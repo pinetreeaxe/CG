@@ -1,0 +1,3 @@
+D:/Uni/CG/Trabalho/CG/Fase1/src/build/CMakeFiles/class2.dir
+D:/Uni/CG/Trabalho/CG/Fase1/src/build/CMakeFiles/ALL_BUILD.dir
+D:/Uni/CG/Trabalho/CG/Fase1/src/build/CMakeFiles/ZERO_CHECK.dir
