@@ -1,3 +1,5 @@
+#include "../src/build/point.h"
+
 #ifdef __APPLE__
 #include <GLUT/glut.h>
 #else
@@ -162,10 +164,7 @@ void reage(unsigned char key, int x, int y) {
 }
 
 
-
-
 int main(int argc, char **argv) {
-
 // init GLUT and the window
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DEPTH|GLUT_DOUBLE|GLUT_RGBA);

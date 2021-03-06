@@ -4,6 +4,9 @@
     <ClCompile Include="D:\Uni\CG\Trabalho\CG\Fase1\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="point.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="D:\Uni\CG\Trabalho\CG\Fase1\src\CMakeLists.txt" />
@@ -12,5 +15,10 @@
     <Filter Include="Source Files">
       <UniqueIdentifier>{6F91D7C2-3EC8-3D8E-BF9F-4C6C986BC17C}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="point.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

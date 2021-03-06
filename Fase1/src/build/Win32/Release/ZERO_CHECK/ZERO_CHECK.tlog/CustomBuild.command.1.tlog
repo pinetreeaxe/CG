@@ -1,0 +1,10 @@
+^D:\UNI\CG\TRABALHO\CG\FASE1\SRC\BUILD\CMAKEFILES\9E8847E982335ED305EFDB0D38B20B53\GENERATE.STAMP.RULE
+setlocal
+D:\Uni\CG\CMake\bin\cmake.exe -SD:/Uni/CG/Trabalho/CG/Fase1/src -BD:/Uni/CG/Trabalho/CG/Fase1/src/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/Uni/CG/Trabalho/CG/Fase1/src/build/class2.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
