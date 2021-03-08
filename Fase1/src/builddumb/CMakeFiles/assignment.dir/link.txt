@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/assignment.dir/engine.cpp.o CMakeFiles/assignment.dir/point.cpp.o CMakeFiles/assignment.dir/models.cpp.o CMakeFiles/assignment.dir/plane.cpp.o -o assignment  /usr/lib/libGL.so /usr/lib/libGLU.so /usr/lib/libglut.so /usr/lib/libXmu.so /usr/lib/libXi.so 

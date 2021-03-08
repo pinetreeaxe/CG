@@ -1,0 +1,3 @@
+/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles/rebuild_cache.dir
+/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles/edit_cache.dir
+/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles/project.dir
