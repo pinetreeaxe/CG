@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/class2.dir/engine.cpp.o CMakeFiles/class2.dir/point.cpp.o CMakeFiles/class2.dir/models.cpp.o CMakeFiles/class2.dir/plane.cpp.o -o class2  /usr/lib/libGL.so /usr/lib/libGLU.so /usr/lib/libglut.so /usr/lib/libXmu.so /usr/lib/libXi.so 

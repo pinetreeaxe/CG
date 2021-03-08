@@ -1,0 +1,13 @@
+﻿  point.cpp
+C:\CG\CG\Fase1\src\point.cpp(16,5): error C2065: 'x': undeclared identifier
+C:\CG\CG\Fase1\src\point.cpp(17,5): error C2065: 'y': undeclared identifier
+C:\CG\CG\Fase1\src\point.cpp(18,5): error C2065: 'z': undeclared identifier
+C:\CG\CG\Fase1\src\point.cpp(21,23): error C2065: 'x': undeclared identifier
+C:\CG\CG\Fase1\src\point.cpp(22,23): error C2065: 'y': undeclared identifier
+C:\CG\CG\Fase1\src\point.cpp(23,23): error C2065: 'z': undeclared identifier
+C:\CG\CG\Fase1\src\point.cpp(25,21): error C2270: 'get_x': modifiers not allowed on nonmember functions
+C:\CG\CG\Fase1\src\point.cpp(25,30): error C2065: 'x': undeclared identifier
+C:\CG\CG\Fase1\src\point.cpp(26,21): error C2270: 'get_y': modifiers not allowed on nonmember functions
+C:\CG\CG\Fase1\src\point.cpp(26,30): error C2065: 'y': undeclared identifier
+C:\CG\CG\Fase1\src\point.cpp(27,21): error C2270: 'get_z': modifiers not allowed on nonmember functions
+C:\CG\CG\Fase1\src\point.cpp(27,30): error C2065: 'z': undeclared identifier

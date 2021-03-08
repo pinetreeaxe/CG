@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/project.dir/models.cpp.o CMakeFiles/project.dir/engine.cpp.o CMakeFiles/project.dir/point.cpp.o CMakeFiles/project.dir/tinyxml2.cpp.o -o project  /usr/lib/libGL.so /usr/lib/libGLU.so /usr/lib/libglut.so /usr/lib/libXmu.so /usr/lib/libXi.so 

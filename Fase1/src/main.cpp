@@ -1,4 +1,4 @@
-#include "../src/build/point.h"
+#include "point.h"
 
 #ifdef __APPLE__
 #include <GLUT/glut.h>
