@@ -9,7 +9,7 @@ private:
     float y;
     float z;
     int div;
-    void draw_face(std::vector<Point>, Point , Vector, Vector) const;
+    void draw_face(std::vector<Point>&, Point , Vector, Vector) const;
 
 public:
     Box(int argc, char** argv);

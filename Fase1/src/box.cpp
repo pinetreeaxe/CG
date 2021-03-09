@@ -11,7 +11,7 @@ Box::Box(int argc, char** argv) {
         div = std::stoi(argv[3]) + 1;
 }
 
-void Box::draw_face(std::vector<Point> points, Point o, Vector v1, Vector v2) const {
+void Box::draw_face(std::vector<Point>& points, Point o, Vector v1, Vector v2) const {
     //creating the points from the two triangles on the bottom left corner of the face
     Point p0 = Point(o.get_x(), o.get_y(), o.get_z());
     Point p1 = Point(p0.get_x(), p0.get_y(), p0.get_z());
@@ -84,6 +84,7 @@ std::vector<Point> Box::draw() const {
 
     // bottom face
     draw_face(points, Point(-halfx, -halfy, -halfz), Vector(slicex, 0, 0), Vector(0, 0, slicez));
+
 
     return points;
 }
