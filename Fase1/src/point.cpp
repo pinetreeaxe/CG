@@ -1,9 +1,18 @@
 #include "point.hpp"
+#define _USE_MATH_DEFINES
+#include "math.h"
+
 
 Point::Point(float a, float b, float c){
     x = a;
     y = b;
     z = c;
+}
+
+Point::Point(SphericalPoint p) {
+    x = p.get_radius() * cos(p.get_beta()) * sin(p.get_alpha());
+    y = p.get_radius() * sin(p.get_beta());
+    z = p.get_radius() * cos(p.get_beta()) * cos(p.get_alpha());
 }
 
 std::string Point::to_string() const {

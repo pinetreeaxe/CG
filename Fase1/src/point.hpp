@@ -5,6 +5,7 @@
 #include <iostream>
 #include <sstream>
 #include "vector.hpp"
+#include "sphericalpoint.hpp"
 
 class Point {
 private:
@@ -12,6 +13,7 @@ private:
 
 public:
     Point(float, float, float);
+    Point(SphericalPoint);
     std::string to_string() const;
     void add_vector(Vector);
     void set_x(float a);

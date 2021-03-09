@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/engine.cpp" "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles/engine.dir/engine.cpp.o"
   "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/models.cpp" "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles/engine.dir/models.cpp.o"
   "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.cpp" "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles/engine.dir/point.cpp.o"
+  "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/sphericalpoint.cpp" "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles/engine.dir/sphericalpoint.cpp.o"
   "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/tinyxml2.cpp" "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles/engine.dir/tinyxml2.cpp.o"
   "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/vector.cpp" "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles/engine.dir/vector.cpp.o"
   )

@@ -5,18 +5,24 @@ CMakeFiles/engine.dir/engine.cpp.o
  /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/engine.cpp
  /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/models.hpp
  /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.hpp
+ /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/sphericalpoint.hpp
  /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/tinyxml2.h
  /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/vector.hpp
 CMakeFiles/engine.dir/models.cpp.o
  /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/models.cpp
  /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/models.hpp
  /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.hpp
+ /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/sphericalpoint.hpp
  /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/tinyxml2.h
  /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/vector.hpp
 CMakeFiles/engine.dir/point.cpp.o
  /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.cpp
  /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.hpp
+ /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/sphericalpoint.hpp
  /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/vector.hpp
+CMakeFiles/engine.dir/sphericalpoint.cpp.o
+ /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/sphericalpoint.cpp
+ /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/sphericalpoint.hpp
 CMakeFiles/engine.dir/tinyxml2.cpp.o
  /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/tinyxml2.cpp
  /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/tinyxml2.h

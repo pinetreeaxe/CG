@@ -2,6 +2,7 @@
 #include "point.hpp"
 #include "box.hpp"
 #include "plane.hpp"
+#include "sphere.hpp"
 
 #include<string>
 #include<ostream>
@@ -23,5 +24,7 @@ int main(int argc, char** argv){
         writeFile(Plane(argc-3, argv+2), argv[argc-1]);
     else if(primitive == "box")
         writeFile(Box(argc-3, argv+2), argv[argc-1]);
+    else if(primitive == "sphere")
+        writeFile(Sphere(argc-3, argv+2), argv[argc-1]);
 
 }

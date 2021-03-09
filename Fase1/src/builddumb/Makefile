@@ -320,6 +320,63 @@ point.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/point.cpp.s
 .PHONY : point.cpp.s
 
+sphere.o: sphere.cpp.o
+
+.PHONY : sphere.o
+
+# target to build an object file
+sphere.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/sphere.cpp.o
+.PHONY : sphere.cpp.o
+
+sphere.i: sphere.cpp.i
+
+.PHONY : sphere.i
+
+# target to preprocess a source file
+sphere.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/sphere.cpp.i
+.PHONY : sphere.cpp.i
+
+sphere.s: sphere.cpp.s
+
+.PHONY : sphere.s
+
+# target to generate assembly for a file
+sphere.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/sphere.cpp.s
+.PHONY : sphere.cpp.s
+
+sphericalpoint.o: sphericalpoint.cpp.o
+
+.PHONY : sphericalpoint.o
+
+# target to build an object file
+sphericalpoint.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/sphericalpoint.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/sphericalpoint.cpp.o
+.PHONY : sphericalpoint.cpp.o
+
+sphericalpoint.i: sphericalpoint.cpp.i
+
+.PHONY : sphericalpoint.i
+
+# target to preprocess a source file
+sphericalpoint.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/sphericalpoint.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/sphericalpoint.cpp.i
+.PHONY : sphericalpoint.cpp.i
+
+sphericalpoint.s: sphericalpoint.cpp.s
+
+.PHONY : sphericalpoint.s
+
+# target to generate assembly for a file
+sphericalpoint.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/sphericalpoint.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/sphericalpoint.cpp.s
+.PHONY : sphericalpoint.cpp.s
+
 tinyxml2.o: tinyxml2.cpp.o
 
 .PHONY : tinyxml2.o
@@ -405,6 +462,12 @@ help:
 	@echo "... point.o"
 	@echo "... point.i"
 	@echo "... point.s"
+	@echo "... sphere.o"
+	@echo "... sphere.i"
+	@echo "... sphere.s"
+	@echo "... sphericalpoint.o"
+	@echo "... sphericalpoint.i"
+	@echo "... sphericalpoint.s"
 	@echo "... tinyxml2.o"
 	@echo "... tinyxml2.i"
 	@echo "... tinyxml2.s"

@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/generator.cpp" "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles/generator.dir/generator.cpp.o"
   "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/plane.cpp" "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles/generator.dir/plane.cpp.o"
   "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.cpp" "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles/generator.dir/point.cpp.o"
+  "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/sphere.cpp" "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles/generator.dir/sphere.cpp.o"
+  "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/sphericalpoint.cpp" "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles/generator.dir/sphericalpoint.cpp.o"
   "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/vector.cpp" "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles/generator.dir/vector.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
