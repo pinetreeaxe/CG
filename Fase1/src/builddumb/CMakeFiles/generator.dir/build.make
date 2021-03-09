@@ -62,10 +62,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/martim/teste/src
+CMAKE_SOURCE_DIR = /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/martim/teste/src/builddumb
+CMAKE_BINARY_DIR = /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb
 
 # Include any dependencies generated for this target.
 include CMakeFiles/generator.dir/depend.make
@@ -78,68 +78,68 @@ include CMakeFiles/generator.dir/flags.make
 
 CMakeFiles/generator.dir/generator.cpp.o: CMakeFiles/generator.dir/flags.make
 CMakeFiles/generator.dir/generator.cpp.o: ../generator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martim/teste/src/builddumb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/generator.dir/generator.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/generator.dir/generator.cpp.o -c /home/martim/teste/src/generator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/generator.dir/generator.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/generator.dir/generator.cpp.o -c /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/generator.cpp
 
 CMakeFiles/generator.dir/generator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/generator.dir/generator.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martim/teste/src/generator.cpp > CMakeFiles/generator.dir/generator.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/generator.cpp > CMakeFiles/generator.dir/generator.cpp.i
 
 CMakeFiles/generator.dir/generator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/generator.dir/generator.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martim/teste/src/generator.cpp -o CMakeFiles/generator.dir/generator.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/generator.cpp -o CMakeFiles/generator.dir/generator.cpp.s
 
 CMakeFiles/generator.dir/point.cpp.o: CMakeFiles/generator.dir/flags.make
 CMakeFiles/generator.dir/point.cpp.o: ../point.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martim/teste/src/builddumb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/generator.dir/point.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/generator.dir/point.cpp.o -c /home/martim/teste/src/point.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/generator.dir/point.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/generator.dir/point.cpp.o -c /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.cpp
 
 CMakeFiles/generator.dir/point.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/generator.dir/point.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martim/teste/src/point.cpp > CMakeFiles/generator.dir/point.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.cpp > CMakeFiles/generator.dir/point.cpp.i
 
 CMakeFiles/generator.dir/point.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/generator.dir/point.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martim/teste/src/point.cpp -o CMakeFiles/generator.dir/point.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.cpp -o CMakeFiles/generator.dir/point.cpp.s
 
 CMakeFiles/generator.dir/plane.cpp.o: CMakeFiles/generator.dir/flags.make
 CMakeFiles/generator.dir/plane.cpp.o: ../plane.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martim/teste/src/builddumb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/generator.dir/plane.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/generator.dir/plane.cpp.o -c /home/martim/teste/src/plane.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/generator.dir/plane.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/generator.dir/plane.cpp.o -c /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/plane.cpp
 
 CMakeFiles/generator.dir/plane.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/generator.dir/plane.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martim/teste/src/plane.cpp > CMakeFiles/generator.dir/plane.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/plane.cpp > CMakeFiles/generator.dir/plane.cpp.i
 
 CMakeFiles/generator.dir/plane.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/generator.dir/plane.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martim/teste/src/plane.cpp -o CMakeFiles/generator.dir/plane.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/plane.cpp -o CMakeFiles/generator.dir/plane.cpp.s
 
 CMakeFiles/generator.dir/box.cpp.o: CMakeFiles/generator.dir/flags.make
 CMakeFiles/generator.dir/box.cpp.o: ../box.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martim/teste/src/builddumb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/generator.dir/box.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/generator.dir/box.cpp.o -c /home/martim/teste/src/box.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/generator.dir/box.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/generator.dir/box.cpp.o -c /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/box.cpp
 
 CMakeFiles/generator.dir/box.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/generator.dir/box.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martim/teste/src/box.cpp > CMakeFiles/generator.dir/box.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/box.cpp > CMakeFiles/generator.dir/box.cpp.i
 
 CMakeFiles/generator.dir/box.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/generator.dir/box.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martim/teste/src/box.cpp -o CMakeFiles/generator.dir/box.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/box.cpp -o CMakeFiles/generator.dir/box.cpp.s
 
 CMakeFiles/generator.dir/vector.cpp.o: CMakeFiles/generator.dir/flags.make
 CMakeFiles/generator.dir/vector.cpp.o: ../vector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martim/teste/src/builddumb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/generator.dir/vector.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/generator.dir/vector.cpp.o -c /home/martim/teste/src/vector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/generator.dir/vector.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/generator.dir/vector.cpp.o -c /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/vector.cpp
 
 CMakeFiles/generator.dir/vector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/generator.dir/vector.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martim/teste/src/vector.cpp > CMakeFiles/generator.dir/vector.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/vector.cpp > CMakeFiles/generator.dir/vector.cpp.i
 
 CMakeFiles/generator.dir/vector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/generator.dir/vector.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martim/teste/src/vector.cpp -o CMakeFiles/generator.dir/vector.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/vector.cpp -o CMakeFiles/generator.dir/vector.cpp.s
 
 # Object files for target generator
 generator_OBJECTS = \
@@ -159,7 +159,7 @@ generator: CMakeFiles/generator.dir/box.cpp.o
 generator: CMakeFiles/generator.dir/vector.cpp.o
 generator: CMakeFiles/generator.dir/build.make
 generator: CMakeFiles/generator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/martim/teste/src/builddumb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable generator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable generator"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/generator.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -172,6 +172,6 @@ CMakeFiles/generator.dir/clean:
 .PHONY : CMakeFiles/generator.dir/clean
 
 CMakeFiles/generator.dir/depend:
-	cd /home/martim/teste/src/builddumb && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/martim/teste/src /home/martim/teste/src /home/martim/teste/src/builddumb /home/martim/teste/src/builddumb /home/martim/teste/src/builddumb/CMakeFiles/generator.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles/generator.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/generator.dir/depend
 

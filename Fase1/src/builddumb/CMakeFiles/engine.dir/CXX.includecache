@@ -6,29 +6,33 @@
 
 #IncludeRegexTransform: 
 
-/home/martim/teste/src/models.cpp
+/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/models.cpp
+stdlib.h
+-
 GLUT/glut.h
 -
 GL/glut.h
 -
 models.hpp
-/home/martim/teste/src/models.hpp
+/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/models.hpp
 tinyxml2.h
-/home/martim/teste/src/tinyxml2.h
+/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/tinyxml2.h
 fstream
 -
 iostream
 -
 string
 -
+random
+-
 
-/home/martim/teste/src/models.hpp
+/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/models.hpp
 point.hpp
-/home/martim/teste/src/point.hpp
+/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.hpp
 vector
 -
 
-/home/martim/teste/src/point.hpp
+/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.hpp
 string
 -
 iostream
@@ -36,9 +40,9 @@ iostream
 sstream
 -
 vector.hpp
-/home/martim/teste/src/vector.hpp
+/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/vector.hpp
 
-/home/martim/teste/src/tinyxml2.h
+/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/tinyxml2.h
 ctype.h
 -
 limits.h
@@ -68,7 +72,7 @@ android/log.h
 assert.h
 -
 
-/home/martim/teste/src/vector.hpp
+/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/vector.hpp
 string
 -
 iostream

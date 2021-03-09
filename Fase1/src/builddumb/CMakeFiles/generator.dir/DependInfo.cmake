@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/martim/teste/src/box.cpp" "/home/martim/teste/src/builddumb/CMakeFiles/generator.dir/box.cpp.o"
-  "/home/martim/teste/src/generator.cpp" "/home/martim/teste/src/builddumb/CMakeFiles/generator.dir/generator.cpp.o"
-  "/home/martim/teste/src/plane.cpp" "/home/martim/teste/src/builddumb/CMakeFiles/generator.dir/plane.cpp.o"
-  "/home/martim/teste/src/point.cpp" "/home/martim/teste/src/builddumb/CMakeFiles/generator.dir/point.cpp.o"
-  "/home/martim/teste/src/vector.cpp" "/home/martim/teste/src/builddumb/CMakeFiles/generator.dir/vector.cpp.o"
+  "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/box.cpp" "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles/generator.dir/box.cpp.o"
+  "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/generator.cpp" "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles/generator.dir/generator.cpp.o"
+  "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/plane.cpp" "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles/generator.dir/plane.cpp.o"
+  "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.cpp" "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles/generator.dir/point.cpp.o"
+  "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/vector.cpp" "/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles/generator.dir/vector.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

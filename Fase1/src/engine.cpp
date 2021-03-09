@@ -16,45 +16,6 @@
 
 
 Models models;
-/*
-std::vector<std::string> readModels(char * fileName){
-    tinyxml2::XMLDocument xmlDOC;   
-	std::vector<std::string> r;
-
-    xmlDOC.LoadFile(fileName);
-	if (xmlDOC.ErrorID()){
-		printf("%s\n", xmlDOC.ErrorStr());
-		exit(0);
-	}
-
-    tinyxml2::XMLNode* scene = xmlDOC.FirstChildElement("scene");
-	if (scene == NULL){
-		printf("Scene not founded.");
-		exit(0);
-	}
-
-	tinyxml2::XMLNode* model = scene->FirstChild();
-	while(model){
-		if(!strcmp(model->Value(), "model")){
-			//model->ToElement()->Attribute("file") devolve um Const char *
-			size_t  lenModel = strlen(model->ToElement()->Attribute("file"));
-			char * test2 = new char[lenModel + 1];
-			strcpy(test2, model->ToElement()->Attribute("file"));
-			printf("Tamanho: %d\n",lenModel);
-			printf("Test2: %s\n",test2);
-			std::string test(model->ToElement()->Attribute("file"));
-			printf("XML: %s\n",model->ToElement()->Attribute("file"));
-			r.push_back(test2);
-			
-		}
-		model = model->NextSibling();
-	}
-	printf("Dentro do r\n");
-	for (std::string fileName : r)
-		printf("%s\n", fileName);
-	return r;
-
-}*/
 
 void changeSize(int w, int h) {
 
@@ -104,26 +65,13 @@ void renderScene(void) {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	// set the camera
+	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	glLoadIdentity();
 	gluLookAt(5.0,5.0,5.0, 0.0,0.0,0.0, 0.0f,1.0f,0.0f);
 	
 	drawAxis();
-	/*
-	drawModels();
-	tinyxml2::XMLNode* scene = xmlDOC.FirstChildElement("scene");
-	if (scene == NULL){
-		printf("Scene not founded.");
-		return;
-	}
-
-	tinyxml2::XMLNode* model = scene->FirstChild();
-	while(model){
-		if(!strcmp(model->Value(), "model"))
-			//parse no que está dentro deste model e desenhá-lo (fazer uma função capaz de realizar isso)
-			printf("%s\n", model->ToElement()->Attribute("file"));
-		model = model->NextSibling();
-	}
-*/
+	models.drawModels();
+	
 	// End of frame
 	glutSwapBuffers();
 }
@@ -136,17 +84,9 @@ void reage(unsigned char key, int x, int y) {
 }
 
 int main(int argc, char **argv) {
-
-	//models = Models(readModels(argv[1]));
-	//models.readFile(argv[1]);
+		
+	models.readFile(argv[1]);
 	//models.readFile("builddumb/teste.xml");
-	/*
-	xmlDOC.LoadFile(argv[1]);
-	if (xmlDOC.ErrorID()){
-		printf("%s\n", xmlDOC.ErrorStr());
-		return xmlDOC.ErrorID();
-	}
-	*/
 
 // init GLUT and the window
 	glutInit(&argc, argv);

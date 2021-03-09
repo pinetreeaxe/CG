@@ -7,6 +7,7 @@
 class Model {
     private:
         std::vector<Point> points;
+        void drawTriangles(Point p1, Point p2, Point p3);
 
     public:
         Model(const char *);
@@ -20,7 +21,6 @@ class Models {
     
     public:
         Models();
-        Models(std::vector<std::string>);
         void drawModels();
         void readFile(char *);
 };

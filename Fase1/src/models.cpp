@@ -10,48 +10,42 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <random> 
 
 
+void Model::drawTriangles(Point p1, Point p2, Point p3){
+    glColor3f((float) rand() / RAND_MAX, (float) rand() / RAND_MAX, (float) rand() / RAND_MAX);
+    glBegin(GL_TRIANGLES);
+        glVertex3f(p1.get_x(),p1.get_y(),p1.get_z());
+        glVertex3f(p2.get_x(),p2.get_y(),p2.get_z());
+        glVertex3f(p3.get_x(),p3.get_y(),p3.get_z());     
+    glEnd();           
+}
 
 void Model::drawModel(){
-
+    for (int i = 0; i < points.size(); i += 3){
+        drawTriangles(points[i], points[i+1], points[i+2]);
+    }
 }
 
-void Models::drawModels(){
 
+Model::Model(const char* fileName){
+    float x,y,z;
+    std::ifstream file(fileName);
+        while(file >> x >> y >> z){
+            points.push_back(Point(x,y,z));
+        }
+    for(Point p: points){
+    }    
 }
-
 
 Models::Models(){
     models = std::vector<Model>();
 }
 
-void Model::printValores(){
-    for(Point point: points)
-        point.to_string();
-}
-
-Model::Model(const char* fileName){
-    float x,y,z;
-    std::ifstream file(fileName);
-        while(file >> x >> y >> z)
-            points.push_back(Point(x,y,z));
-}
-
-Models::Models(std::vector<std::string> fileNames){
-    printf("Dentro do Models\n");
-    for(std::string fileName : fileNames){
-        printf("%s\n", fileName);
-        //models.push_back(Model(fileName));
-    }
-    for(Model model: models)
-        model.printValores();    
-    
-}
-
 void Models::readFile(char * fileName){
-    tinyxml2::XMLDocument xmlDOC;   
 
+    tinyxml2::XMLDocument xmlDOC;   
     xmlDOC.LoadFile(fileName);
 	if (xmlDOC.ErrorID()){
 		printf("%s\n", xmlDOC.ErrorStr());
@@ -60,15 +54,20 @@ void Models::readFile(char * fileName){
 
     tinyxml2::XMLNode* scene = xmlDOC.FirstChildElement("scene");
 	if (scene == NULL){
-		printf("Scene not founded.");
+		printf("Scene not founded.\n");
 		exit(0);
 	}
 
 	tinyxml2::XMLNode* model = scene->FirstChild();
 	while(model){
 		if(!strcmp(model->Value(), "model"))
-			models.push_back(Model(model->ToElement()->Attribute("file")));
+			models.push_back(Model(model->ToElement()->Attribute("file")));    
 		model = model->NextSibling();
 	}
 
+}
+
+void Models::drawModels(){
+    for(Model m: models)
+        m.drawModel();
 }

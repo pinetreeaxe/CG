@@ -62,10 +62,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/martim/teste/src
+CMAKE_SOURCE_DIR = /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/martim/teste/src/builddumb
+CMAKE_BINARY_DIR = /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb
 
 # Include any dependencies generated for this target.
 include CMakeFiles/engine.dir/depend.make
@@ -78,68 +78,68 @@ include CMakeFiles/engine.dir/flags.make
 
 CMakeFiles/engine.dir/engine.cpp.o: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/engine.cpp.o: ../engine.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martim/teste/src/builddumb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/engine.dir/engine.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/engine.cpp.o -c /home/martim/teste/src/engine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/engine.dir/engine.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/engine.cpp.o -c /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/engine.cpp
 
 CMakeFiles/engine.dir/engine.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/engine.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martim/teste/src/engine.cpp > CMakeFiles/engine.dir/engine.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/engine.cpp > CMakeFiles/engine.dir/engine.cpp.i
 
 CMakeFiles/engine.dir/engine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/engine.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martim/teste/src/engine.cpp -o CMakeFiles/engine.dir/engine.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/engine.cpp -o CMakeFiles/engine.dir/engine.cpp.s
 
 CMakeFiles/engine.dir/point.cpp.o: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/point.cpp.o: ../point.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martim/teste/src/builddumb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/engine.dir/point.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/point.cpp.o -c /home/martim/teste/src/point.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/engine.dir/point.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/point.cpp.o -c /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.cpp
 
 CMakeFiles/engine.dir/point.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/point.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martim/teste/src/point.cpp > CMakeFiles/engine.dir/point.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.cpp > CMakeFiles/engine.dir/point.cpp.i
 
 CMakeFiles/engine.dir/point.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/point.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martim/teste/src/point.cpp -o CMakeFiles/engine.dir/point.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.cpp -o CMakeFiles/engine.dir/point.cpp.s
 
 CMakeFiles/engine.dir/vector.cpp.o: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/vector.cpp.o: ../vector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martim/teste/src/builddumb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/engine.dir/vector.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/vector.cpp.o -c /home/martim/teste/src/vector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/engine.dir/vector.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/vector.cpp.o -c /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/vector.cpp
 
 CMakeFiles/engine.dir/vector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/vector.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martim/teste/src/vector.cpp > CMakeFiles/engine.dir/vector.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/vector.cpp > CMakeFiles/engine.dir/vector.cpp.i
 
 CMakeFiles/engine.dir/vector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/vector.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martim/teste/src/vector.cpp -o CMakeFiles/engine.dir/vector.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/vector.cpp -o CMakeFiles/engine.dir/vector.cpp.s
 
 CMakeFiles/engine.dir/tinyxml2.cpp.o: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/tinyxml2.cpp.o: ../tinyxml2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martim/teste/src/builddumb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/engine.dir/tinyxml2.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/tinyxml2.cpp.o -c /home/martim/teste/src/tinyxml2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/engine.dir/tinyxml2.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/tinyxml2.cpp.o -c /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/tinyxml2.cpp
 
 CMakeFiles/engine.dir/tinyxml2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/tinyxml2.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martim/teste/src/tinyxml2.cpp > CMakeFiles/engine.dir/tinyxml2.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/tinyxml2.cpp > CMakeFiles/engine.dir/tinyxml2.cpp.i
 
 CMakeFiles/engine.dir/tinyxml2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/tinyxml2.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martim/teste/src/tinyxml2.cpp -o CMakeFiles/engine.dir/tinyxml2.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/tinyxml2.cpp -o CMakeFiles/engine.dir/tinyxml2.cpp.s
 
 CMakeFiles/engine.dir/models.cpp.o: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/models.cpp.o: ../models.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martim/teste/src/builddumb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/engine.dir/models.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/models.cpp.o -c /home/martim/teste/src/models.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/engine.dir/models.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/models.cpp.o -c /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/models.cpp
 
 CMakeFiles/engine.dir/models.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/models.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martim/teste/src/models.cpp > CMakeFiles/engine.dir/models.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/models.cpp > CMakeFiles/engine.dir/models.cpp.i
 
 CMakeFiles/engine.dir/models.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/models.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martim/teste/src/models.cpp -o CMakeFiles/engine.dir/models.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/models.cpp -o CMakeFiles/engine.dir/models.cpp.s
 
 # Object files for target engine
 engine_OBJECTS = \
@@ -164,7 +164,7 @@ engine: /usr/lib/libglut.so
 engine: /usr/lib/libXmu.so
 engine: /usr/lib/libXi.so
 engine: CMakeFiles/engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/martim/teste/src/builddumb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable engine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/engine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -177,6 +177,6 @@ CMakeFiles/engine.dir/clean:
 .PHONY : CMakeFiles/engine.dir/clean
 
 CMakeFiles/engine.dir/depend:
-	cd /home/martim/teste/src/builddumb && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/martim/teste/src /home/martim/teste/src /home/martim/teste/src/builddumb /home/martim/teste/src/builddumb /home/martim/teste/src/builddumb/CMakeFiles/engine.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/builddumb/CMakeFiles/engine.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/engine.dir/depend
 
