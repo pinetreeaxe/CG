@@ -1,0 +1,3 @@
+﻿  engine.cpp
+D:\Uni\CG\Trabalho\CG\Fase1\src\engine.cpp(134,2): warning C4060: switch statement contains no 'case' or 'default' labels
+  engine.vcxproj -> D:\Uni\CG\Trabalho\CG\Fase1\src\build\Release\engine.exe

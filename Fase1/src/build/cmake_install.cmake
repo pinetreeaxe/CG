@@ -1,4 +1,4 @@
-# Install script for directory: C:/CG/CG/Fase1/src
+# Install script for directory: D:/Uni/CG/Trabalho/CG/Fase1/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/CG/CG/Fase1/src/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/Uni/CG/Trabalho/CG/Fase1/src/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

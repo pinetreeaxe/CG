@@ -1,13 +1,9 @@
-﻿  point.cpp
-C:\CG\CG\Fase1\src\point.cpp(16,5): error C2065: 'x': undeclared identifier
-C:\CG\CG\Fase1\src\point.cpp(17,5): error C2065: 'y': undeclared identifier
-C:\CG\CG\Fase1\src\point.cpp(18,5): error C2065: 'z': undeclared identifier
-C:\CG\CG\Fase1\src\point.cpp(21,23): error C2065: 'x': undeclared identifier
-C:\CG\CG\Fase1\src\point.cpp(22,23): error C2065: 'y': undeclared identifier
-C:\CG\CG\Fase1\src\point.cpp(23,23): error C2065: 'z': undeclared identifier
-C:\CG\CG\Fase1\src\point.cpp(25,21): error C2270: 'get_x': modifiers not allowed on nonmember functions
-C:\CG\CG\Fase1\src\point.cpp(25,30): error C2065: 'x': undeclared identifier
-C:\CG\CG\Fase1\src\point.cpp(26,21): error C2270: 'get_y': modifiers not allowed on nonmember functions
-C:\CG\CG\Fase1\src\point.cpp(26,30): error C2065: 'y': undeclared identifier
-C:\CG\CG\Fase1\src\point.cpp(27,21): error C2270: 'get_z': modifiers not allowed on nonmember functions
-C:\CG\CG\Fase1\src\point.cpp(27,30): error C2065: 'z': undeclared identifier
+﻿  engine.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdlib.h(52,48): error C2381: 'exit': redefinition; 'noreturn' differs
+D:\Uni\CG\Trabalho\CG\Fase1\toolkits\glut\GL/glut.h(146): message : see declaration of 'exit'
+D:\Uni\CG\Trabalho\CG\Fase1\src\engine.cpp(133,2): warning C4060: switch statement contains no 'case' or 'default' labels
+  models.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdlib.h(52,48): error C2381: 'exit': redefinition; 'noreturn' differs
+D:\Uni\CG\Trabalho\CG\Fase1\toolkits\glut\GL/glut.h(146): message : see declaration of 'exit'
+D:\Uni\CG\Trabalho\CG\Fase1\src\models.cpp(43,16): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'std::string'
+  Generating Code...

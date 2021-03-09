@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "point.hpp"
 #include "box.hpp"
 #include "plane.hpp"

@@ -1,0 +1,8 @@
+﻿  Building Custom Rule D:/Uni/CG/Trabalho/CG/Fase1/src/CMakeLists.txt
+  generator.cpp
+  point.cpp
+  plane.cpp
+  box.cpp
+  vector.cpp
+  Generating Code...
+  generator.vcxproj -> D:\Uni\CG\Trabalho\CG\Fase1\src\build\Release\generator.exe

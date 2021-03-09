@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #ifdef __APPLE__
 #include <GLUT/glut.h>
 #else
@@ -137,7 +138,8 @@ void reage(unsigned char key, int x, int y) {
 int main(int argc, char **argv) {
 
 	//models = Models(readModels(argv[1]));
-	models.readFile(argv[1]);
+	//models.readFile(argv[1]);
+	//models.readFile("builddumb/teste.xml");
 	/*
 	xmlDOC.LoadFile(argv[1]);
 	if (xmlDOC.ErrorID()){
