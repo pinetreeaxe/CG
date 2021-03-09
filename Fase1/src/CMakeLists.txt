@@ -6,8 +6,9 @@ PROJECT(engine)
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 set(CMAKE_BUILD_TYPE Debug)
 
-add_executable(${PROJECT_NAME} main.cpp point.cpp)
-# add_executable(generator engine.cpp models.cpp tinyxml2.cpp)
+
+add_executable(${PROJECT_NAME} engine.cpp point.cpp vector.cpp tinyxml2.cpp models.cpp)
+add_executable(generator generator.cpp point.cpp plane.cpp box.cpp vector.cpp)
 
 find_package(OpenGL REQUIRED)
 include_directories(${OpenGL_INCLUDE_DIRS})

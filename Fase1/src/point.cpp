@@ -1,4 +1,4 @@
-#include "point.h"
+#include "point.hpp"
 
 Point::Point(float a, float b, float c){
     x = a;
@@ -12,17 +12,17 @@ std::string Point::to_string() const {
     return pt.str();
 }
 
-void add_vector(Vector v) {
+void Point::add_vector(Vector v) {
     x += v.get_x();
     y += v.get_y();
     z += v.get_z();
 }
 
-void set_x(float a) { x = a; }
-void set_y(float b) { y = b; }
-void set_z(float c) { z = c; }
+void Point::set_x(float a) { x = a; }
+void Point::set_y(float b) { y = b; }
+void Point::set_z(float c) { z = c; }
 
-float get_x() const { return x; }
-float get_y() const { return y; }
-float get_z() const { return z; }
+float Point::get_x() const { return x; }
+float Point::get_y() const { return y; }
+float Point::get_z() const { return z; }
 

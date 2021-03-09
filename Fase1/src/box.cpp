@@ -12,7 +12,6 @@ Box::Box(int argc, char** argv) {
 }
 
 void Box::draw_face(std::vector<Point> points, Point o, Vector v1, Vector v2) const {
-
     //creating the points from the two triangles on the bottom left corner of the face
     Point p0 = Point(o.get_x(), o.get_y(), o.get_z());
     Point p1 = Point(p0.get_x(), p0.get_y(), p0.get_z());
@@ -43,17 +42,17 @@ void Box::draw_face(std::vector<Point> points, Point o, Vector v1, Vector v2) co
             points.push_back(p3j);
 
             //translate all points to the next slice ("horizontally")
-            p0j.add_vector(var1);
-            p1j.add_vector(var1);
-            p2j.add_vector(var1);
-            p3j.add_vector(var1);
+            p0j.add_vector(v1);
+            p1j.add_vector(v1);
+            p2j.add_vector(v1);
+            p3j.add_vector(v1);
         }
 
         //translate all points to the next slice ("vertically")
-        p0.add_vector(var2);
-        p1.add_vector(var2);
-        p2.add_vector(var2);
-        p3.add_vector(var2);
+        p0.add_vector(v2);
+        p1.add_vector(v2);
+        p2.add_vector(v2);
+        p3.add_vector(v2);
     }
 }
 
@@ -85,4 +84,6 @@ std::vector<Point> Box::draw() const {
 
     // bottom face
     draw_face(points, Point(-halfx, -halfy, -halfz), Vector(slicex, 0, 0), Vector(0, 0, slicez));
+
+    return points;
 }

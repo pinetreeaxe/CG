@@ -1,7 +1,7 @@
 #ifndef MODELS_H
 #define MODELS_H
 
-#include "point.h"
+#include "point.hpp"
 #include <vector>
 
 class Model {
@@ -9,7 +9,7 @@ class Model {
         std::vector<Point> points;
 
     public:
-        Model(std::string);
+        Model(const char *);
         void drawModel();
         void printValores();
 };
@@ -22,6 +22,7 @@ class Models {
         Models();
         Models(std::vector<std::string>);
         void drawModels();
+        void readFile(char *);
 };
 
 #endif

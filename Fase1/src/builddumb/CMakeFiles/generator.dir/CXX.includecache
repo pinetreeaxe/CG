@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/martim/teste/src/box.cpp
+box.hpp
+/home/martim/teste/src/box.hpp
+point.hpp
+/home/martim/teste/src/point.hpp
+
+/home/martim/teste/src/box.hpp
+point.hpp
+/home/martim/teste/src/point.hpp
+vector
+-
+
+/home/martim/teste/src/point.hpp
+string
+-
+iostream
+-
+sstream
+-
+vector.hpp
+/home/martim/teste/src/vector.hpp
+
+/home/martim/teste/src/vector.hpp
+string
+-
+iostream
+-
+sstream
+-
+

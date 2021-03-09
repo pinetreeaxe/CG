@@ -1,4 +1,4 @@
-#include "plane.h"
+#include "plane.hpp"
 
 Plane::Plane(int argc, char** args) {
     side = std::stof(args[0]);

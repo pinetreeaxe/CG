@@ -15,7 +15,7 @@
 
 
 Models models;
-
+/*
 std::vector<std::string> readModels(char * fileName){
     tinyxml2::XMLDocument xmlDOC;   
 	std::vector<std::string> r;
@@ -53,7 +53,7 @@ std::vector<std::string> readModels(char * fileName){
 		printf("%s\n", fileName);
 	return r;
 
-}
+}*/
 
 void changeSize(int w, int h) {
 
@@ -96,34 +96,7 @@ void drawAxis(){
 		glVertex3f(0.0f, 0.0f,100.0f);
 	glEnd();
 }
-/*
-void drawModel(tinyxml2::XMLNode* model){
-	//printf("%s\n", model->ToElement()->Attribute("file"));
-	std::ifstream file;
-	std::string txtFromFile;
-	file.open(model->ToElement()->Attribute("file"));
-	if(file.is_open()){
 
-	}
-}
-
-void drawModels(){
-	tinyxml2::XMLNode* scene = xmlDOC.FirstChildElement("scene");
-	if (scene == NULL){
-		printf("Scene not founded.");
-		return;
-	}
-
-	tinyxml2::XMLNode* model = scene->FirstChild();
-	while(model){
-		if(!strcmp(model->Value(), "model"))
-			//parse no que está dentro deste model e desenhá-lo (fazer uma função capaz de realizar isso)
-			drawModel(model);
-		model = model->NextSibling();
-	}
-
-}
-*/
 void renderScene(void) {
 
 	// clear buffers
@@ -163,7 +136,8 @@ void reage(unsigned char key, int x, int y) {
 
 int main(int argc, char **argv) {
 
-	models = Models(readModels(argv[1]));
+	//models = Models(readModels(argv[1]));
+	models.readFile(argv[1]);
 	/*
 	xmlDOC.LoadFile(argv[1]);
 	if (xmlDOC.ErrorID()){

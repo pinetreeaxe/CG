@@ -1,0 +1,4 @@
+/home/martim/teste/src/builddumb/CMakeFiles/rebuild_cache.dir
+/home/martim/teste/src/builddumb/CMakeFiles/edit_cache.dir
+/home/martim/teste/src/builddumb/CMakeFiles/generator.dir
+/home/martim/teste/src/builddumb/CMakeFiles/engine.dir
