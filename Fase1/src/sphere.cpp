@@ -4,7 +4,7 @@
 #include "math.h"
 
 Sphere::Sphere(int argc, char** argv){
-	radius = std::stoi(argv[0]);
+	radius = std::stof(argv[0]);
 	slices = std::stoi(argv[1]);
 	stacks = std::stoi(argv[2]);
 }

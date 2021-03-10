@@ -1,17 +1,17 @@
-#ifndef SPHERE_H
-#define SPHERE_H
+#ifndef CONE_H
+#define CONE_H
 
 #include <vector>
 #include "sphericalpoint.hpp"
 #include "point.hpp"
 
-class Sphere {
+class Cone {
 private:
-    float radius;
-    int stacks, slices;
+    float radius, height;
+    int slices, stacks;
 
 public:
-    Sphere(int, char**);
+    Cone(int, char**);
     std::vector<Point> draw();
 };
 #endif

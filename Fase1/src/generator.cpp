@@ -3,6 +3,7 @@
 #include "box.hpp"
 #include "plane.hpp"
 #include "sphere.hpp"
+#include "cone.hpp"
 
 #include<string>
 #include<ostream>
@@ -26,5 +27,7 @@ int main(int argc, char** argv){
         writeFile(Box(argc-3, argv+2), argv[argc-1]);
     else if(primitive == "sphere")
         writeFile(Sphere(argc-3, argv+2), argv[argc-1]);
+    else if(primitive == "cone")
+        writeFile(Cone(argc-3, argv+2), argv[argc-1]);
 
 }

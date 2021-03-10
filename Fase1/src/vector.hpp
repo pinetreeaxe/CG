@@ -11,9 +11,11 @@ private:
 
 public:
     Vector(float, float, float);
-    void set_x(float a);
-    void set_y(float b);
-    void set_z(float c);
+    void set_x(float);
+    void set_y(float);
+    void set_z(float);
+    void multiply(float);
+    void divide(float);
     float get_x() const;
     float get_y() const;
     float get_z() const;

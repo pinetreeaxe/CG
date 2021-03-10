@@ -6,11 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.cpp
+/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/cone.cpp
+cone.hpp
+/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/cone.hpp
 point.hpp
 /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.hpp
 math.h
 /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/math.h
+
+/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/cone.hpp
+vector
+-
+sphericalpoint.hpp
+/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/sphericalpoint.hpp
+point.hpp
+/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.hpp
 
 /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.hpp
 string
@@ -21,26 +31,6 @@ sstream
 -
 vector.hpp
 /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/vector.hpp
-sphericalpoint.hpp
-/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/sphericalpoint.hpp
-
-/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/sphere.cpp
-sphere.hpp
-/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/sphere.hpp
-point.hpp
-/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.hpp
-math.h
-/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/math.h
-
-/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/sphere.hpp
-vector
--
-sphericalpoint.hpp
-/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/sphericalpoint.hpp
-point.hpp
-/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.hpp
-
-/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/sphericalpoint.cpp
 sphericalpoint.hpp
 /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/sphericalpoint.hpp
 

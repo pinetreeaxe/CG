@@ -7,7 +7,14 @@ CMakeFiles/generator.dir/box.cpp.o: ../point.hpp
 CMakeFiles/generator.dir/box.cpp.o: ../sphericalpoint.hpp
 CMakeFiles/generator.dir/box.cpp.o: ../vector.hpp
 
+CMakeFiles/generator.dir/cone.cpp.o: ../cone.cpp
+CMakeFiles/generator.dir/cone.cpp.o: ../cone.hpp
+CMakeFiles/generator.dir/cone.cpp.o: ../point.hpp
+CMakeFiles/generator.dir/cone.cpp.o: ../sphericalpoint.hpp
+CMakeFiles/generator.dir/cone.cpp.o: ../vector.hpp
+
 CMakeFiles/generator.dir/generator.cpp.o: ../box.hpp
+CMakeFiles/generator.dir/generator.cpp.o: ../cone.hpp
 CMakeFiles/generator.dir/generator.cpp.o: ../generator.cpp
 CMakeFiles/generator.dir/generator.cpp.o: ../plane.hpp
 CMakeFiles/generator.dir/generator.cpp.o: ../point.hpp

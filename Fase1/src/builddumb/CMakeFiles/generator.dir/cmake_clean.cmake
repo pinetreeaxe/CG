@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/generator.dir/box.cpp.o"
+  "CMakeFiles/generator.dir/cone.cpp.o"
   "CMakeFiles/generator.dir/generator.cpp.o"
   "CMakeFiles/generator.dir/plane.cpp.o"
   "CMakeFiles/generator.dir/point.cpp.o"

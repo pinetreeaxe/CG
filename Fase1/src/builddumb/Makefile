@@ -182,6 +182,33 @@ box.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/box.cpp.s
 .PHONY : box.cpp.s
 
+cone.o: cone.cpp.o
+
+.PHONY : cone.o
+
+# target to build an object file
+cone.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/cone.cpp.o
+.PHONY : cone.cpp.o
+
+cone.i: cone.cpp.i
+
+.PHONY : cone.i
+
+# target to preprocess a source file
+cone.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/cone.cpp.i
+.PHONY : cone.cpp.i
+
+cone.s: cone.cpp.s
+
+.PHONY : cone.s
+
+# target to generate assembly for a file
+cone.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/cone.cpp.s
+.PHONY : cone.cpp.s
+
 engine.o: engine.cpp.o
 
 .PHONY : engine.o
@@ -447,6 +474,9 @@ help:
 	@echo "... box.o"
 	@echo "... box.i"
 	@echo "... box.s"
+	@echo "... cone.o"
+	@echo "... cone.i"
+	@echo "... cone.s"
 	@echo "... engine.o"
 	@echo "... engine.i"
 	@echo "... engine.s"
