@@ -16,6 +16,10 @@
 
 
 Models models;
+float angleX = 0;
+float angleY = 0;
+float angleZ = 0;
+GLenum mode = GL_FILL;
 
 void changeSize(int w, int h) {
 
@@ -65,20 +69,55 @@ void renderScene(void) {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	// set the camera
-	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	glLoadIdentity();
 	gluLookAt(5.0,5.0,5.0, 0.0,0.0,0.0, 0.0f,1.0f,0.0f);
-	
+	glPolygonMode(GL_FRONT_AND_BACK, mode);
+
 	drawAxis();
+	glRotatef(angleX,1.0,0.0,0.0);
+	glRotatef(angleY,0.0,1.0,0.0);
+	glRotatef(angleZ,0.0,0.0,1.0);
 	models.drawModels();
 	
 	// End of frame
 	glutSwapBuffers();
 }
 
-void reage(unsigned char key, int x, int y) {
-	switch (key) {
-		//Não tem nada ainda, só quero isto pelo glutPostRedisplay.
+void keyReaction(unsigned char key, int x, int y){
+	switch(key){
+		case '1':
+			mode = GL_LINE;
+			break;
+		case '2':
+			mode = GL_POINT;
+			break;
+		case '3':
+			mode = GL_FILL;
+			break;
+		case 'z':
+			angleX += 10;
+			break;
+		case 'x':
+			angleX -= 10;
+			break;
+		case 'c':
+			angleZ += 10;
+			break;
+		case 'v':
+			angleZ -= 10;
+			break;	
+		case 'a':
+			angleY -= 10;
+			break;
+		case 'd':
+			angleY += 10;
+			break;
+		case 'r':
+			angleX = 0;
+			angleY = 0;
+			angleZ = 0;
+			mode = GL_FILL;
+			break;
 	}
 	glutPostRedisplay();
 }
@@ -98,7 +137,7 @@ int main(int argc, char **argv) {
 // Required callback registry 
 	glutDisplayFunc(renderScene);
 	glutReshapeFunc(changeSize);
-	glutKeyboardFunc(reage);
+	glutKeyboardFunc(keyReaction);
 
 //  OpenGL settings
 	glEnable(GL_DEPTH_TEST);

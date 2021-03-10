@@ -28,37 +28,11 @@ ostream
 fstream
 -
 
-/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/models.cpp
-stdlib.h
--
-GLUT/glut.h
--
-GL/glut.h
--
-models.hpp
-/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/models.hpp
-tinyxml2.h
-/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/tinyxml2.h
-fstream
--
-iostream
--
-string
--
-random
--
-
 /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/models.hpp
 point.hpp
 /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.hpp
 vector
 -
-
-/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.cpp
-point.hpp
-/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.hpp
-math.h
-/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/math.h
 
 /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/point.hpp
 string
@@ -103,10 +77,6 @@ android/log.h
 -
 assert.h
 -
-
-/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/vector.cpp
-vector.hpp
-/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/vector.hpp
 
 /home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/vector.hpp
 string
