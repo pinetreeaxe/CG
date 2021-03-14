@@ -12,7 +12,6 @@ class Model {
     public:
         Model(const char *);
         void drawModel();
-        void printValores();
 };
 
 class Models {
