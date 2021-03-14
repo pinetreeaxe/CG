@@ -34,9 +34,7 @@ Model::Model(const char* fileName){
     std::ifstream file(fileName);
         while(file >> x >> y >> z){
             points.push_back(Point(x,y,z));
-        }
-    for(Point p: points){
-    }    
+        }  
 }
 
 Models::Models(){
