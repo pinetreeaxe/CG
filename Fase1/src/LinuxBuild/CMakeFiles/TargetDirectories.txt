@@ -1,0 +1,4 @@
+/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/LinuxBuild/CMakeFiles/rebuild_cache.dir
+/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/LinuxBuild/CMakeFiles/edit_cache.dir
+/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/LinuxBuild/CMakeFiles/generator.dir
+/home/martim/aulas/2sem/cg/Trabalho/CG/Fase1/src/LinuxBuild/CMakeFiles/engine.dir

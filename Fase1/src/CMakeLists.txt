@@ -10,10 +10,10 @@ set(CMAKE_BUILD_TYPE Debug)
 add_executable(${PROJECT_NAME} engine.cpp point.cpp vector.cpp tinyxml2.cpp models.cpp sphericalpoint.cpp)
 add_executable(generator generator.cpp point.cpp plane.cpp box.cpp vector.cpp sphere.cpp sphericalpoint.cpp cone.cpp)
 
-#find_package(OpenGL REQUIRED)
-#include_directories(${OpenGL_INCLUDE_DIRS})
-#link_directories(${OpenGL_LIBRARY_DIRS})
-#add_definitions(${OpenGL_DEFINITIONS})
+find_package(OpenGL REQUIRED)
+include_directories(${OpenGL_INCLUDE_DIRS})
+link_directories(${OpenGL_LIBRARY_DIRS})
+add_definitions(${OpenGL_DEFINITIONS})
 
 if  (WIN32)
 
