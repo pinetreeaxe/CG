@@ -1,26 +1,23 @@
 # CMake generation dependency list for this directory.
-D:/Uni/CG/CMake/share/cmake-3.20/Modules/CMakeCInformation.cmake
-D:/Uni/CG/CMake/share/cmake-3.20/Modules/CMakeCXXInformation.cmake
-D:/Uni/CG/CMake/share/cmake-3.20/Modules/CMakeCommonLanguageInclude.cmake
-D:/Uni/CG/CMake/share/cmake-3.20/Modules/CMakeGenericSystem.cmake
-D:/Uni/CG/CMake/share/cmake-3.20/Modules/CMakeInitializeConfigs.cmake
-D:/Uni/CG/CMake/share/cmake-3.20/Modules/CMakeLanguageInformation.cmake
-D:/Uni/CG/CMake/share/cmake-3.20/Modules/CMakeRCInformation.cmake
-D:/Uni/CG/CMake/share/cmake-3.20/Modules/CMakeSystemSpecificInformation.cmake
-D:/Uni/CG/CMake/share/cmake-3.20/Modules/CMakeSystemSpecificInitialize.cmake
-D:/Uni/CG/CMake/share/cmake-3.20/Modules/Compiler/CMakeCommonCompilerMacros.cmake
-D:/Uni/CG/CMake/share/cmake-3.20/Modules/Compiler/MSVC-C.cmake
-D:/Uni/CG/CMake/share/cmake-3.20/Modules/Compiler/MSVC-CXX.cmake
-D:/Uni/CG/CMake/share/cmake-3.20/Modules/FindOpenGL.cmake
-D:/Uni/CG/CMake/share/cmake-3.20/Modules/FindPackageHandleStandardArgs.cmake
-D:/Uni/CG/CMake/share/cmake-3.20/Modules/FindPackageMessage.cmake
-D:/Uni/CG/CMake/share/cmake-3.20/Modules/Platform/Windows-MSVC-C.cmake
-D:/Uni/CG/CMake/share/cmake-3.20/Modules/Platform/Windows-MSVC-CXX.cmake
-D:/Uni/CG/CMake/share/cmake-3.20/Modules/Platform/Windows-MSVC.cmake
-D:/Uni/CG/CMake/share/cmake-3.20/Modules/Platform/Windows.cmake
-D:/Uni/CG/CMake/share/cmake-3.20/Modules/Platform/WindowsPaths.cmake
-D:/Uni/CG/Trabalho/CG/Fase1/src/CMakeLists.txt
-D:/Uni/CG/Trabalho/CG/Fase1/src/build/CMakeFiles/3.20.0-rc1/CMakeCCompiler.cmake
-D:/Uni/CG/Trabalho/CG/Fase1/src/build/CMakeFiles/3.20.0-rc1/CMakeCXXCompiler.cmake
-D:/Uni/CG/Trabalho/CG/Fase1/src/build/CMakeFiles/3.20.0-rc1/CMakeRCCompiler.cmake
-D:/Uni/CG/Trabalho/CG/Fase1/src/build/CMakeFiles/3.20.0-rc1/CMakeSystem.cmake
+C:/CG/CG/Fase1/src/CMakeLists.txt
+C:/CG/CG/Fase1/src/build/CMakeFiles/3.19.5/CMakeCCompiler.cmake
+C:/CG/CG/Fase1/src/build/CMakeFiles/3.19.5/CMakeCXXCompiler.cmake
+C:/CG/CG/Fase1/src/build/CMakeFiles/3.19.5/CMakeRCCompiler.cmake
+C:/CG/CG/Fase1/src/build/CMakeFiles/3.19.5/CMakeSystem.cmake
+C:/Program Files/CMake/share/cmake-3.19/Modules/CMakeCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.19/Modules/CMakeCXXInformation.cmake
+C:/Program Files/CMake/share/cmake-3.19/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/CMake/share/cmake-3.19/Modules/CMakeGenericSystem.cmake
+C:/Program Files/CMake/share/cmake-3.19/Modules/CMakeInitializeConfigs.cmake
+C:/Program Files/CMake/share/cmake-3.19/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-3.19/Modules/CMakeRCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.19/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files/CMake/share/cmake-3.19/Modules/CMakeSystemSpecificInitialize.cmake
+C:/Program Files/CMake/share/cmake-3.19/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+C:/Program Files/CMake/share/cmake-3.19/Modules/Compiler/MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.19/Modules/Compiler/MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.19/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.19/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.19/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files/CMake/share/cmake-3.19/Modules/Platform/Windows.cmake
+C:/Program Files/CMake/share/cmake-3.19/Modules/Platform/WindowsPaths.cmake

@@ -22,8 +22,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{68534958-13C5-3BAA-9E92-5121D607C2B9}</ProjectGuid>
-    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <ProjectGuid>{E38C871E-7638-35B6-9CFF-FF723A5442B1}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>ALL_BUILD</ProjectName>
@@ -66,7 +66,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>D:\Uni\CG\Trabalho\CG\Fase1\toolkits\glut;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\CG\CG\Fase1\toolkits\glut;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -76,7 +76,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>D:\Uni\CG\Trabalho\CG\Fase1\toolkits\glut;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\CG\CG\Fase1\toolkits\glut;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -86,7 +86,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>D:\Uni\CG\Trabalho\CG\Fase1\toolkits\glut;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\CG\CG\Fase1\toolkits\glut;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -96,7 +96,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>D:\Uni\CG\Trabalho\CG\Fase1\toolkits\glut;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\CG\CG\Fase1\toolkits\glut;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -105,11 +105,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Uni\CG\Trabalho\CG\Fase1\src\CMakeLists.txt">
+    <CustomBuild Include="C:\CG\CG\Fase1\src\CMakeLists.txt">
       <StdOutEncoding>UTF-8</StdOutEncoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/Uni/CG/Trabalho/CG/Fase1/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/CG/CG/Fase1/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-D:\Uni\CG\CMake\bin\cmake.exe -SD:/Uni/CG/Trabalho/CG/Fase1/src -BD:/Uni/CG/Trabalho/CG/Fase1/src/build --check-stamp-file D:/Uni/CG/Trabalho/CG/Fase1/src/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/CG/CG/Fase1/src -BC:/CG/CG/Fase1/src/build --check-stamp-file C:/CG/CG/Fase1/src/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -117,12 +117,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\FindOpenGL.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\FindPackageHandleStandardArgs.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\FindPackageMessage.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake;D:\Uni\CG\Trabalho\CG\Fase1\src\build\CMakeFiles\3.20.0-rc1\CMakeCCompiler.cmake;D:\Uni\CG\Trabalho\CG\Fase1\src\build\CMakeFiles\3.20.0-rc1\CMakeCXXCompiler.cmake;D:\Uni\CG\Trabalho\CG\Fase1\src\build\CMakeFiles\3.20.0-rc1\CMakeRCCompiler.cmake;D:\Uni\CG\Trabalho\CG\Fase1\src\build\CMakeFiles\3.20.0-rc1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Uni\CG\Trabalho\CG\Fase1\src\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\CG\CG\Fase1\src\build\CMakeFiles\3.19.5\CMakeCCompiler.cmake;C:\CG\CG\Fase1\src\build\CMakeFiles\3.19.5\CMakeCXXCompiler.cmake;C:\CG\CG\Fase1\src\build\CMakeFiles\3.19.5\CMakeRCCompiler.cmake;C:\CG\CG\Fase1\src\build\CMakeFiles\3.19.5\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\CG\CG\Fase1\src\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/Uni/CG/Trabalho/CG/Fase1/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/CG/CG/Fase1/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-D:\Uni\CG\CMake\bin\cmake.exe -SD:/Uni/CG/Trabalho/CG/Fase1/src -BD:/Uni/CG/Trabalho/CG/Fase1/src/build --check-stamp-file D:/Uni/CG/Trabalho/CG/Fase1/src/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/CG/CG/Fase1/src -BC:/CG/CG/Fase1/src/build --check-stamp-file C:/CG/CG/Fase1/src/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -130,12 +130,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\FindOpenGL.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\FindPackageHandleStandardArgs.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\FindPackageMessage.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake;D:\Uni\CG\Trabalho\CG\Fase1\src\build\CMakeFiles\3.20.0-rc1\CMakeCCompiler.cmake;D:\Uni\CG\Trabalho\CG\Fase1\src\build\CMakeFiles\3.20.0-rc1\CMakeCXXCompiler.cmake;D:\Uni\CG\Trabalho\CG\Fase1\src\build\CMakeFiles\3.20.0-rc1\CMakeRCCompiler.cmake;D:\Uni\CG\Trabalho\CG\Fase1\src\build\CMakeFiles\3.20.0-rc1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Uni\CG\Trabalho\CG\Fase1\src\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\CG\CG\Fase1\src\build\CMakeFiles\3.19.5\CMakeCCompiler.cmake;C:\CG\CG\Fase1\src\build\CMakeFiles\3.19.5\CMakeCXXCompiler.cmake;C:\CG\CG\Fase1\src\build\CMakeFiles\3.19.5\CMakeRCCompiler.cmake;C:\CG\CG\Fase1\src\build\CMakeFiles\3.19.5\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\CG\CG\Fase1\src\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/Uni/CG/Trabalho/CG/Fase1/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/CG/CG/Fase1/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-D:\Uni\CG\CMake\bin\cmake.exe -SD:/Uni/CG/Trabalho/CG/Fase1/src -BD:/Uni/CG/Trabalho/CG/Fase1/src/build --check-stamp-file D:/Uni/CG/Trabalho/CG/Fase1/src/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/CG/CG/Fase1/src -BC:/CG/CG/Fase1/src/build --check-stamp-file C:/CG/CG/Fase1/src/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -143,12 +143,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\FindOpenGL.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\FindPackageHandleStandardArgs.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\FindPackageMessage.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake;D:\Uni\CG\Trabalho\CG\Fase1\src\build\CMakeFiles\3.20.0-rc1\CMakeCCompiler.cmake;D:\Uni\CG\Trabalho\CG\Fase1\src\build\CMakeFiles\3.20.0-rc1\CMakeCXXCompiler.cmake;D:\Uni\CG\Trabalho\CG\Fase1\src\build\CMakeFiles\3.20.0-rc1\CMakeRCCompiler.cmake;D:\Uni\CG\Trabalho\CG\Fase1\src\build\CMakeFiles\3.20.0-rc1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Uni\CG\Trabalho\CG\Fase1\src\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\CG\CG\Fase1\src\build\CMakeFiles\3.19.5\CMakeCCompiler.cmake;C:\CG\CG\Fase1\src\build\CMakeFiles\3.19.5\CMakeCXXCompiler.cmake;C:\CG\CG\Fase1\src\build\CMakeFiles\3.19.5\CMakeRCCompiler.cmake;C:\CG\CG\Fase1\src\build\CMakeFiles\3.19.5\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\CG\CG\Fase1\src\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/Uni/CG/Trabalho/CG/Fase1/src/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/CG/CG/Fase1/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-D:\Uni\CG\CMake\bin\cmake.exe -SD:/Uni/CG/Trabalho/CG/Fase1/src -BD:/Uni/CG/Trabalho/CG/Fase1/src/build --check-stamp-file D:/Uni/CG/Trabalho/CG/Fase1/src/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/CG/CG/Fase1/src -BC:/CG/CG/Fase1/src/build --check-stamp-file C:/CG/CG/Fase1/src/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -156,26 +156,26 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\FindOpenGL.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\FindPackageHandleStandardArgs.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\FindPackageMessage.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake;D:\Uni\CG\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake;D:\Uni\CG\Trabalho\CG\Fase1\src\build\CMakeFiles\3.20.0-rc1\CMakeCCompiler.cmake;D:\Uni\CG\Trabalho\CG\Fase1\src\build\CMakeFiles\3.20.0-rc1\CMakeCXXCompiler.cmake;D:\Uni\CG\Trabalho\CG\Fase1\src\build\CMakeFiles\3.20.0-rc1\CMakeRCCompiler.cmake;D:\Uni\CG\Trabalho\CG\Fase1\src\build\CMakeFiles\3.20.0-rc1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Uni\CG\Trabalho\CG\Fase1\src\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\CG\CG\Fase1\src\build\CMakeFiles\3.19.5\CMakeCCompiler.cmake;C:\CG\CG\Fase1\src\build\CMakeFiles\3.19.5\CMakeCXXCompiler.cmake;C:\CG\CG\Fase1\src\build\CMakeFiles\3.19.5\CMakeRCCompiler.cmake;C:\CG\CG\Fase1\src\build\CMakeFiles\3.19.5\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.19\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\CG\CG\Fase1\src\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\Uni\CG\Trabalho\CG\Fase1\src\build\ZERO_CHECK.vcxproj">
-      <Project>{FC2533B2-35A1-312F-BA92-9E16C8345A8A}</Project>
+    <ProjectReference Include="C:\CG\CG\Fase1\src\build\ZERO_CHECK.vcxproj">
+      <Project>{8FF5E525-3EB8-3363-AC39-E91F3EF72F76}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="D:\Uni\CG\Trabalho\CG\Fase1\src\build\engine.vcxproj">
-      <Project>{2D2A0EA8-2AD2-3AD4-A9DF-7C09C8B07B66}</Project>
+    <ProjectReference Include="C:\CG\CG\Fase1\src\build\engine.vcxproj">
+      <Project>{44B42335-A100-3A47-AC7F-6C5F9C7A7487}</Project>
       <Name>engine</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Uni\CG\Trabalho\CG\Fase1\src\build\generator.vcxproj">
-      <Project>{72388FB2-8C63-33B6-9EF4-47AC2C4C74DD}</Project>
+    <ProjectReference Include="C:\CG\CG\Fase1\src\build\generator.vcxproj">
+      <Project>{1921BF68-47EE-305D-B2B2-3CE7DE1CBDA9}</Project>
       <Name>generator</Name>
     </ProjectReference>
   </ItemGroup>

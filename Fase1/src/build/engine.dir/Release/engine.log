@@ -1,3 +1,10 @@
-﻿  engine.cpp
-D:\Uni\CG\Trabalho\CG\Fase1\src\engine.cpp(134,2): warning C4060: switch statement contains no 'case' or 'default' labels
-  engine.vcxproj -> D:\Uni\CG\Trabalho\CG\Fase1\src\build\Release\engine.exe
+﻿  Building Custom Rule C:/CG/CG/Fase1/src/CMakeLists.txt
+  engine.cpp
+  point.cpp
+  vector.cpp
+  tinyxml2.cpp
+  models.cpp
+C:\CG\CG\Fase1\src\models.cpp(26,23): warning C4018: '<': signed/unsigned mismatch
+  sphericalpoint.cpp
+  Generating Code...
+  engine.vcxproj -> C:\CG\CG\Fase1\src\build\Release\engine.exe

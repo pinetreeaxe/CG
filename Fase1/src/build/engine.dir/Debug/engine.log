@@ -1,9 +1,10 @@
-﻿  engine.cpp
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdlib.h(52,48): error C2381: 'exit': redefinition; 'noreturn' differs
-D:\Uni\CG\Trabalho\CG\Fase1\toolkits\glut\GL/glut.h(146): message : see declaration of 'exit'
-D:\Uni\CG\Trabalho\CG\Fase1\src\engine.cpp(133,2): warning C4060: switch statement contains no 'case' or 'default' labels
+﻿  Building Custom Rule C:/CG/CG/Fase1/src/CMakeLists.txt
+  engine.cpp
+  point.cpp
+  vector.cpp
+  tinyxml2.cpp
   models.cpp
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdlib.h(52,48): error C2381: 'exit': redefinition; 'noreturn' differs
-D:\Uni\CG\Trabalho\CG\Fase1\toolkits\glut\GL/glut.h(146): message : see declaration of 'exit'
-D:\Uni\CG\Trabalho\CG\Fase1\src\models.cpp(43,16): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'std::string'
+C:\CG\CG\Fase1\src\models.cpp(26,23): warning C4018: '<': signed/unsigned mismatch
+  sphericalpoint.cpp
   Generating Code...
+  engine.vcxproj -> C:\CG\CG\Fase1\src\build\Debug\engine.exe

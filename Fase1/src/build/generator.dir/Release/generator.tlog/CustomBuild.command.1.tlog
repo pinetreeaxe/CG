@@ -1,6 +1,6 @@
-^D:\UNI\CG\TRABALHO\CG\FASE1\SRC\CMAKELISTS.TXT
+^C:\CG\CG\FASE1\SRC\CMAKELISTS.TXT
 setlocal
-D:\Uni\CG\CMake\bin\cmake.exe -SD:/Uni/CG/Trabalho/CG/Fase1/src -BD:/Uni/CG/Trabalho/CG/Fase1/src/build --check-stamp-file D:/Uni/CG/Trabalho/CG/Fase1/src/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/CG/CG/Fase1/src -BC:/CG/CG/Fase1/src/build --check-stamp-file C:/CG/CG/Fase1/src/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
