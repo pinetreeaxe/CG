@@ -1,4 +1,0 @@
-C:/CG/CG/Fase1/src/build/CMakeFiles/engine.dir
-C:/CG/CG/Fase1/src/build/CMakeFiles/generator.dir
-C:/CG/CG/Fase1/src/build/CMakeFiles/ALL_BUILD.dir
-C:/CG/CG/Fase1/src/build/CMakeFiles/ZERO_CHECK.dir
