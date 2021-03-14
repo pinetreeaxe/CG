@@ -52,7 +52,7 @@ void Models::readFile(char * fileName){
 
     tinyxml2::XMLNode* scene = xmlDOC.FirstChildElement("scene");
 	if (scene == NULL){
-		printf("Scene not founded.\n");
+		printf("Scene not found.\n");
 		exit(0);
 	}
 
