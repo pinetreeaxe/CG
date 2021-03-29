@@ -27,7 +27,7 @@ class Rotate {
         Rotate(float, float, float, float);
         void transform();
 };
-
+/*
 class Transformation {
     private:
         std::variant<Translate,Rotate> t;
@@ -36,5 +36,5 @@ class Transformation {
         Transformation(Rotate);
         void transform();
 };
-
+*/
 #endif

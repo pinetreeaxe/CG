@@ -1,0 +1,5 @@
+<scene>
+    <translate X=1 Y=1 Z=0 />
+    <rotate angle=45 axisX=0 axisY=1 axisZ=0 />
+    <model file="torus.3d" />
+</scene>

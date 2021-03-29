@@ -1,6 +1,7 @@
 #ifndef MODELS_H
 #define MODELS_H
 
+#include "transformation.hpp"
 #include "point.hpp"
 #include <vector>
 
@@ -17,6 +18,9 @@ class Model {
 class Models {
     private:
         std::vector<Model> models;
+        std::vector<Translate> translations;
+        std::vector<Rotate> rotations;
+        //std::vector<Transformation> transformations;
     
     public:
         Models();
