@@ -20,6 +20,17 @@ float angleX = 0;
 float angleY = 0;
 float angleZ = 0;
 GLenum mode = GL_FILL;
+float camAlfa = 0.75f, camBeta = 0.5f, camRadius = 10.0f;
+float camX, camY, camZ;
+
+
+void spherical2Cartesian() {
+
+	camX = camRadius * cos(camBeta) * sin(camAlfa);
+	camY = camRadius * sin(camBeta);
+	camZ = camRadius * cos(camBeta) * cos(camAlfa);
+}
+
 
 void changeSize(int w, int h) {
 
@@ -70,7 +81,7 @@ void renderScene(void) {
 
 	// set the camera
 	glLoadIdentity();
-	gluLookAt(5.0,5.0,5.0, 0.0,0.0,0.0, 0.0f,1.0f,0.0f);
+	gluLookAt(camX,camY,camZ, 0.0,0.0,0.0, 0.0f,1.0f,0.0f);
 	glPolygonMode(GL_FRONT_AND_BACK, mode);
 
 	drawAxis();
@@ -94,31 +105,38 @@ void keyReaction(unsigned char key, int x, int y){
 		case '3':
 			mode = GL_FILL;
 			break;
-		case 'z':
-			angleX += 10;
+		case '+':
+			camRadius -= 0.1f;
+			if (camRadius < 1.0f)
+				camRadius = 1.0f;
 			break;
-		case 'x':
-			angleX -= 10;
+		case '-':
+			camRadius += 0.1f;
 			break;
-		case 'c':
-			angleZ += 10;
+		case 'w':
+			camBeta += 0.1f;
+			if (camBeta > 1.5f)
+				camBeta = 1.5f;
 			break;
-		case 'v':
-			angleZ -= 10;
-			break;	
+		case 's':
+			camBeta -= 0.1f;
+			if (camBeta < -1.5f)
+				camBeta = -1.5f;
+			break;
 		case 'a':
-			angleY -= 10;
+			camAlfa += 0.1; break;
 			break;
 		case 'd':
-			angleY += 10;
+			camAlfa -= 0.1; break;
 			break;
 		case 'r':
-			angleX = 0;
-			angleY = 0;
-			angleZ = 0;
+			camAlfa = 0.75f;
+			camBeta = 0.5f;
+			camRadius = 10.0f;
 			mode = GL_FILL;
 			break;
 	}
+	spherical2Cartesian();
 	glutPostRedisplay();
 }
 
@@ -142,6 +160,8 @@ int main(int argc, char **argv) {
 //  OpenGL settings
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_CULL_FACE);
+
+	spherical2Cartesian();
 	
 // enter GLUT's main cycle
 	glutMainLoop();
