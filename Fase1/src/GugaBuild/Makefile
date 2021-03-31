@@ -439,6 +439,33 @@ torus.cpp.s:
 	$(MAKE) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/torus.cpp.s
 .PHONY : torus.cpp.s
 
+transformation.o: transformation.cpp.o
+
+.PHONY : transformation.o
+
+# target to build an object file
+transformation.cpp.o:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/transformation.cpp.o
+.PHONY : transformation.cpp.o
+
+transformation.i: transformation.cpp.i
+
+.PHONY : transformation.i
+
+# target to preprocess a source file
+transformation.cpp.i:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/transformation.cpp.i
+.PHONY : transformation.cpp.i
+
+transformation.s: transformation.cpp.s
+
+.PHONY : transformation.s
+
+# target to generate assembly for a file
+transformation.cpp.s:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/transformation.cpp.s
+.PHONY : transformation.cpp.s
+
 vector.o: vector.cpp.o
 
 .PHONY : vector.o
@@ -512,6 +539,9 @@ help:
 	@echo "... torus.o"
 	@echo "... torus.i"
 	@echo "... torus.s"
+	@echo "... transformation.o"
+	@echo "... transformation.i"
+	@echo "... transformation.s"
 	@echo "... vector.o"
 	@echo "... vector.i"
 	@echo "... vector.s"

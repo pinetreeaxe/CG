@@ -7,6 +7,7 @@ CMakeFiles/engine.dir/engine.cpp.o
  /home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/sphericalpoint.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/tinyxml2.h
+ /home/gustavo/Documents/CG/CG/Fase1/src/transformation.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/vector.hpp
 CMakeFiles/engine.dir/models.cpp.o
  /home/gustavo/Documents/CG/CG/Fase1/src/models.cpp
@@ -14,6 +15,7 @@ CMakeFiles/engine.dir/models.cpp.o
  /home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/sphericalpoint.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/tinyxml2.h
+ /home/gustavo/Documents/CG/CG/Fase1/src/transformation.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/vector.hpp
 CMakeFiles/engine.dir/point.cpp.o
  /home/gustavo/Documents/CG/CG/Fase1/src/point.cpp
@@ -26,6 +28,9 @@ CMakeFiles/engine.dir/sphericalpoint.cpp.o
 CMakeFiles/engine.dir/tinyxml2.cpp.o
  /home/gustavo/Documents/CG/CG/Fase1/src/tinyxml2.cpp
  /home/gustavo/Documents/CG/CG/Fase1/src/tinyxml2.h
+CMakeFiles/engine.dir/transformation.cpp.o
+ /home/gustavo/Documents/CG/CG/Fase1/src/transformation.cpp
+ /home/gustavo/Documents/CG/CG/Fase1/src/transformation.hpp
 CMakeFiles/engine.dir/vector.cpp.o
  /home/gustavo/Documents/CG/CG/Fase1/src/vector.cpp
  /home/gustavo/Documents/CG/CG/Fase1/src/vector.hpp

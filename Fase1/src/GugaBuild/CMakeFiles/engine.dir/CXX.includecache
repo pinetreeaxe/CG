@@ -49,6 +49,8 @@ random
 -
 
 /home/gustavo/Documents/CG/CG/Fase1/src/models.hpp
+transformation.hpp
+/home/gustavo/Documents/CG/CG/Fase1/src/transformation.hpp
 point.hpp
 /home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
 vector
@@ -120,6 +122,22 @@ stdint.h
 android/log.h
 -
 assert.h
+-
+
+/home/gustavo/Documents/CG/CG/Fase1/src/transformation.cpp
+transformation.hpp
+/home/gustavo/Documents/CG/CG/Fase1/src/transformation.hpp
+
+/home/gustavo/Documents/CG/CG/Fase1/src/transformation.hpp
+GL/gl.h
+-
+variant
+-
+vector
+-
+GLUT/glut.h
+-
+GL/glut.h
 -
 
 /home/gustavo/Documents/CG/CG/Fase1/src/vector.cpp

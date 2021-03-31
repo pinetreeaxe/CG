@@ -22,13 +22,14 @@ float angleZ = 0;
 GLenum mode = GL_FILL;
 float camAlfa = 0.75f, camBeta = 0.5f, camRadius = 10.0f;
 float camX, camY, camZ;
+float centerX = 0.0f, centerY = 0.0f, centerZ = 0.0f;
 
 
 void spherical2Cartesian() {
 
-	camX = camRadius * cos(camBeta) * sin(camAlfa);
-	camY = camRadius * sin(camBeta);
-	camZ = camRadius * cos(camBeta) * cos(camAlfa);
+	camX = centerX + camRadius * cos(camBeta) * sin(camAlfa);
+	camY = centerY + camRadius * sin(camBeta);
+	camZ = centerZ + camRadius * cos(camBeta) * cos(camAlfa);
 }
 
 
@@ -81,7 +82,9 @@ void renderScene(void) {
 
 	// set the camera
 	glLoadIdentity();
-	gluLookAt(camX,camY,camZ, 0.0,0.0,0.0, 0.0f,1.0f,0.0f);
+	gluLookAt(camX,camY,camZ,
+			  centerX,centerY,centerZ,
+			  0.0f,1.0f,0.0f);
 	glPolygonMode(GL_FRONT_AND_BACK, mode);
 
 	drawAxis();
@@ -124,10 +127,10 @@ void keyReaction(unsigned char key, int x, int y){
 				camBeta = -1.5f;
 			break;
 		case 'a':
-			camAlfa += 0.1; break;
+			camAlfa -= 0.1; break;
 			break;
 		case 'd':
-			camAlfa -= 0.1; break;
+			camAlfa += 0.1; break;
 			break;
 		case 'r':
 			camAlfa = 0.75f;
@@ -138,6 +141,27 @@ void keyReaction(unsigned char key, int x, int y){
 	}
 	spherical2Cartesian();
 	glutPostRedisplay();
+}
+
+void specialKeyReaction(int key, int xx, int yy) {
+
+	switch (key) {
+
+	case GLUT_KEY_RIGHT:
+		centerX += 0.1f; break;
+
+	case GLUT_KEY_LEFT:
+		centerX -= 0.1; break;
+
+	case GLUT_KEY_UP:
+		centerZ -= 0.1; break;
+
+	case GLUT_KEY_DOWN:
+		centerZ += 0.1; break;
+	}
+	spherical2Cartesian();
+	glutPostRedisplay();
+
 }
 
 int main(int argc, char **argv) {
@@ -156,6 +180,7 @@ int main(int argc, char **argv) {
 	glutDisplayFunc(renderScene);
 	glutReshapeFunc(changeSize);
 	glutKeyboardFunc(keyReaction);
+	glutSpecialFunc(specialKeyReaction);
 
 //  OpenGL settings
 	glEnable(GL_DEPTH_TEST);

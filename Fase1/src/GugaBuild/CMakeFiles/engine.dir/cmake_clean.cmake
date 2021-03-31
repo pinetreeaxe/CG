@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/tinyxml2.cpp.o"
   "CMakeFiles/engine.dir/models.cpp.o"
   "CMakeFiles/engine.dir/sphericalpoint.cpp.o"
+  "CMakeFiles/engine.dir/transformation.cpp.o"
   "engine.pdb"
   "engine"
 )

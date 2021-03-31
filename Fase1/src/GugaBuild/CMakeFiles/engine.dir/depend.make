@@ -6,6 +6,7 @@ CMakeFiles/engine.dir/engine.cpp.o: ../models.hpp
 CMakeFiles/engine.dir/engine.cpp.o: ../point.hpp
 CMakeFiles/engine.dir/engine.cpp.o: ../sphericalpoint.hpp
 CMakeFiles/engine.dir/engine.cpp.o: ../tinyxml2.h
+CMakeFiles/engine.dir/engine.cpp.o: ../transformation.hpp
 CMakeFiles/engine.dir/engine.cpp.o: ../vector.hpp
 
 CMakeFiles/engine.dir/models.cpp.o: ../models.cpp
@@ -13,6 +14,7 @@ CMakeFiles/engine.dir/models.cpp.o: ../models.hpp
 CMakeFiles/engine.dir/models.cpp.o: ../point.hpp
 CMakeFiles/engine.dir/models.cpp.o: ../sphericalpoint.hpp
 CMakeFiles/engine.dir/models.cpp.o: ../tinyxml2.h
+CMakeFiles/engine.dir/models.cpp.o: ../transformation.hpp
 CMakeFiles/engine.dir/models.cpp.o: ../vector.hpp
 
 CMakeFiles/engine.dir/point.cpp.o: ../point.cpp
@@ -25,6 +27,9 @@ CMakeFiles/engine.dir/sphericalpoint.cpp.o: ../sphericalpoint.hpp
 
 CMakeFiles/engine.dir/tinyxml2.cpp.o: ../tinyxml2.cpp
 CMakeFiles/engine.dir/tinyxml2.cpp.o: ../tinyxml2.h
+
+CMakeFiles/engine.dir/transformation.cpp.o: ../transformation.cpp
+CMakeFiles/engine.dir/transformation.cpp.o: ../transformation.hpp
 
 CMakeFiles/engine.dir/vector.cpp.o: ../vector.cpp
 CMakeFiles/engine.dir/vector.cpp.o: ../vector.hpp
