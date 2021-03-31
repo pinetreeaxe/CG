@@ -20,7 +20,7 @@ class Models {
         std::vector<Model> models;
         std::vector<Translate> translations;
         std::vector<Rotate> rotations;
-        //std::vector<Transformation> transformations;
+        std::vector<Scale> scales;
     
     public:
         Models();

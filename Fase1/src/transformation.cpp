@@ -1,9 +1,5 @@
 #include "transformation.hpp"
 
-//template<class... Ts> struct overloaded : Ts... { using Ts::operator()...; };
-// explicit deduction guide (not needed as of C++20)
-//template<class... Ts> overloaded(Ts...) -> overloaded<Ts...>;
-
 Translate::Translate(float xt, float yt, float zt){
     x = xt;
     y = yt;
@@ -24,19 +20,13 @@ Rotate::Rotate(float anglet, float xt, float yt, float zt){
 void Rotate::transform(){
     glRotatef(angle,x,y,z);
 }
-/*
-Transformation::Transformation(Translate transl){
-    t = transl;
+
+Scale::Scale(float xt, float yt, float zt){
+    x = xt;
+    y = yt;
+    z = zt;
 }
 
-Transformation::Transformation(Rotate rot){
-    t = rot;
+void Scale::transform(){
+    glScalef(x,y,z);
 }
-
-void Transformation::transform(){
-    std::visit(overloaded{
-        [](Translate transl) {transl.transform();},
-        [](Rotate rot) {rot.transform();},
-    }, t);
-}
-*/

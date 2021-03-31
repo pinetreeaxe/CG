@@ -27,14 +27,15 @@ class Rotate {
         Rotate(float, float, float, float);
         void transform();
 };
-/*
-class Transformation {
+
+class Scale {
     private:
-        std::variant<Translate,Rotate> t;
+        float x, y, z;
+    
     public:
-        Transformation(Translate);
-        Transformation(Rotate);
+        Scale(float, float, float);
         void transform();
 };
-*/
+
+
 #endif
