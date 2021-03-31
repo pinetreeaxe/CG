@@ -15,6 +15,7 @@ class Translate {
         float x, y, z;
 
     public:
+        Translate();
         Translate(float, float, float);
         void transform();
 };
@@ -24,6 +25,7 @@ class Rotate {
         float angle, x, y, z;
 
     public:
+        Rotate();
         Rotate(float, float, float, float);
         void transform();
 };
@@ -33,9 +35,18 @@ class Scale {
         float x, y, z;
     
     public:
+        Scale();
         Scale(float, float, float);
         void transform();
 };
 
+class Color {
+    private:
+        float r, g, b;
 
+    public:
+        Color();
+        Color(float, float, float);
+        void transform();
+};
 #endif

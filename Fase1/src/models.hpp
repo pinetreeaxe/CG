@@ -3,6 +3,7 @@
 
 #include "transformation.hpp"
 #include "point.hpp"
+#include "tinyxml2.h"
 #include <vector>
 
 class Model {
@@ -17,15 +18,20 @@ class Model {
 
 class Models {
     private:
+        std::vector<Models> groups;
         std::vector<Model> models;
-        std::vector<Translate> translations;
-        std::vector<Rotate> rotations;
-        std::vector<Scale> scales;
+        Translate translation;
+        Rotate rotation;
+        Scale scale;
+        Color color;
     
     public:
         Models();
+        Models(std::vector<Models>, std::vector<Model>, Translate, Rotate, Scale, Color);
         void drawModels();
         void readFile(char *);
+        Models groupParser(tinyxml2::XMLNode*, Color);
+        std::vector<Model> modelsParser(tinyxml2::XMLNode*);
 };
 
 #endif

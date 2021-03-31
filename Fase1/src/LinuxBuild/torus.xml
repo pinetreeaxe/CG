@@ -1,6 +1,17 @@
 <scene>
-    <translate X="2" Y="3" Z="0" />
-    <rotate angle="45" axisX="1" axisY="0" axisZ="0" />
-    <scale X="1" Y="0.1" Z="1"/>
-    <model file="torus.3d" />
+    <group>
+        <scale X="1" Y="0.1" Z="1"/>
+        <group>
+            <translate X="2" Y="3" Z="0" />
+            <rotate angle="45" axisX="1" axisY="0" axisZ="0" />
+            <color R="0.4" G="0.2" B="0.8"/>
+            <model file="torus.3d" />
+        </group>
+        <group>
+            <translate X="3" Y="2" Z="0" />
+            <rotate angle="120" axisX="0" axisY="0" axisZ="1" />
+            <color R="0.8" G="0.4" B="0.2"/>
+            <model file="torus.3d" />
+        </group>
+    </group>
 </scene>
