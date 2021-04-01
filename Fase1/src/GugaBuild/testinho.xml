@@ -1,0 +1,8 @@
+<scene>
+	<group>
+		<scale X="20" Y="20" Z="20"/>
+		<group>
+			<model file = "sphere.3d"/>
+		</group>>
+	</group>
+</scene>

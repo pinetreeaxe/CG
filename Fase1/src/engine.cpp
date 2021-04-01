@@ -20,7 +20,7 @@ float angleX = 0;
 float angleY = 0;
 float angleZ = 0;
 GLenum mode = GL_FILL;
-float camAlfa = 0.75f, camBeta = 0.5f, camRadius = 10.0f;
+float camAlfa = 0.75f, camBeta = 0.5f, camRadius = 200.0f;
 float camX, camY, camZ;
 float centerX = 0.0f, centerY = 0.0f, centerZ = 0.0f;
 
@@ -109,12 +109,12 @@ void keyReaction(unsigned char key, int x, int y){
 			mode = GL_FILL;
 			break;
 		case '+':
-			camRadius -= 0.1f;
-			if (camRadius < 1.0f)
-				camRadius = 1.0f;
+			camRadius -= 0.5f;
+			if (camRadius < 10.0f)
+				camRadius = 10.0f;
 			break;
 		case '-':
-			camRadius += 0.1f;
+			camRadius += 0.5f;
 			break;
 		case 'w':
 			camBeta += 0.1f;
@@ -151,16 +151,16 @@ void specialKeyReaction(int key, int xx, int yy) {
 	switch (key) {
 
 	case GLUT_KEY_RIGHT:
-		centerX += 0.1f; break;
+		centerX += 0.5f; break;
 
 	case GLUT_KEY_LEFT:
-		centerX -= 0.1; break;
+		centerX -= 0.5f; break;
 
 	case GLUT_KEY_UP:
-		centerZ -= 0.1; break;
+		centerZ -= 0.5f; break;
 
 	case GLUT_KEY_DOWN:
-		centerZ += 0.1; break;
+		centerZ += 0.5f; break;
 	}
 	spherical2Cartesian();
 	glutPostRedisplay();
