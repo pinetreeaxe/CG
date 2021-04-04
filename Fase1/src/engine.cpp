@@ -135,7 +135,7 @@ void keyReaction(unsigned char key, int x, int y){
 		case 'r':
 			camAlfa = 0.75f;
 			camBeta = 0.5f;
-			camRadius = 10.0f;
+			camRadius = 200.0f;
 			centerX = 0.0f;
 			centerY = 0.0f;
 			centerZ = 0.0f;
