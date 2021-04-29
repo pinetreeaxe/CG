@@ -98,7 +98,7 @@ void CatmullRom::getGlobalCatmullRomPoint(float gt, float *pos, float *deriv) {
 	getCatmullRomPoint(t, points[indices[0]], points[indices[1]], points[indices[2]], points[indices[3]], pos, deriv);
 }
 
-void CatmullRom::renderCatmullRomCurve(float timestamp) {
+void CatmullRom::transform(float timestamp) {
 
 // draw curve using line segments with GL_LINE_LOOP
     if(points.size()>=4){
@@ -159,17 +159,25 @@ Rotate::Rotate(){
     x = 0.0f;
     y = 0.0f;
     z = 0.0f;
+    time = 0.0f;
 }
 
-Rotate::Rotate(float anglet, float xt, float yt, float zt){
+Rotate::Rotate(float anglet, float xt, float yt, float zt, float timet){
     angle = anglet;
     x = xt;
     y = yt;
     z = zt;
+    time = timet;
 }
 
-void Rotate::transform(){
-    glRotatef(angle,x,y,z);
+void Rotate::transform(float timestamp){
+    float realAngle;
+    if(time == 0)
+        realAngle = angle;
+    else
+        realAngle = angle + timestamp * (360/time);
+    glRotatef(realAngle,x,y,z);
+    //a
 }
 
 Scale::Scale(){

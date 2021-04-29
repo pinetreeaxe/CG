@@ -26,7 +26,7 @@ class CatmullRom {
         void multMatrixVector(float[4][4], float*, float *);
         void getCatmullRomPoint(float, Point, Point, Point, Point, float *, float *);
         void getGlobalCatmullRomPoint(float, float *, float *);
-        void renderCatmullRomCurve(float);
+        void transform(float);
 };
 
 class Translate {
@@ -41,12 +41,12 @@ class Translate {
 
 class Rotate {
     private:
-        float angle, x, y, z;
+        float angle, x, y, z, time;
 
     public:
         Rotate();
-        Rotate(float, float, float, float);
-        void transform();
+        Rotate(float, float, float, float,float);
+        void transform(float);
 };
 
 class Scale {

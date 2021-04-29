@@ -136,7 +136,7 @@ Models Models::groupParser(tinyxml2::XMLNode* group, Color gColor){
             }
         }
         else if(!strcmp(type->Value(), "rotate")){
-            float angle,x,y,z;
+            float angle,x,y,z,time;
             if(type->ToElement()->Attribute("angle"))
                 angle = std::stof(type->ToElement()->Attribute("angle"));
             else
@@ -153,7 +153,12 @@ Models Models::groupParser(tinyxml2::XMLNode* group, Color gColor){
                 z = std::stof(type->ToElement()->Attribute("axisZ"));
             else
                 z = 0;
-            nRotation = Rotate(angle,x,y,z);
+            if(type->ToElement()->Attribute("time"))
+                time = std::stof(type->ToElement()->Attribute("time"));
+            else
+                time = 0;
+                //a
+            nRotation = Rotate(angle,x,y,z,time);
         }
 		else if(!strcmp(type->Value(), "scale")){
             float x,y,z;
@@ -216,8 +221,8 @@ void Models::readFile(char * fileName){
 
 void Models::drawModels(float timestamp){    
     translation.transform();
-    cat.renderCatmullRomCurve(timestamp);
-    rotation.transform();
+    cat.transform(timestamp);
+    rotation.transform(timestamp);
     scale.transform();
     color.transform();
     for(Model m: models)
