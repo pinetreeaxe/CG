@@ -11,6 +11,8 @@ stdlib.h
 -
 GLUT/glut.h
 -
+GL/glew.h
+-
 GL/glut.h
 -
 models.hpp
@@ -32,6 +34,8 @@ fstream
 stdlib.h
 -
 GLUT/glut.h
+-
+GL/glew.h
 -
 GL/glut.h
 -
@@ -137,6 +141,12 @@ variant
 -
 vector
 -
+math.h
+-
+point.hpp
+/home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
+vector.hpp
+/home/gustavo/Documents/CG/CG/Fase1/src/vector.hpp
 GLUT/glut.h
 -
 GL/glut.h

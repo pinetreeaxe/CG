@@ -4,11 +4,30 @@
 #include <GL/gl.h>
 #include <variant>
 #include <vector>
+#include <math.h>
+#include "point.hpp"
+#include "vector.hpp"
 #ifdef __APPLE__
 #include <GLUT/glut.h>
 #else
 #include <GL/glut.h>
 #endif
+
+class CatmullRom {
+    private:
+        float time;
+        std::vector<Point> points;
+    public:
+        CatmullRom();
+        CatmullRom(float,std::vector<Point>);
+        void buildRotMatrix(float *, float *, float *, float *);
+        void cross(float *, float *, float *);
+        void normalize(float *); 
+        void multMatrixVector(float[4][4], float*, float *);
+        void getCatmullRomPoint(float, Point, Point, Point, Point, float *, float *);
+        void getGlobalCatmullRomPoint(float, float *, float *);
+        void renderCatmullRomCurve(float);
+};
 
 class Translate {
     private:

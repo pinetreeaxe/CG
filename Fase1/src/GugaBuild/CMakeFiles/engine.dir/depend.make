@@ -28,8 +28,11 @@ CMakeFiles/engine.dir/sphericalpoint.cpp.o: ../sphericalpoint.hpp
 CMakeFiles/engine.dir/tinyxml2.cpp.o: ../tinyxml2.cpp
 CMakeFiles/engine.dir/tinyxml2.cpp.o: ../tinyxml2.h
 
+CMakeFiles/engine.dir/transformation.cpp.o: ../point.hpp
+CMakeFiles/engine.dir/transformation.cpp.o: ../sphericalpoint.hpp
 CMakeFiles/engine.dir/transformation.cpp.o: ../transformation.cpp
 CMakeFiles/engine.dir/transformation.cpp.o: ../transformation.hpp
+CMakeFiles/engine.dir/transformation.cpp.o: ../vector.hpp
 
 CMakeFiles/engine.dir/vector.cpp.o: ../vector.cpp
 CMakeFiles/engine.dir/vector.cpp.o: ../vector.hpp

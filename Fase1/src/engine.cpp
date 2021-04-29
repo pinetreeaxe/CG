@@ -2,6 +2,7 @@
 #ifdef __APPLE__
 #include <GLUT/glut.h>
 #else
+#include <GL/glew.h>
 #include <GL/glut.h>
 #endif
 
@@ -20,9 +21,10 @@ float angleX = 0;
 float angleY = 0;
 float angleZ = 0;
 GLenum mode = GL_FILL;
-float camAlfa = 0.75f, camBeta = 0.5f, camRadius = 200.0f;
+float camAlfa = 0.75f, camBeta = 0.5f, camRadius = 50.0f;
 float camX, camY, camZ;
 float centerX = 0.0f, centerY = 0.0f, centerZ = 0.0f;
+float timestamp = 0.0f;
 
 
 void spherical2Cartesian() {
@@ -91,7 +93,8 @@ void renderScene(void) {
 	glRotatef(angleX,1.0,0.0,0.0);
 	glRotatef(angleY,0.0,1.0,0.0);
 	glRotatef(angleZ,0.0,0.0,1.0);
-	models.drawModels();
+	models.drawModels(timestamp);
+	timestamp += 0.0001;
 	
 	// End of frame
 	glutSwapBuffers();
@@ -169,7 +172,6 @@ void specialKeyReaction(int key, int xx, int yy) {
 
 int main(int argc, char **argv) {
 		
-	models.readFile(argv[1]);
 	//models.readFile("builddumb/teste.xml");
 
 // init GLUT and the window
@@ -181,16 +183,23 @@ int main(int argc, char **argv) {
 		
 // Required callback registry 
 	glutDisplayFunc(renderScene);
+	glutIdleFunc(renderScene);
 	glutReshapeFunc(changeSize);
 	glutKeyboardFunc(keyReaction);
 	glutSpecialFunc(specialKeyReaction);
+	glewInit();
+
+	glEnableClientState(GL_VERTEX_ARRAY);
+	
 
 //  OpenGL settings
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_CULL_FACE);
 
+	models.readFile(argv[1]);
 	spherical2Cartesian();
-	
+
+
 // enter GLUT's main cycle
 	glutMainLoop();
 	

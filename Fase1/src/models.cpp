@@ -2,6 +2,7 @@
 #ifdef __APPLE__
 #include <GLUT/glut.h>
 #else
+#include <GL/glew.h>
 #include <GL/glut.h>
 #endif
 
@@ -24,18 +25,24 @@ void Model::drawTriangles(Point p1, Point p2, Point p3){
 }
 
 void Model::drawModel(){
-    for (int i = 0; i < points.size(); i += 3){
-        drawTriangles(points[i], points[i+1], points[i+2]);
-    }
+    glDrawArrays(GL_TRIANGLES,0,verticesCount);
 }
 
 
 Model::Model(const char* fileName){
+    std::vector<float> points = std::vector<float>();
     float x,y,z;
     std::ifstream file(fileName);
         while(file >> x >> y >> z){
-            points.push_back(Point(x,y,z));
-        }  
+            points.push_back(x);
+            points.push_back(y);
+            points.push_back(z);
+        } 
+    verticesCount = points.size()/3;
+    glGenBuffers(1,&vertices);
+    glBindBuffer(GL_ARRAY_BUFFER, vertices);
+    glVertexPointer(3,GL_FLOAT,0,0);
+	glBufferData(GL_ARRAY_BUFFER,sizeof(float)*points.size(), points.data(),GL_STATIC_DRAW);
 }
 
 Models::Models(){
@@ -47,15 +54,28 @@ Models::Models(){
     color = Color();
 }
 
-Models::Models(std::vector<Models> nGroups, std::vector<Model> nModels, Translate nTranslation, Rotate nRotation, Scale nScale, Color nColor){
+Models::Models(std::vector<Models> nGroups, std::vector<Model> nModels, Translate nTranslation, Rotate nRotation, Scale nScale, Color nColor, CatmullRom nCat){
     groups = nGroups;
     models = nModels;
     translation = nTranslation;
     rotation = nRotation;
     scale = nScale;
     color = nColor;
+    cat = nCat;
 }
 
+std::vector<Point> Models::translationParser(tinyxml2::XMLNode* points){
+    std::vector<Point> nPoints = std::vector<Point>();
+    tinyxml2::XMLNode* type = points->FirstChild();
+    while(type){
+		if(!strcmp(type->Value(), "point"))
+			nPoints.push_back(Point(std::stof(type->ToElement()->Attribute("X")),
+                            std::stof(type->ToElement()->Attribute("Y")),
+                            std::stof(type->ToElement()->Attribute("Z"))));
+        type = type->NextSibling();
+    }
+    return nPoints;
+}
 
 std::vector<Model> Models::modelsParser(tinyxml2::XMLNode* models){
     std::vector<Model> nModels = std::vector<Model>();
@@ -71,6 +91,7 @@ std::vector<Model> Models::modelsParser(tinyxml2::XMLNode* models){
 Models Models::groupParser(tinyxml2::XMLNode* group, Color gColor){
     std::vector<Models> nGroups = std::vector<Models>(); 
     std::vector<Model> nModels = std::vector<Model>();
+    CatmullRom nCat = CatmullRom();
     Translate nTranslation = Translate();
     Rotate nRotation = Rotate();
     Scale nScale = Scale();
@@ -86,20 +107,33 @@ Models Models::groupParser(tinyxml2::XMLNode* group, Color gColor){
         else if(!strcmp(type->Value(), "model"))
 			nModels.push_back(Model(type->ToElement()->Attribute("file")));
         else if(!strcmp(type->Value(), "translate")){
-            float x,y,z;
-            if(type->ToElement()->Attribute("X"))
-                x = std::stof(type->ToElement()->Attribute("X"));
-            else
-                x = 0;
-            if(type->ToElement()->Attribute("Y"))
-                y = std::stof(type->ToElement()->Attribute("Y"));
-            else
-                y = 0;
-            if(type->ToElement()->Attribute("Z"))
-                z = std::stof(type->ToElement()->Attribute("Z"));
-            else
-                z = 0;
-            nTranslation = Translate(x,y,z);
+            if(type->ToElement()->Attribute("time")){
+                std::vector<Point> nPoints = std::vector<Point>();
+                float time = std::stof(type->ToElement()->Attribute("time"));
+                std::vector<Point> auxPoints = translationParser(type);
+                for(Point p : auxPoints)
+                    nPoints.push_back(p);
+                nCat = CatmullRom(time,nPoints);
+            }else{
+                float x,y,z;
+                if(type->ToElement()->Attribute("X"))
+                    x = std::stof(type->ToElement()->Attribute("X"));
+                else
+                    x = 0;
+                if(type->ToElement()->Attribute("Y"))
+                    y = std::stof(type->ToElement()->Attribute("Y"));
+                else
+                    y = 0;
+                if(type->ToElement()->Attribute("Z"))
+                    z = std::stof(type->ToElement()->Attribute("Z"));
+                else
+                    z = 0;
+                if(type->ToElement()->Attribute("Z"))
+                    z = std::stof(type->ToElement()->Attribute("Z"));
+                else
+                    z = 0;
+                nTranslation = Translate(x,y,z);
+            }
         }
         else if(!strcmp(type->Value(), "rotate")){
             float angle,x,y,z;
@@ -158,7 +192,7 @@ Models Models::groupParser(tinyxml2::XMLNode* group, Color gColor){
         }
 		type = type->NextSibling();
 	}
-    return Models(nGroups, nModels, nTranslation, nRotation, nScale, nColor);
+    return Models(nGroups, nModels, nTranslation, nRotation, nScale, nColor, nCat);
 }
 
 
@@ -180,8 +214,9 @@ void Models::readFile(char * fileName){
     *this = groupParser(scene, color);
 }
 
-void Models::drawModels(){    
+void Models::drawModels(float timestamp){    
     translation.transform();
+    cat.renderCatmullRomCurve(timestamp);
     rotation.transform();
     scale.transform();
     color.transform();
@@ -189,7 +224,7 @@ void Models::drawModels(){
         m.drawModel();
     for(Models ms: groups){
         glPushMatrix();
-        ms.drawModels();
+        ms.drawModels(timestamp);
         glPopMatrix();
     }
 }

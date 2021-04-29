@@ -8,7 +8,7 @@
 
 class Model {
     private:
-        std::vector<Point> points;
+        GLuint vertices, verticesCount;
         void drawTriangles(Point p1, Point p2, Point p3);
 
     public:
@@ -24,13 +24,15 @@ class Models {
         Rotate rotation;
         Scale scale;
         Color color;
+        CatmullRom cat;
     
     public:
         Models();
-        Models(std::vector<Models>, std::vector<Model>, Translate, Rotate, Scale, Color);
-        void drawModels();
+        Models(std::vector<Models>, std::vector<Model>, Translate, Rotate, Scale, Color, CatmullRom);
+        void drawModels(float);
         void readFile(char *);
         Models groupParser(tinyxml2::XMLNode*, Color);
+        std::vector<Point> translationParser(tinyxml2::XMLNode*);
         std::vector<Model> modelsParser(tinyxml2::XMLNode*);
 };
 
