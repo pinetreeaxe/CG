@@ -25,6 +25,8 @@ void Model::drawTriangles(Point p1, Point p2, Point p3){
 }
 
 void Model::drawModel(){
+    glBindBuffer(GL_ARRAY_BUFFER, vertices[0]);
+    glVertexPointer(3,GL_FLOAT,0,0);
     glDrawArrays(GL_TRIANGLES,0,verticesCount);
 }
 
@@ -38,10 +40,9 @@ Model::Model(const char* fileName){
             points.push_back(y);
             points.push_back(z);
         } 
-    verticesCount = points.size()/3;
-    glGenBuffers(1,&vertices);
-    glBindBuffer(GL_ARRAY_BUFFER, vertices);
-    glVertexPointer(3,GL_FLOAT,0,0);
+    verticesCount = points.size();
+    glGenBuffers(1,vertices);
+    glBindBuffer(GL_ARRAY_BUFFER, vertices[0]);
 	glBufferData(GL_ARRAY_BUFFER,sizeof(float)*points.size(), points.data(),GL_STATIC_DRAW);
 }
 

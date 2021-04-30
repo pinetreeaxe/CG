@@ -104,16 +104,17 @@ void CatmullRom::transform(float timestamp) {
     if(points.size()>=4){
         float pos[3];
         float deriv[3];
-        const float tessNum = points.size()*50;
+        const float tessNum = points.size()*30;
         const float mod = time/tessNum;
         glBegin(GL_LINE_LOOP);
+        glColor3f(1.0f,1.0f,1.0f);
         for (int i = 0; i < tessNum; i++)
         {
             getGlobalCatmullRomPoint(mod*i, pos, deriv);
             glVertex3f(pos[0],pos[1],pos[2]);
         }
-        glEnd(); 
-        getGlobalCatmullRomPoint(timestamp, pos, deriv);
+        glEnd();
+        getGlobalCatmullRomPoint(timestamp/time, pos, deriv);
         glTranslatef(pos[0], pos[1], pos[2]);
 
         float X[3] = { deriv[0], deriv[1], deriv[2] };
@@ -177,7 +178,6 @@ void Rotate::transform(float timestamp){
     else
         realAngle = angle + timestamp * (360/time);
     glRotatef(realAngle,x,y,z);
-    //a
 }
 
 Scale::Scale(){

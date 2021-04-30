@@ -21,10 +21,12 @@ float angleX = 0;
 float angleY = 0;
 float angleZ = 0;
 GLenum mode = GL_FILL;
-float camAlfa = 0.75f, camBeta = 0.5f, camRadius = 50.0f;
+float camAlfa = 0.75f, camBeta = 0.5f, camRadius = 200.0f;
 float camX, camY, camZ;
 float centerX = 0.0f, centerY = 0.0f, centerZ = 0.0f;
 float timestamp = 0.0f;
+float savedMod,timeMod = 0.001f;
+bool isPaused = false;
 
 
 void spherical2Cartesian() {
@@ -89,12 +91,12 @@ void renderScene(void) {
 			  0.0f,1.0f,0.0f);
 	glPolygonMode(GL_FRONT_AND_BACK, mode);
 
-	drawAxis();
+	//drawAxis();
 	glRotatef(angleX,1.0,0.0,0.0);
 	glRotatef(angleY,0.0,1.0,0.0);
 	glRotatef(angleZ,0.0,0.0,1.0);
 	models.drawModels(timestamp);
-	timestamp += 0.0001;
+	timestamp += timeMod;
 	
 	// End of frame
 	glutSwapBuffers();
@@ -112,12 +114,12 @@ void keyReaction(unsigned char key, int x, int y){
 			mode = GL_FILL;
 			break;
 		case '+':
-			camRadius -= 0.5f;
-			if (camRadius < 10.0f)
-				camRadius = 10.0f;
+			camRadius -= 1.0f;
+			if (camRadius < 30.0f)
+				camRadius = 30.0f;
 			break;
 		case '-':
-			camRadius += 0.5f;
+			camRadius += 1.0f;
 			break;
 		case 'w':
 			camBeta += 0.1f;
@@ -142,7 +144,25 @@ void keyReaction(unsigned char key, int x, int y){
 			centerX = 0.0f;
 			centerY = 0.0f;
 			centerZ = 0.0f;
+			timestamp = 0.0f;
+			timeMod = 0.001f;
 			mode = GL_FILL;
+			break;
+		case 'p':
+			if(!isPaused){
+				isPaused = true;
+				savedMod = timeMod;
+				timeMod = 0.0f;
+			}else{
+				isPaused = false;
+				timeMod = savedMod;
+			}
+			break;
+		case 'i':
+			timeMod *= 10;
+			break;
+		case 'o':
+			timeMod /= 10;
 			break;
 	}
 	spherical2Cartesian();
