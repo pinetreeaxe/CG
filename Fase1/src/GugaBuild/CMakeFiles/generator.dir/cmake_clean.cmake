@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/generator.dir/sphericalpoint.cpp.o"
   "CMakeFiles/generator.dir/cone.cpp.o"
   "CMakeFiles/generator.dir/torus.cpp.o"
+  "CMakeFiles/generator.dir/patches.cpp.o"
   "generator.pdb"
   "generator"
 )

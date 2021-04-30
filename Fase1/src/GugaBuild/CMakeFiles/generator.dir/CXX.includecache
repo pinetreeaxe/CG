@@ -49,6 +49,8 @@ cone.hpp
 /home/gustavo/Documents/CG/CG/Fase1/src/cone.hpp
 torus.hpp
 /home/gustavo/Documents/CG/CG/Fase1/src/torus.hpp
+patches.hpp
+/home/gustavo/Documents/CG/CG/Fase1/src/patches.hpp
 string
 -
 ostream
@@ -57,6 +59,20 @@ iostream
 -
 fstream
 -
+
+/home/gustavo/Documents/CG/CG/Fase1/src/patches.cpp
+math.h
+/home/gustavo/Documents/CG/CG/Fase1/src/math.h
+fstream
+-
+patches.hpp
+/home/gustavo/Documents/CG/CG/Fase1/src/patches.hpp
+
+/home/gustavo/Documents/CG/CG/Fase1/src/patches.hpp
+vector
+-
+point.hpp
+/home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
 
 /home/gustavo/Documents/CG/CG/Fase1/src/plane.cpp
 plane.hpp

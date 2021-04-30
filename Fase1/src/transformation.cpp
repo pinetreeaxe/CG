@@ -106,14 +106,14 @@ void CatmullRom::transform(float timestamp) {
         float deriv[3];
         const float tessNum = points.size()*30;
         const float mod = time/tessNum;
-        glBegin(GL_LINE_LOOP);
+        /*glBegin(GL_LINE_LOOP);
         glColor3f(1.0f,1.0f,1.0f);
         for (int i = 0; i < tessNum; i++)
         {
             getGlobalCatmullRomPoint(mod*i, pos, deriv);
             glVertex3f(pos[0],pos[1],pos[2]);
         }
-        glEnd();
+        glEnd();*/
         getGlobalCatmullRomPoint(timestamp/time, pos, deriv);
         glTranslatef(pos[0], pos[1], pos[2]);
 

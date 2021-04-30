@@ -5,6 +5,7 @@
 #include "sphere.hpp"
 #include "cone.hpp"
 #include "torus.hpp"
+#include "patches.hpp"
 
 #include<string>
 #include<ostream>
@@ -31,5 +32,7 @@ int main(int argc, char** argv){
     else if(primitive == "cone")
         writeFile(Cone(argc-3, argv+2), argv[argc-1]);
     else if(primitive == "torus")
-        writeFile(Torus(argc-3, argv+2), argv[argc-1]);   
+        writeFile(Torus(argc-3, argv+2), argv[argc-1]);
+    else if(primitive == "patches")
+        writeFile(Patches(argc-3, argv+2), argv[argc-1]); 
 }

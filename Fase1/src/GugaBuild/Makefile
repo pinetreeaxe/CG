@@ -271,6 +271,33 @@ models.cpp.s:
 	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/models.cpp.s
 .PHONY : models.cpp.s
 
+patches.o: patches.cpp.o
+
+.PHONY : patches.o
+
+# target to build an object file
+patches.cpp.o:
+	$(MAKE) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/patches.cpp.o
+.PHONY : patches.cpp.o
+
+patches.i: patches.cpp.i
+
+.PHONY : patches.i
+
+# target to preprocess a source file
+patches.cpp.i:
+	$(MAKE) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/patches.cpp.i
+.PHONY : patches.cpp.i
+
+patches.s: patches.cpp.s
+
+.PHONY : patches.s
+
+# target to generate assembly for a file
+patches.cpp.s:
+	$(MAKE) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/patches.cpp.s
+.PHONY : patches.cpp.s
+
 plane.o: plane.cpp.o
 
 .PHONY : plane.o
@@ -521,6 +548,9 @@ help:
 	@echo "... models.o"
 	@echo "... models.i"
 	@echo "... models.s"
+	@echo "... patches.o"
+	@echo "... patches.i"
+	@echo "... patches.s"
 	@echo "... plane.o"
 	@echo "... plane.i"
 	@echo "... plane.s"

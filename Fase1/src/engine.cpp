@@ -25,7 +25,7 @@ float camAlfa = 0.75f, camBeta = 0.5f, camRadius = 200.0f;
 float camX, camY, camZ;
 float centerX = 0.0f, centerY = 0.0f, centerZ = 0.0f;
 float timestamp = 0.0f;
-float savedMod,timeMod = 0.001f;
+float savedMod,timeMod = 0.0001f;
 bool isPaused = false;
 
 
@@ -145,7 +145,7 @@ void keyReaction(unsigned char key, int x, int y){
 			centerY = 0.0f;
 			centerZ = 0.0f;
 			timestamp = 0.0f;
-			timeMod = 0.001f;
+			timeMod = 0.0001f;
 			mode = GL_FILL;
 			break;
 		case 'p':
