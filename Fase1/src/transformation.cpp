@@ -100,7 +100,6 @@ void CatmullRom::getGlobalCatmullRomPoint(float gt, float *pos, float *deriv) {
 
 void CatmullRom::transform(float timestamp) {
 
-// draw curve using line segments with GL_LINE_LOOP
     if(points.size()>=4){
         float pos[3];
         float deriv[3];
@@ -136,7 +135,7 @@ void CatmullRom::transform(float timestamp) {
 
        glMultMatrixf(m);
     }
-}
+}  
 
 
 Translate::Translate(){

@@ -14,16 +14,6 @@
 #include <random> 
 
 
-
-void Model::drawTriangles(Point p1, Point p2, Point p3){
-    //glColor3f((float) rand() / RAND_MAX, (float) rand() / RAND_MAX, (float) rand() / RAND_MAX);
-    glBegin(GL_TRIANGLES);
-        glVertex3f(p1.get_x(),p1.get_y(),p1.get_z());
-        glVertex3f(p2.get_x(),p2.get_y(),p2.get_z());
-        glVertex3f(p3.get_x(),p3.get_y(),p3.get_z());     
-    glEnd();           
-}
-
 void Model::drawModel(){
     glBindBuffer(GL_ARRAY_BUFFER, vertices[0]);
     glVertexPointer(3,GL_FLOAT,0,0);
@@ -158,7 +148,6 @@ Models Models::groupParser(tinyxml2::XMLNode* group, Color gColor){
                 time = std::stof(type->ToElement()->Attribute("time"));
             else
                 time = 0;
-                //a
             nRotation = Rotate(angle,x,y,z,time);
         }
 		else if(!strcmp(type->Value(), "scale")){

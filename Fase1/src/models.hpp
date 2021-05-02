@@ -10,7 +10,6 @@ class Model {
     private:
         GLuint vertices[1];
         int verticesCount;
-        void drawTriangles(Point p1, Point p2, Point p3);
 
     public:
         Model(const char *);
