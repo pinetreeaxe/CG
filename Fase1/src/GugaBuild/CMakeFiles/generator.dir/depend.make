@@ -3,12 +3,14 @@
 
 CMakeFiles/generator.dir/box.cpp.o: ../box.cpp
 CMakeFiles/generator.dir/box.cpp.o: ../box.hpp
+CMakeFiles/generator.dir/box.cpp.o: ../normalTexPoint.hpp
 CMakeFiles/generator.dir/box.cpp.o: ../point.hpp
 CMakeFiles/generator.dir/box.cpp.o: ../sphericalpoint.hpp
 CMakeFiles/generator.dir/box.cpp.o: ../vector.hpp
 
 CMakeFiles/generator.dir/cone.cpp.o: ../cone.cpp
 CMakeFiles/generator.dir/cone.cpp.o: ../cone.hpp
+CMakeFiles/generator.dir/cone.cpp.o: ../normalTexPoint.hpp
 CMakeFiles/generator.dir/cone.cpp.o: ../point.hpp
 CMakeFiles/generator.dir/cone.cpp.o: ../sphericalpoint.hpp
 CMakeFiles/generator.dir/cone.cpp.o: ../vector.hpp
@@ -16,6 +18,7 @@ CMakeFiles/generator.dir/cone.cpp.o: ../vector.hpp
 CMakeFiles/generator.dir/generator.cpp.o: ../box.hpp
 CMakeFiles/generator.dir/generator.cpp.o: ../cone.hpp
 CMakeFiles/generator.dir/generator.cpp.o: ../generator.cpp
+CMakeFiles/generator.dir/generator.cpp.o: ../normalTexPoint.hpp
 CMakeFiles/generator.dir/generator.cpp.o: ../patches.hpp
 CMakeFiles/generator.dir/generator.cpp.o: ../plane.hpp
 CMakeFiles/generator.dir/generator.cpp.o: ../point.hpp
@@ -24,12 +27,19 @@ CMakeFiles/generator.dir/generator.cpp.o: ../sphericalpoint.hpp
 CMakeFiles/generator.dir/generator.cpp.o: ../torus.hpp
 CMakeFiles/generator.dir/generator.cpp.o: ../vector.hpp
 
+CMakeFiles/generator.dir/normalTexPoint.cpp.o: ../normalTexPoint.cpp
+CMakeFiles/generator.dir/normalTexPoint.cpp.o: ../normalTexPoint.hpp
+CMakeFiles/generator.dir/normalTexPoint.cpp.o: ../point.hpp
+CMakeFiles/generator.dir/normalTexPoint.cpp.o: ../sphericalpoint.hpp
+CMakeFiles/generator.dir/normalTexPoint.cpp.o: ../vector.hpp
+
 CMakeFiles/generator.dir/patches.cpp.o: ../patches.cpp
 CMakeFiles/generator.dir/patches.cpp.o: ../patches.hpp
 CMakeFiles/generator.dir/patches.cpp.o: ../point.hpp
 CMakeFiles/generator.dir/patches.cpp.o: ../sphericalpoint.hpp
 CMakeFiles/generator.dir/patches.cpp.o: ../vector.hpp
 
+CMakeFiles/generator.dir/plane.cpp.o: ../normalTexPoint.hpp
 CMakeFiles/generator.dir/plane.cpp.o: ../plane.cpp
 CMakeFiles/generator.dir/plane.cpp.o: ../plane.hpp
 CMakeFiles/generator.dir/plane.cpp.o: ../point.hpp
@@ -41,6 +51,7 @@ CMakeFiles/generator.dir/point.cpp.o: ../point.hpp
 CMakeFiles/generator.dir/point.cpp.o: ../sphericalpoint.hpp
 CMakeFiles/generator.dir/point.cpp.o: ../vector.hpp
 
+CMakeFiles/generator.dir/sphere.cpp.o: ../normalTexPoint.hpp
 CMakeFiles/generator.dir/sphere.cpp.o: ../point.hpp
 CMakeFiles/generator.dir/sphere.cpp.o: ../sphere.cpp
 CMakeFiles/generator.dir/sphere.cpp.o: ../sphere.hpp
@@ -50,6 +61,7 @@ CMakeFiles/generator.dir/sphere.cpp.o: ../vector.hpp
 CMakeFiles/generator.dir/sphericalpoint.cpp.o: ../sphericalpoint.cpp
 CMakeFiles/generator.dir/sphericalpoint.cpp.o: ../sphericalpoint.hpp
 
+CMakeFiles/generator.dir/torus.cpp.o: ../normalTexPoint.hpp
 CMakeFiles/generator.dir/torus.cpp.o: ../point.hpp
 CMakeFiles/generator.dir/torus.cpp.o: ../sphericalpoint.hpp
 CMakeFiles/generator.dir/torus.cpp.o: ../torus.cpp

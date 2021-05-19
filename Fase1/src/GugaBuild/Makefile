@@ -271,6 +271,33 @@ models.cpp.s:
 	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/models.cpp.s
 .PHONY : models.cpp.s
 
+normalTexPoint.o: normalTexPoint.cpp.o
+
+.PHONY : normalTexPoint.o
+
+# target to build an object file
+normalTexPoint.cpp.o:
+	$(MAKE) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/normalTexPoint.cpp.o
+.PHONY : normalTexPoint.cpp.o
+
+normalTexPoint.i: normalTexPoint.cpp.i
+
+.PHONY : normalTexPoint.i
+
+# target to preprocess a source file
+normalTexPoint.cpp.i:
+	$(MAKE) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/normalTexPoint.cpp.i
+.PHONY : normalTexPoint.cpp.i
+
+normalTexPoint.s: normalTexPoint.cpp.s
+
+.PHONY : normalTexPoint.s
+
+# target to generate assembly for a file
+normalTexPoint.cpp.s:
+	$(MAKE) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/normalTexPoint.cpp.s
+.PHONY : normalTexPoint.cpp.s
+
 patches.o: patches.cpp.o
 
 .PHONY : patches.o
@@ -548,6 +575,9 @@ help:
 	@echo "... models.o"
 	@echo "... models.i"
 	@echo "... models.s"
+	@echo "... normalTexPoint.o"
+	@echo "... normalTexPoint.i"
+	@echo "... normalTexPoint.s"
 	@echo "... patches.o"
 	@echo "... patches.i"
 	@echo "... patches.s"

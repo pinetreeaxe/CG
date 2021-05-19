@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/generator.dir/cone.cpp.o"
   "CMakeFiles/generator.dir/torus.cpp.o"
   "CMakeFiles/generator.dir/patches.cpp.o"
+  "CMakeFiles/generator.dir/normalTexPoint.cpp.o"
   "generator.pdb"
   "generator"
 )

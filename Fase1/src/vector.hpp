@@ -10,6 +10,7 @@ private:
     float x, y, z;
 
 public:
+    Vector();
     Vector(float, float, float);
     void set_x(float);
     void set_y(float);
@@ -19,5 +20,6 @@ public:
     float get_x() const;
     float get_y() const;
     float get_z() const;
+    std::string to_string() const;
 };
 #endif

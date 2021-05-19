@@ -1,6 +1,7 @@
 #ifndef BOX_H
 #define BOX_H
 #include "point.hpp"
+#include "normalTexPoint.hpp"
 #include <vector>
 
 class Box {
@@ -9,11 +10,11 @@ private:
     float y;
     float z;
     int div;
-    void draw_face(std::vector<Point>&, Point , Vector, Vector) const;
+    void draw_face(std::vector<NormalTexPoint>&, Point, Vector, Vector, Vector) const;
 
 public:
     Box(int argc, char** argv);
-    std::vector<Point> draw() const;
+    std::vector<NormalTexPoint> draw() const;
 };
 
 #endif

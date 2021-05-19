@@ -12,6 +12,7 @@ private:
     float x, y, z;
 
 public:
+    Point();
     Point(float, float, float);
     Point(SphericalPoint);
     std::string to_string() const;

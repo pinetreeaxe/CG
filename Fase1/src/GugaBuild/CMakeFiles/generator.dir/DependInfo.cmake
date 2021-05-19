@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/gustavo/Documents/CG/CG/Fase1/src/box.cpp" "/home/gustavo/Documents/CG/CG/Fase1/src/GugaBuild/CMakeFiles/generator.dir/box.cpp.o"
   "/home/gustavo/Documents/CG/CG/Fase1/src/cone.cpp" "/home/gustavo/Documents/CG/CG/Fase1/src/GugaBuild/CMakeFiles/generator.dir/cone.cpp.o"
   "/home/gustavo/Documents/CG/CG/Fase1/src/generator.cpp" "/home/gustavo/Documents/CG/CG/Fase1/src/GugaBuild/CMakeFiles/generator.dir/generator.cpp.o"
+  "/home/gustavo/Documents/CG/CG/Fase1/src/normalTexPoint.cpp" "/home/gustavo/Documents/CG/CG/Fase1/src/GugaBuild/CMakeFiles/generator.dir/normalTexPoint.cpp.o"
   "/home/gustavo/Documents/CG/CG/Fase1/src/patches.cpp" "/home/gustavo/Documents/CG/CG/Fase1/src/GugaBuild/CMakeFiles/generator.dir/patches.cpp.o"
   "/home/gustavo/Documents/CG/CG/Fase1/src/plane.cpp" "/home/gustavo/Documents/CG/CG/Fase1/src/GugaBuild/CMakeFiles/generator.dir/plane.cpp.o"
   "/home/gustavo/Documents/CG/CG/Fase1/src/point.cpp" "/home/gustavo/Documents/CG/CG/Fase1/src/GugaBuild/CMakeFiles/generator.dir/point.cpp.o"

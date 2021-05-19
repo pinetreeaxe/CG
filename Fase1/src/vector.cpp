@@ -1,5 +1,11 @@
 #include "vector.hpp"
 
+Vector::Vector(){
+    x = 0;
+    y = 0;
+    z = 0;
+}
+
 Vector::Vector(float a, float b, float c) {
     x = a;
     y = b;
@@ -25,3 +31,9 @@ void Vector::divide(float d) {
 float Vector::get_x() const { return x; }
 float Vector::get_y() const { return y; }
 float Vector::get_z() const { return z; }
+
+std::string Vector::to_string() const {
+    std::ostringstream pt;
+    pt << x << ' ' << y << ' ' << z;
+    return pt.str();
+}

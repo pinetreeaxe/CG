@@ -4,12 +4,14 @@
 CMakeFiles/generator.dir/box.cpp.o
  /home/gustavo/Documents/CG/CG/Fase1/src/box.cpp
  /home/gustavo/Documents/CG/CG/Fase1/src/box.hpp
+ /home/gustavo/Documents/CG/CG/Fase1/src/normalTexPoint.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/sphericalpoint.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/vector.hpp
 CMakeFiles/generator.dir/cone.cpp.o
  /home/gustavo/Documents/CG/CG/Fase1/src/cone.cpp
  /home/gustavo/Documents/CG/CG/Fase1/src/cone.hpp
+ /home/gustavo/Documents/CG/CG/Fase1/src/normalTexPoint.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/sphericalpoint.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/vector.hpp
@@ -17,12 +19,19 @@ CMakeFiles/generator.dir/generator.cpp.o
  /home/gustavo/Documents/CG/CG/Fase1/src/box.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/cone.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/generator.cpp
+ /home/gustavo/Documents/CG/CG/Fase1/src/normalTexPoint.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/patches.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/plane.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/sphere.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/sphericalpoint.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/torus.hpp
+ /home/gustavo/Documents/CG/CG/Fase1/src/vector.hpp
+CMakeFiles/generator.dir/normalTexPoint.cpp.o
+ /home/gustavo/Documents/CG/CG/Fase1/src/normalTexPoint.cpp
+ /home/gustavo/Documents/CG/CG/Fase1/src/normalTexPoint.hpp
+ /home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
+ /home/gustavo/Documents/CG/CG/Fase1/src/sphericalpoint.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/vector.hpp
 CMakeFiles/generator.dir/patches.cpp.o
  /home/gustavo/Documents/CG/CG/Fase1/src/patches.cpp
@@ -31,6 +40,7 @@ CMakeFiles/generator.dir/patches.cpp.o
  /home/gustavo/Documents/CG/CG/Fase1/src/sphericalpoint.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/vector.hpp
 CMakeFiles/generator.dir/plane.cpp.o
+ /home/gustavo/Documents/CG/CG/Fase1/src/normalTexPoint.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/plane.cpp
  /home/gustavo/Documents/CG/CG/Fase1/src/plane.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
@@ -42,6 +52,7 @@ CMakeFiles/generator.dir/point.cpp.o
  /home/gustavo/Documents/CG/CG/Fase1/src/sphericalpoint.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/vector.hpp
 CMakeFiles/generator.dir/sphere.cpp.o
+ /home/gustavo/Documents/CG/CG/Fase1/src/normalTexPoint.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/sphere.cpp
  /home/gustavo/Documents/CG/CG/Fase1/src/sphere.hpp
@@ -51,6 +62,7 @@ CMakeFiles/generator.dir/sphericalpoint.cpp.o
  /home/gustavo/Documents/CG/CG/Fase1/src/sphericalpoint.cpp
  /home/gustavo/Documents/CG/CG/Fase1/src/sphericalpoint.hpp
 CMakeFiles/generator.dir/torus.cpp.o
+ /home/gustavo/Documents/CG/CG/Fase1/src/normalTexPoint.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/sphericalpoint.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/torus.cpp

@@ -1,5 +1,6 @@
 #include "box.hpp"
 #include "point.hpp"
+#include "normalTexPoint.hpp"
 
 Box::Box(int argc, char** argv) {
     x = std::stof(argv[0]);
@@ -11,7 +12,7 @@ Box::Box(int argc, char** argv) {
         div = std::stoi(argv[3]) + 1;
 }
 
-void Box::draw_face(std::vector<Point>& points, Point o, Vector v1, Vector v2) const {
+void Box::draw_face(std::vector<NormalTexPoint>& points, Point o, Vector v1, Vector v2, Vector normal) const {
     //creating the points from the two triangles on the bottom left corner of the face
     Point p0 = Point(o.get_x(), o.get_y(), o.get_z());
     Point p1 = Point(p0.get_x(), p0.get_y(), p0.get_z());
@@ -24,13 +25,19 @@ void Box::draw_face(std::vector<Point>& points, Point o, Vector v1, Vector v2) c
 
     //itera sobre as "colunas"
     for (int i = 0; i < div; i++) {
-        Point p0j = Point(p0.get_x(), p0.get_y(), p0.get_z());
-        Point p1j = Point(p1.get_x(), p1.get_y(), p1.get_z());
-        Point p2j = Point(p2.get_x(), p2.get_y(), p2.get_z());
-        Point p3j = Point(p3.get_x(), p3.get_y(), p3.get_z());
+        Point p0i = Point(p0.get_x(), p0.get_y(), p0.get_z());
+        Point p1i = Point(p1.get_x(), p1.get_y(), p1.get_z());
+        Point p2i = Point(p2.get_x(), p2.get_y(), p2.get_z());
+        Point p3i = Point(p3.get_x(), p3.get_y(), p3.get_z());
 
         //itera sobre as "linhas"
         for (int j = 0; j < div; j++) {
+
+            NormalTexPoint p0j = NormalTexPoint(p0i,normal);
+            NormalTexPoint p1j = NormalTexPoint(p1i,normal);
+            NormalTexPoint p2j = NormalTexPoint(p2i,normal);
+            NormalTexPoint p3j = NormalTexPoint(p3i,normal);
+
             //1st triangle 
             points.push_back(p0j);
             points.push_back(p1j);
@@ -42,10 +49,10 @@ void Box::draw_face(std::vector<Point>& points, Point o, Vector v1, Vector v2) c
             points.push_back(p3j);
 
             //translate all points to the next slice ("horizontally")
-            p0j.add_vector(v1);
-            p1j.add_vector(v1);
-            p2j.add_vector(v1);
-            p3j.add_vector(v1);
+            p0i.add_vector(v1);
+            p1i.add_vector(v1);
+            p2i.add_vector(v1);
+            p3i.add_vector(v1);
         }
 
         //translate all points to the next slice ("vertically")
@@ -56,7 +63,7 @@ void Box::draw_face(std::vector<Point>& points, Point o, Vector v1, Vector v2) c
     }
 }
 
-std::vector<Point> Box::draw() const {
+std::vector<NormalTexPoint> Box::draw() const {
     float halfx = x / 2;
     float halfy = y / 2;
     float halfz = z / 2;
@@ -65,25 +72,25 @@ std::vector<Point> Box::draw() const {
     float slicey = y / div;
     float slicez = z / div;
 
-    std::vector<Point> points;
+    std::vector<NormalTexPoint> points;
 
     // front face
-    draw_face(points, Point(-halfx, -halfy, halfz), Vector(slicex, 0, 0), Vector(0, slicey, 0));
+    draw_face(points, Point(-halfx, -halfy, halfz), Vector(slicex, 0, 0), Vector(0, slicey, 0),Vector(0,0,1));
 
     // back face
-    draw_face(points, Point(halfx, -halfy, -halfz), Vector(-slicex, 0, 0), Vector(0, slicey, 0));
+    draw_face(points, Point(halfx, -halfy, -halfz), Vector(-slicex, 0, 0), Vector(0, slicey, 0),Vector(0,0,-1));
 
     // left face
-    draw_face(points, Point(-halfx, -halfy, -halfz), Vector(0, 0, slicez), Vector(0, slicey, 0));
+    draw_face(points, Point(-halfx, -halfy, -halfz), Vector(0, 0, slicez), Vector(0, slicey, 0),Vector(-1,0,0));
 
     // right face
-    draw_face(points, Point(halfx, -halfy, halfz), Vector(0, 0, -slicez), Vector(0, slicey, 0));
+    draw_face(points, Point(halfx, -halfy, halfz), Vector(0, 0, -slicez), Vector(0, slicey, 0),Vector(1,0,0));
 
     // top face
-    draw_face(points, Point(-halfx, halfy, halfz), Vector(slicex, 0, 0), Vector(0, 0, -slicez));
+    draw_face(points, Point(-halfx, halfy, halfz), Vector(slicex, 0, 0), Vector(0, 0, -slicez),Vector(0,1,0));
 
     // bottom face
-    draw_face(points, Point(-halfx, -halfy, -halfz), Vector(slicex, 0, 0), Vector(0, 0, slicez));
+    draw_face(points, Point(-halfx, -halfy, -halfz), Vector(slicex, 0, 0), Vector(0, 0, slicez),Vector(0,-1,0));
 
 
     return points;

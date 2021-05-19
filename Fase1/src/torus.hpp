@@ -4,6 +4,7 @@
 #include <vector>
 #include "sphericalpoint.hpp"
 #include "point.hpp"
+#include "normalTexPoint.hpp"
 
 class Torus {
 private:
@@ -12,6 +13,6 @@ private:
 
 public:
     Torus(int, char**);
-    std::vector<Point> draw();
+    std::vector<NormalTexPoint> draw();
 };
 #endif

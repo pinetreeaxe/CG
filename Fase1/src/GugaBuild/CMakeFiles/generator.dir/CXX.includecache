@@ -11,10 +11,14 @@ box.hpp
 /home/gustavo/Documents/CG/CG/Fase1/src/box.hpp
 point.hpp
 /home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
+normalTexPoint.hpp
+/home/gustavo/Documents/CG/CG/Fase1/src/normalTexPoint.hpp
 
 /home/gustavo/Documents/CG/CG/Fase1/src/box.hpp
 point.hpp
 /home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
+normalTexPoint.hpp
+/home/gustavo/Documents/CG/CG/Fase1/src/normalTexPoint.hpp
 vector
 -
 
@@ -23,6 +27,8 @@ cone.hpp
 /home/gustavo/Documents/CG/CG/Fase1/src/cone.hpp
 point.hpp
 /home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
+normalTexPoint.hpp
+/home/gustavo/Documents/CG/CG/Fase1/src/normalTexPoint.hpp
 math.h
 /home/gustavo/Documents/CG/CG/Fase1/src/math.h
 
@@ -33,6 +39,8 @@ sphericalpoint.hpp
 /home/gustavo/Documents/CG/CG/Fase1/src/sphericalpoint.hpp
 point.hpp
 /home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
+normalTexPoint.hpp
+/home/gustavo/Documents/CG/CG/Fase1/src/normalTexPoint.hpp
 
 /home/gustavo/Documents/CG/CG/Fase1/src/generator.cpp
 stdlib.h
@@ -51,6 +59,8 @@ torus.hpp
 /home/gustavo/Documents/CG/CG/Fase1/src/torus.hpp
 patches.hpp
 /home/gustavo/Documents/CG/CG/Fase1/src/patches.hpp
+normalTexPoint.hpp
+/home/gustavo/Documents/CG/CG/Fase1/src/normalTexPoint.hpp
 string
 -
 ostream
@@ -59,6 +69,22 @@ iostream
 -
 fstream
 -
+
+/home/gustavo/Documents/CG/CG/Fase1/src/normalTexPoint.cpp
+normalTexPoint.hpp
+/home/gustavo/Documents/CG/CG/Fase1/src/normalTexPoint.hpp
+
+/home/gustavo/Documents/CG/CG/Fase1/src/normalTexPoint.hpp
+string
+-
+iostream
+-
+sstream
+-
+vector.hpp
+/home/gustavo/Documents/CG/CG/Fase1/src/vector.hpp
+point.hpp
+/home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
 
 /home/gustavo/Documents/CG/CG/Fase1/src/patches.cpp
 math.h
@@ -79,8 +105,8 @@ plane.hpp
 /home/gustavo/Documents/CG/CG/Fase1/src/plane.hpp
 
 /home/gustavo/Documents/CG/CG/Fase1/src/plane.hpp
-point.hpp
-/home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
+normalTexPoint.hpp
+/home/gustavo/Documents/CG/CG/Fase1/src/normalTexPoint.hpp
 vector
 -
 
@@ -117,6 +143,8 @@ sphericalpoint.hpp
 /home/gustavo/Documents/CG/CG/Fase1/src/sphericalpoint.hpp
 point.hpp
 /home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
+normalTexPoint.hpp
+/home/gustavo/Documents/CG/CG/Fase1/src/normalTexPoint.hpp
 
 /home/gustavo/Documents/CG/CG/Fase1/src/sphericalpoint.cpp
 sphericalpoint.hpp
@@ -139,6 +167,8 @@ sphericalpoint.hpp
 /home/gustavo/Documents/CG/CG/Fase1/src/sphericalpoint.hpp
 point.hpp
 /home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
+normalTexPoint.hpp
+/home/gustavo/Documents/CG/CG/Fase1/src/normalTexPoint.hpp
 
 /home/gustavo/Documents/CG/CG/Fase1/src/vector.cpp
 vector.hpp
