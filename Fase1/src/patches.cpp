@@ -106,6 +106,13 @@ Point Patches::getGlobalBezierPoint(int patchNum, float u, float v) {
     return Point(pos[0],pos[1],pos[2]);
 }
 
+Vector Patches::crossVectors(Vector a, Vector b) {
+    float x = a.get_y()*b.get_z() - a.get_z()*b.get_y();
+    float y = a.get_z()*b.get_x() - a.get_x()*b.get_z();
+    float z = a.get_x()*b.get_y() - a.get_y()*b.get_x();
+	return Vector(x,y,z);
+}
+
 std::vector<Point> Patches::draw(){
     std::vector<Point> points;
     float step = 1.0f / tesselationLevel;

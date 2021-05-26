@@ -15,25 +15,35 @@
 
 
 void Model::drawModel(){
-    glBindBuffer(GL_ARRAY_BUFFER, vertices[0]);
-    glVertexPointer(3,GL_FLOAT,0,0);
-    glDrawArrays(GL_TRIANGLES,0,verticesCount);
+    glBindBuffer(GL_ARRAY_BUFFER,buffers[0]);
+	glVertexPointer(3,GL_FLOAT,0,0);
+	glBindBuffer(GL_ARRAY_BUFFER, buffers[1]);
+	glNormalPointer(GL_FLOAT, 0, 0);
+	glDrawArrays(GL_TRIANGLES, 0, verticesCount);
 }
 
 
 Model::Model(const char* fileName){
     std::vector<float> points = std::vector<float>();
-    float x,y,z;
+    std::vector<float> normals = std::vector<float>();
+    float x,y,z,nx,ny,nz;
     std::ifstream file(fileName);
-        while(file >> x >> y >> z){
-            points.push_back(x);
-            points.push_back(y);
-            points.push_back(z);
-        } 
-    verticesCount = points.size();
-    glGenBuffers(1,vertices);
-    glBindBuffer(GL_ARRAY_BUFFER, vertices[0]);
-	glBufferData(GL_ARRAY_BUFFER,sizeof(float)*points.size(), points.data(),GL_STATIC_DRAW);
+    int vertex = 0;
+    while(file >> x >> y >> z >> nx >> ny >> nz){
+        points.push_back(x);
+        points.push_back(y);
+        points.push_back(z);
+        normals.push_back(nx);
+        normals.push_back(ny);
+        normals.push_back(nz);
+        vertex++;
+    } 
+    verticesCount = vertex;
+    glGenBuffers(2, buffers);
+	glBindBuffer(GL_ARRAY_BUFFER,buffers[0]);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(float) * verticesCount * 3, points.data(), GL_STATIC_DRAW);
+	glBindBuffer(GL_ARRAY_BUFFER, buffers[1]);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(float)* verticesCount * 3, normals.data(), GL_STATIC_DRAW);
 }
 
 Models::Models(){

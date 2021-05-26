@@ -8,7 +8,7 @@
 
 class Model {
     private:
-        GLuint vertices[1];
+        GLuint buffers[2];
         int verticesCount;
 
     public:

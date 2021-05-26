@@ -14,6 +14,7 @@
 #include <iostream>
 #include <ostream>
 #include <fstream>
+#define _PI_ 3.14159
 
 
 Models models;
@@ -21,12 +22,152 @@ float angleX = 0;
 float angleY = 0;
 float angleZ = 0;
 GLenum mode = GL_FILL;
-float camAlfa = 0.75f, camBeta = 0.5f, camRadius = 200.0f;
+//float camAlfa = 0.75f, camBeta = 0.5f, camRadius = 20.0f;
+float camAlfa = 0.0f, camBeta = 0.0f, camRadius = 20.0f;
 float camX, camY, camZ;
 float centerX = 0.0f, centerY = 0.0f, centerZ = 0.0f;
 float timestamp = 0.0f;
 float savedMod,timeMod = 0.0001f;
-bool isPaused = false;
+bool isPaused = false;	
+GLfloat dark[4] = { 0.2,0.2,0.2,1.0 };
+GLfloat white[4] = { 1.0,1.0,1.0,1.0 };
+
+GLuint vertexCount, buffers[2];
+
+
+void prepareCilinder(float height, float radius, int sides) {
+
+	float *v;
+
+	v = (float *)malloc(sizeof(float) * 4 * 3 * 3 * sides);
+	float* n;
+	n = (float*)malloc(sizeof(float) * 4 * 3 * 3 * sides);
+	int vertex = 0;
+	float delta = 2.0f * _PI_ / sides;
+
+	for (int i = 0; i < sides; ++i) {
+		// top
+		// central point
+		v[vertex*3 + 0] = 0.0f; 
+		v[vertex*3 + 1] = height /2.0f;
+		v[vertex*3 + 2] = 0.0f;
+		n[vertex * 3 + 0] = 0.0f;
+		n[vertex * 3 + 1] = 1.0f;
+		n[vertex * 3 + 2] = 0.0f;
+		vertex++;
+		v[vertex*3 + 0] = radius * sin( i * delta);
+		v[vertex*3 + 1] = height /2.0f;
+		v[vertex*3 + 2] = radius * cos( i * delta);
+		n[vertex * 3 + 0] = 0.0f;
+		n[vertex * 3 + 1] = 1.0f;
+		n[vertex * 3 + 2] = 0.0f;
+		vertex++;
+		v[vertex*3 + 0] = radius * sin( (i+1) * delta);
+		v[vertex*3 + 1] = height /2.0f;
+		v[vertex*3 + 2] = radius * cos( (i+1) * delta);
+		n[vertex * 3 + 0] = 0.0f;
+		n[vertex * 3 + 1] = 1.0f;
+		n[vertex * 3 + 2] = 0.0f;
+
+		// body
+		// tri�ngulo 1
+		vertex++;
+		v[vertex*3 + 0] = radius * sin( (i+1) * delta);
+		v[vertex*3 + 1] = height /2.0f;
+		v[vertex*3 + 2] = radius * cos( (i+1) * delta);
+		n[vertex * 3 + 0] = sin((i + 1) * delta);
+		n[vertex * 3 + 1] = 0.0f;
+		n[vertex * 3 + 2] = cos((i + 1) * delta);
+		vertex++;
+		v[vertex*3 + 0] = radius * sin( i * delta);
+		v[vertex*3 + 1] = height /2.0f;
+		v[vertex*3 + 2] = radius * cos( i * delta);
+		n[vertex * 3 + 0] = sin(i* delta);
+		n[vertex * 3 + 1] = 0.0f;
+		n[vertex * 3 + 2] = cos(i* delta);
+
+		vertex++;
+		v[vertex*3 + 0] = radius * sin( i * delta);
+		v[vertex*3 + 1] = -height /2.0f;
+		v[vertex*3 + 2] = radius * cos( i * delta);
+		n[vertex * 3 + 0] = sin(i* delta);
+		n[vertex * 3 + 1] = 0.0f;
+		n[vertex * 3 + 2] = cos(i  * delta);
+
+		// triangle 2
+		vertex++;
+		v[vertex*3 + 0] = radius * sin( (i+1) * delta);
+		v[vertex*3 + 1] = -height /2.0f;
+		v[vertex*3 + 2] = radius * cos( (i+1) * delta);
+		n[vertex * 3 + 0] = sin((i + 1) * delta);
+		n[vertex * 3 + 1] = 0.0f;
+		n[vertex * 3 + 2] = cos((i + 1) * delta);
+
+		vertex++;
+		v[vertex*3 + 0] = radius * sin( (i+1) * delta);
+		v[vertex*3 + 1] = height /2.0f;
+		v[vertex*3 + 2] = radius * cos( (i+1) * delta);
+		n[vertex * 3 + 0] = sin((i + 1) * delta);
+		n[vertex * 3 + 1] = 0.0f;
+		n[vertex * 3 + 2] = cos((i + 1) * delta);
+
+		vertex++;
+		v[vertex*3 + 0] = radius * sin( i * delta);
+		v[vertex*3 + 1] = -height /2.0f;
+		v[vertex*3 + 2] = radius * cos( i * delta);
+		n[vertex * 3 + 0] = sin(i * delta);
+		n[vertex * 3 + 1] = 0.0f;
+		n[vertex * 3 + 2] = cos(i * delta);
+
+		// base
+		// central point
+		vertex++;
+		v[vertex*3 + 0] = 0.0f; 
+		v[vertex*3 + 1] = -height /2.0f;
+		v[vertex*3 + 2] = 0.0f;
+		n[vertex * 3 + 0] = 0.0f;
+		n[vertex * 3 + 1] = -1.0f;
+		n[vertex * 3 + 2] = 0.0f;
+
+		vertex++;
+		v[vertex*3 + 0] = radius * sin( (i+1) * delta);
+		v[vertex*3 + 1] = -height /2.0f;
+		v[vertex*3 + 2] = radius * cos( (i+1) * delta);
+		n[vertex * 3 + 0] = 0.0f;
+		n[vertex * 3 + 1] = -1.0f;
+		n[vertex * 3 + 2] = 0.0f;
+
+		vertex++;
+		v[vertex*3 + 0] = radius * sin( i * delta);
+		v[vertex*3 + 1] = -height /2.0f;
+		v[vertex*3 + 2] = radius * cos( i * delta);
+		n[vertex * 3 + 0] = 0.0f;
+		n[vertex * 3 + 1] = -1.0f;
+		n[vertex * 3 + 2] = 0.0f;
+
+		vertex++;
+	}
+
+	vertexCount = vertex;
+
+	glGenBuffers(2, buffers);
+	glBindBuffer(GL_ARRAY_BUFFER,buffers[0]);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(float) * vertexCount * 3, v,     GL_STATIC_DRAW);
+	glBindBuffer(GL_ARRAY_BUFFER, buffers[1]);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(float)* vertexCount * 3, n, GL_STATIC_DRAW);
+	free(v);
+	free(n);
+
+}
+
+
+void drawCilinder() {
+	glBindBuffer(GL_ARRAY_BUFFER,buffers[0]);
+	glVertexPointer(3,GL_FLOAT,0,0);
+	glBindBuffer(GL_ARRAY_BUFFER, buffers[1]);
+	glNormalPointer(GL_FLOAT, 0, 0);
+	glDrawArrays(GL_TRIANGLES, 0, vertexCount);
+}
 
 
 void spherical2Cartesian() {
@@ -82,6 +223,7 @@ void drawAxis(){
 void renderScene(void) {
 
 	// clear buffers
+	glClearColor(0.0f,0.0f,0.0f,0.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	// set the camera
@@ -89,12 +231,25 @@ void renderScene(void) {
 	gluLookAt(camX,camY,camZ,
 			  centerX,centerY,centerZ,
 			  0.0f,1.0f,0.0f);
-	glPolygonMode(GL_FRONT_AND_BACK, mode);
+	//glPolygonMode(GL_FRONT_AND_BACK, mode);
 
 	//drawAxis();
 	glRotatef(angleX,1.0,0.0,0.0);
 	glRotatef(angleY,0.0,1.0,0.0);
 	glRotatef(angleZ,0.0,0.0,1.0);
+
+	float pos[4] = { 1.0,1.0,1.0,0.0 };
+	glLightfv(GL_LIGHT0, GL_POSITION, pos);
+
+	float dark[] = { 0.2,0.2,0.2,1.0 };
+	float white[] = { 0.8,0.8,0.8,1.0 };
+	float red[] = { 0.8,0.2,0.2,1.0 };
+	glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, white);
+	glMaterialfv(GL_FRONT, GL_SPECULAR, white);
+	glMaterialf(GL_FRONT, GL_SHININESS, 128);
+
+	//drawCilinder();
+
 	models.drawModels(timestamp);
 	timestamp += timeMod;
 	
@@ -190,6 +345,24 @@ void specialKeyReaction(int key, int xx, int yy) {
 
 }
 
+void initGL() {
+
+// OpenGL settings 
+	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_CULL_FACE);
+	glEnable(GL_LIGHTING);
+	glEnable(GL_LIGHT0);
+	glLightfv(GL_LIGHT0, GL_AMBIENT, dark);
+	glLightfv(GL_LIGHT0, GL_DIFFUSE, white);
+	glLightfv(GL_LIGHT0, GL_SPECULAR, white);
+// init
+	spherical2Cartesian();
+	glEnableClientState(GL_VERTEX_ARRAY);
+	glEnableClientState(GL_NORMAL_ARRAY);
+
+	prepareCilinder(2,1,16);
+}
+
 int main(int argc, char **argv) {
 		
 	//models.readFile("builddumb/teste.xml");
@@ -209,16 +382,12 @@ int main(int argc, char **argv) {
 	glutSpecialFunc(specialKeyReaction);
 	glewInit();
 
-	glEnableClientState(GL_VERTEX_ARRAY);
+//  OpenGL settings
+	initGL();
 	
 
-//  OpenGL settings
-	glEnable(GL_DEPTH_TEST);
-	glEnable(GL_CULL_FACE);
 
 	models.readFile(argv[1]);
-	spherical2Cartesian();
-
 
 // enter GLUT's main cycle
 	glutMainLoop();

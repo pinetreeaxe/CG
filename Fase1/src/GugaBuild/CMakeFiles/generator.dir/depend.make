@@ -33,6 +33,7 @@ CMakeFiles/generator.dir/normalTexPoint.cpp.o: ../point.hpp
 CMakeFiles/generator.dir/normalTexPoint.cpp.o: ../sphericalpoint.hpp
 CMakeFiles/generator.dir/normalTexPoint.cpp.o: ../vector.hpp
 
+CMakeFiles/generator.dir/patches.cpp.o: ../normalTexPoint.hpp
 CMakeFiles/generator.dir/patches.cpp.o: ../patches.cpp
 CMakeFiles/generator.dir/patches.cpp.o: ../patches.hpp
 CMakeFiles/generator.dir/patches.cpp.o: ../point.hpp

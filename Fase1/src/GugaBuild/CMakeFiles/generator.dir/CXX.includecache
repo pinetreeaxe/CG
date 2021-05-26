@@ -99,6 +99,8 @@ vector
 -
 point.hpp
 /home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
+normalTexPoint.hpp
+/home/gustavo/Documents/CG/CG/Fase1/src/normalTexPoint.hpp
 
 /home/gustavo/Documents/CG/CG/Fase1/src/plane.cpp
 plane.hpp
