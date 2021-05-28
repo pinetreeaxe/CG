@@ -1,24 +1,16 @@
 <scene>
+    <lights>
+		<light type="POINT" posX="0.0" posY="0.0" posZ="0.0" />
+        <light type="DIRECTIONAL" dirX="10.0" dirY="-10.0" dirZ="0.0" />
+	</lights>
     <group>
-        <scale X="1" Y="0.1" Z="1"/>
-        <translate X="2" Y="3" Z="0" />
-        <rotate angle="45" axisX="1" axisY="0" axisZ="0" />
-        <color R="0.4" G="0.2" B="0.8"/>
+        <translate X="5" Y="0" Z="0" />
         <models>
-            <model file="box.3d" />
-            <model file="torus.3d"/>
+            <model file="box2.3d" />
         </models>
     </group>
     <group>
-        <color R="0.24" G="0.08" B="0.5"/>
         <translate X="-3" Y="0" Z="0"/>
-        <model file="torus.3d"/>
-        <group>
-            <translate X="0" Y="-3" Z="0"/>
-            <scale X="0.5" Y="1" Z="0.5"/>
-            <color R="0.14" G="0.04" B="0.17"/>
-            <model file="box.3d"/>
-        </group>
+        <model file="torus2.3d"/>
     </group>
-    
 </scene>

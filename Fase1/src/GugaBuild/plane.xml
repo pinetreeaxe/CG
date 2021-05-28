@@ -1,3 +1,6 @@
 <scene>
-    <model file="plane.3d" />
+    <lights>
+		<light type="SPOT" posX="0.0" posY="5.0" posZ="0.0" dirX="0.0" dirY="-1.0" dirZ="0.0" cutoff="25" />
+	</lights>
+    <model file="sphere2.3d" />
 </scene>

@@ -1,4 +1,7 @@
 <scene>
+    <lights>
+		<light type="POINT" posX="1.0" posY="1.0" posZ="1.0" />
+	</lights>
     <group>
     <translate  time="10">
         <point X="10" Y="0" Z="0" />
@@ -11,7 +14,7 @@
         <point X="10" Y="0" Z="-10" />
     </translate>
     <models>
-        <model file="torus.3d" />
+        <model file="torus2.3d" />
     </models>
     <group>
     <translate  time="10">
@@ -26,7 +29,7 @@
     </translate>
     <rotate angle="90" axisX="1" axisY="0" axisZ="0" time="0.1"/>
 	    <models>
-		    <model file="box.3d"/>
+		    <model file="box2.3d"/>
 	    </models>
     </group>
     </group>
@@ -42,7 +45,7 @@
         <point X="10" Y="0" Z="-10" />
     </translate>
 	    <models>
-		    <model file="sphere.3d"/>
+		    <model file="sphere2.3d"/>
 	    </models>
     </group>
 </scene>

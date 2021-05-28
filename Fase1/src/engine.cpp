@@ -22,7 +22,7 @@ float angleX = 0;
 float angleY = 0;
 float angleZ = 0;
 GLenum mode = GL_FILL;
-float camAlfa = 0.75f, camBeta = 0.5f, camRadius = 20.0f;
+float camAlfa = 0.75f, camBeta = 0.5f, camRadius = 200.0f;
 //float camAlfa = 0.0f, camBeta = 0.0f, camRadius = 20.0f;
 float camX, camY, camZ;
 float centerX = 0.0f, centerY = 0.0f, centerZ = 0.0f;

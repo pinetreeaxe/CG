@@ -1,4 +1,7 @@
 <scene>
+	<lights>
+		<light type="POINT" posX="0.0" posY="0.0" posZ="0.0" />
+	</lights>
 	<group>
 		<color R="0.9" G="0.6" B="0.1"/>
 		<scale X="15" Y="15" Z="15"/>
@@ -1364,7 +1367,7 @@
 		</translate>
 		<scale X="0.7" Y="0.7" Z="0.7"/>
 		<models>
-			<model file="teapot.3d"/>
+			<model file="sphere.3d"/>
 		</models>	</group>	<group>
 		<color R="0.3" G="0.4" B="0.8"/>
 		<translate time="100">

@@ -55,10 +55,13 @@ Models::Models(){
     color = Color();
 }
 
-Models::Models(std::vector<Models> nGroups, std::vector<Model> nModels, std::vector<PointLight> pls, Translate nTranslation, Rotate nRotation, Scale nScale, Color nColor, CatmullRom nCat){
+Models::Models(std::vector<Models> nGroups, std::vector<Model> nModels, std::vector<PointLight> pls, std::vector<DirectionalLight> dls,
+                std::vector<SpotLight> sp, Translate nTranslation, Rotate nRotation, Scale nScale, Color nColor, CatmullRom nCat){
     groups = nGroups;
     models = nModels;
     pointLights = pls;
+    dirLights = dls;
+    spotLights = sp;
     translation = nTranslation;
     rotation = nRotation;
     scale = nScale;
@@ -66,7 +69,7 @@ Models::Models(std::vector<Models> nGroups, std::vector<Model> nModels, std::vec
     cat = nCat;
 }
 
-void Models::lightsParser(tinyxml2::XMLNode* points, std::vector<PointLight> *pls){
+void Models::lightsParser(tinyxml2::XMLNode* points, std::vector<PointLight> *pls, std::vector<DirectionalLight> *dls,  std::vector<SpotLight> *sls){
     tinyxml2::XMLNode* type = points->FirstChild();
     int number = 0;
     while(type){
@@ -100,6 +103,79 @@ void Models::lightsParser(tinyxml2::XMLNode* points, std::vector<PointLight> *pl
                                 std::stof(type->ToElement()->Attribute("specB")));
                 }
                 (*pls).push_back(PointLight(pos,amb,diff,spec,number));
+                number++;
+            }
+            else if(!strcmp(type->ToElement()->Attribute("type"), "DIRECTIONAL")){
+                Point dir = Point(std::stof(type->ToElement()->Attribute("dirX")),
+                                std::stof(type->ToElement()->Attribute("dirY")),
+                                std::stof(type->ToElement()->Attribute("dirZ")));
+                Color amb = Color(0.2f,0.2f,0.2f);
+                Color diff = Color(1.0f,1.0f,1.0f);
+                Color spec = Color(1.0f,1.0f,1.0f);
+
+                if(type->ToElement()->Attribute("ambR")){
+                    amb = Color(std::stof(type->ToElement()->Attribute("ambR")),
+                                std::stof(type->ToElement()->Attribute("posG")),
+                                std::stof(type->ToElement()->Attribute("posB")));
+                }
+                if(type->ToElement()->Attribute("diffR")){
+                    diff = Color(std::stof(type->ToElement()->Attribute("diffR")),
+                                std::stof(type->ToElement()->Attribute("diffG")),
+                                std::stof(type->ToElement()->Attribute("diffB")));
+                }
+                if(type->ToElement()->Attribute("diffR")){
+                    diff = Color(std::stof(type->ToElement()->Attribute("diffR")),
+                                std::stof(type->ToElement()->Attribute("diffG")),
+                                std::stof(type->ToElement()->Attribute("diffB")));
+                }
+                if(type->ToElement()->Attribute("specR")){
+                    diff = Color(std::stof(type->ToElement()->Attribute("specR")),
+                                std::stof(type->ToElement()->Attribute("specG")),
+                                std::stof(type->ToElement()->Attribute("specB")));
+                }
+                (*dls).push_back(DirectionalLight(dir,amb,diff,spec,number));
+                number++;
+            }
+            else if(!strcmp(type->ToElement()->Attribute("type"), "SPOT")){
+                Point pos = Point(std::stof(type->ToElement()->Attribute("posX")),
+                                std::stof(type->ToElement()->Attribute("posY")),
+                                std::stof(type->ToElement()->Attribute("posZ")));
+                Vector dir = Vector(std::stof(type->ToElement()->Attribute("dirX")),
+                                std::stof(type->ToElement()->Attribute("dirY")),
+                                std::stof(type->ToElement()->Attribute("dirZ")));
+                Color amb = Color(0.2f,0.2f,0.2f);
+                Color diff = Color(1.0f,1.0f,1.0f);
+                Color spec = Color(1.0f,1.0f,1.0f);
+                float cut = 45.0f;
+                float exp = 0.0f;
+
+                if(type->ToElement()->Attribute("ambR")){
+                    amb = Color(std::stof(type->ToElement()->Attribute("ambR")),
+                                std::stof(type->ToElement()->Attribute("posG")),
+                                std::stof(type->ToElement()->Attribute("posB")));
+                }
+                if(type->ToElement()->Attribute("diffR")){
+                    diff = Color(std::stof(type->ToElement()->Attribute("diffR")),
+                                std::stof(type->ToElement()->Attribute("diffG")),
+                                std::stof(type->ToElement()->Attribute("diffB")));
+                }
+                if(type->ToElement()->Attribute("diffR")){
+                    diff = Color(std::stof(type->ToElement()->Attribute("diffR")),
+                                std::stof(type->ToElement()->Attribute("diffG")),
+                                std::stof(type->ToElement()->Attribute("diffB")));
+                }
+                if(type->ToElement()->Attribute("specR")){
+                    diff = Color(std::stof(type->ToElement()->Attribute("specR")),
+                                std::stof(type->ToElement()->Attribute("specG")),
+                                std::stof(type->ToElement()->Attribute("specB")));
+                }
+                if(type->ToElement()->Attribute("cutoff")){
+                    cut = std::stof(type->ToElement()->Attribute("cutoff"));
+                }
+                if(type->ToElement()->Attribute("exponent")){
+                    cut = std::stof(type->ToElement()->Attribute("exponent"));
+                }
+                (*sls).push_back(SpotLight(pos,amb,diff,spec,dir,exp,cut,number));
                 number++;
             }
         }
@@ -136,6 +212,8 @@ Models Models::groupParser(tinyxml2::XMLNode* group, Color gColor){
     std::vector<Models> nGroups = std::vector<Models>(); 
     std::vector<Model> nModels = std::vector<Model>();
     std::vector<PointLight> pls = std::vector<PointLight>();
+    std::vector<DirectionalLight> dls = std::vector<DirectionalLight>();
+    std::vector<SpotLight> sls = std::vector<SpotLight>();
     CatmullRom nCat = CatmullRom();
     Translate nTranslation = Translate();
     Rotate nRotation = Rotate();
@@ -237,14 +315,14 @@ Models Models::groupParser(tinyxml2::XMLNode* group, Color gColor){
             nColor = Color(r,g,b);
         }
         else if(!strcmp(type->Value(), "lights")){
-            lightsParser(type,&pls);
+            lightsParser(type,&pls, &dls, &sls);
         }
         else if(!strcmp(type->Value(), "group")){
             nGroups.push_back(groupParser(type, nColor));
         }
 		type = type->NextSibling();
 	}
-    return Models(nGroups, nModels, pls, nTranslation, nRotation, nScale, nColor, nCat);
+    return Models(nGroups, nModels, pls, dls,sls, nTranslation, nRotation, nScale, nColor, nCat);
 }
 
 
@@ -272,11 +350,15 @@ void Models::drawModels(float timestamp){
     rotation.transform(timestamp);
     scale.transform();
     color.transform();
-    /*if(pointLights.size()>0){
+    if((pointLights.size()+dirLights.size()+spotLights.size())>0){
         glEnable(GL_LIGHTING);
-    }*/
+    }
     for(PointLight pl : pointLights)
         pl.turnOn();
+    for(DirectionalLight dl : dirLights)
+        dl.turnOn();
+    for(SpotLight sl : spotLights)
+        sl.turnOn();
     for(Model m: models)
         m.drawModel();
     for(Models ms: groups){
