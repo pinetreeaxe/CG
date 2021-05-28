@@ -55,15 +55,58 @@ Models::Models(){
     color = Color();
 }
 
-Models::Models(std::vector<Models> nGroups, std::vector<Model> nModels, Translate nTranslation, Rotate nRotation, Scale nScale, Color nColor, CatmullRom nCat){
+Models::Models(std::vector<Models> nGroups, std::vector<Model> nModels, std::vector<PointLight> pls, Translate nTranslation, Rotate nRotation, Scale nScale, Color nColor, CatmullRom nCat){
     groups = nGroups;
     models = nModels;
+    pointLights = pls;
     translation = nTranslation;
     rotation = nRotation;
     scale = nScale;
     color = nColor;
     cat = nCat;
 }
+
+void Models::lightsParser(tinyxml2::XMLNode* points, std::vector<PointLight> *pls){
+    tinyxml2::XMLNode* type = points->FirstChild();
+    int number = 0;
+    while(type){
+		if(!strcmp(type->Value(), "light")){
+            if(!strcmp(type->ToElement()->Attribute("type"), "POINT")){
+                Point pos = Point(std::stof(type->ToElement()->Attribute("posX")),
+                                std::stof(type->ToElement()->Attribute("posY")),
+                                std::stof(type->ToElement()->Attribute("posZ")));
+                Color amb = Color(0.2f,0.2f,0.2f);
+                Color diff = Color(1.0f,1.0f,1.0f);
+                Color spec = Color(1.0f,1.0f,1.0f);
+
+                if(type->ToElement()->Attribute("ambR")){
+                    amb = Color(std::stof(type->ToElement()->Attribute("ambR")),
+                                std::stof(type->ToElement()->Attribute("posG")),
+                                std::stof(type->ToElement()->Attribute("posB")));
+                }
+                if(type->ToElement()->Attribute("diffR")){
+                    diff = Color(std::stof(type->ToElement()->Attribute("diffR")),
+                                std::stof(type->ToElement()->Attribute("diffG")),
+                                std::stof(type->ToElement()->Attribute("diffB")));
+                }
+                if(type->ToElement()->Attribute("diffR")){
+                    diff = Color(std::stof(type->ToElement()->Attribute("diffR")),
+                                std::stof(type->ToElement()->Attribute("diffG")),
+                                std::stof(type->ToElement()->Attribute("diffB")));
+                }
+                if(type->ToElement()->Attribute("specR")){
+                    diff = Color(std::stof(type->ToElement()->Attribute("specR")),
+                                std::stof(type->ToElement()->Attribute("specG")),
+                                std::stof(type->ToElement()->Attribute("specB")));
+                }
+                (*pls).push_back(PointLight(pos,amb,diff,spec,number));
+                number++;
+            }
+        }
+        type = type->NextSibling();
+    }
+}
+
 
 std::vector<Point> Models::translationParser(tinyxml2::XMLNode* points){
     std::vector<Point> nPoints = std::vector<Point>();
@@ -92,6 +135,7 @@ std::vector<Model> Models::modelsParser(tinyxml2::XMLNode* models){
 Models Models::groupParser(tinyxml2::XMLNode* group, Color gColor){
     std::vector<Models> nGroups = std::vector<Models>(); 
     std::vector<Model> nModels = std::vector<Model>();
+    std::vector<PointLight> pls = std::vector<PointLight>();
     CatmullRom nCat = CatmullRom();
     Translate nTranslation = Translate();
     Rotate nRotation = Rotate();
@@ -192,12 +236,15 @@ Models Models::groupParser(tinyxml2::XMLNode* group, Color gColor){
                 b = 0;
             nColor = Color(r,g,b);
         }
+        else if(!strcmp(type->Value(), "lights")){
+            lightsParser(type,&pls);
+        }
         else if(!strcmp(type->Value(), "group")){
             nGroups.push_back(groupParser(type, nColor));
         }
 		type = type->NextSibling();
 	}
-    return Models(nGroups, nModels, nTranslation, nRotation, nScale, nColor, nCat);
+    return Models(nGroups, nModels, pls, nTranslation, nRotation, nScale, nColor, nCat);
 }
 
 
@@ -225,6 +272,11 @@ void Models::drawModels(float timestamp){
     rotation.transform(timestamp);
     scale.transform();
     color.transform();
+    /*if(pointLights.size()>0){
+        glEnable(GL_LIGHTING);
+    }*/
+    for(PointLight pl : pointLights)
+        pl.turnOn();
     for(Model m: models)
         m.drawModel();
     for(Models ms: groups){

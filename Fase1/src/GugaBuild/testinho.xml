@@ -1,7 +1,10 @@
 <scene>
 	<group>
 		<group>
-			<model file = "plane.3d"/>
+			<lights>
+				<light type="POINT" posX="1.0" posY="1.0" posZ="1.0" />
+			</lights>
+			<model file = "sphere2.3d"/>
 		</group>>
 	</group>
 </scene>

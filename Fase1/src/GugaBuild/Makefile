@@ -244,6 +244,33 @@ generator.cpp.s:
 	$(MAKE) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/generator.cpp.s
 .PHONY : generator.cpp.s
 
+lights.o: lights.cpp.o
+
+.PHONY : lights.o
+
+# target to build an object file
+lights.cpp.o:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/lights.cpp.o
+.PHONY : lights.cpp.o
+
+lights.i: lights.cpp.i
+
+.PHONY : lights.i
+
+# target to preprocess a source file
+lights.cpp.i:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/lights.cpp.i
+.PHONY : lights.cpp.i
+
+lights.s: lights.cpp.s
+
+.PHONY : lights.s
+
+# target to generate assembly for a file
+lights.cpp.s:
+	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/lights.cpp.s
+.PHONY : lights.cpp.s
+
 models.o: models.cpp.o
 
 .PHONY : models.o
@@ -572,6 +599,9 @@ help:
 	@echo "... generator.o"
 	@echo "... generator.i"
 	@echo "... generator.s"
+	@echo "... lights.o"
+	@echo "... lights.i"
+	@echo "... lights.s"
 	@echo "... models.o"
 	@echo "... models.i"
 	@echo "... models.s"

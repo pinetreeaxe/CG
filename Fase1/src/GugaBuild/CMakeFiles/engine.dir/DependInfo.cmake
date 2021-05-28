@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/gustavo/Documents/CG/CG/Fase1/src/engine.cpp" "/home/gustavo/Documents/CG/CG/Fase1/src/GugaBuild/CMakeFiles/engine.dir/engine.cpp.o"
+  "/home/gustavo/Documents/CG/CG/Fase1/src/lights.cpp" "/home/gustavo/Documents/CG/CG/Fase1/src/GugaBuild/CMakeFiles/engine.dir/lights.cpp.o"
   "/home/gustavo/Documents/CG/CG/Fase1/src/models.cpp" "/home/gustavo/Documents/CG/CG/Fase1/src/GugaBuild/CMakeFiles/engine.dir/models.cpp.o"
   "/home/gustavo/Documents/CG/CG/Fase1/src/point.cpp" "/home/gustavo/Documents/CG/CG/Fase1/src/GugaBuild/CMakeFiles/engine.dir/point.cpp.o"
   "/home/gustavo/Documents/CG/CG/Fase1/src/sphericalpoint.cpp" "/home/gustavo/Documents/CG/CG/Fase1/src/GugaBuild/CMakeFiles/engine.dir/sphericalpoint.cpp.o"

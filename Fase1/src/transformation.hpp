@@ -66,6 +66,9 @@ class Color {
     public:
         Color();
         Color(float, float, float);
+        float getRed();
+        float getGreen();
+        float getBlue();
         void transform();
 };
 #endif

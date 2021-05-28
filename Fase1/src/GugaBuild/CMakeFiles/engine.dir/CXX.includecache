@@ -30,6 +30,16 @@ ostream
 fstream
 -
 
+/home/gustavo/Documents/CG/CG/Fase1/src/lights.cpp
+lights.hpp
+/home/gustavo/Documents/CG/CG/Fase1/src/lights.hpp
+
+/home/gustavo/Documents/CG/CG/Fase1/src/lights.hpp
+point.hpp
+/home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
+transformation.hpp
+/home/gustavo/Documents/CG/CG/Fase1/src/transformation.hpp
+
 /home/gustavo/Documents/CG/CG/Fase1/src/models.cpp
 stdlib.h
 -
@@ -57,6 +67,8 @@ transformation.hpp
 /home/gustavo/Documents/CG/CG/Fase1/src/transformation.hpp
 point.hpp
 /home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
+lights.hpp
+/home/gustavo/Documents/CG/CG/Fase1/src/lights.hpp
 tinyxml2.h
 /home/gustavo/Documents/CG/CG/Fase1/src/tinyxml2.h
 vector

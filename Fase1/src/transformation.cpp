@@ -207,6 +207,18 @@ Color::Color(float rt, float gt, float bt){
     b = bt;
 }
 
+float Color::getRed(){
+    return r;
+}
+
+float Color::getGreen(){
+    return g;
+}
+
+float Color::getBlue(){
+    return b;
+}
+
 void Color::transform(){
     glColor3f(r,g,b);
 }

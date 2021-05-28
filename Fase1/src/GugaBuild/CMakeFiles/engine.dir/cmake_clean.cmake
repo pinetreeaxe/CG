@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/models.cpp.o"
   "CMakeFiles/engine.dir/sphericalpoint.cpp.o"
   "CMakeFiles/engine.dir/transformation.cpp.o"
+  "CMakeFiles/engine.dir/lights.cpp.o"
   "engine.pdb"
   "engine"
 )

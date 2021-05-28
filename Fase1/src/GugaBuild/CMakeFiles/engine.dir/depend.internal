@@ -3,13 +3,22 @@
 
 CMakeFiles/engine.dir/engine.cpp.o
  /home/gustavo/Documents/CG/CG/Fase1/src/engine.cpp
+ /home/gustavo/Documents/CG/CG/Fase1/src/lights.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/models.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/sphericalpoint.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/tinyxml2.h
  /home/gustavo/Documents/CG/CG/Fase1/src/transformation.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/vector.hpp
+CMakeFiles/engine.dir/lights.cpp.o
+ /home/gustavo/Documents/CG/CG/Fase1/src/lights.cpp
+ /home/gustavo/Documents/CG/CG/Fase1/src/lights.hpp
+ /home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
+ /home/gustavo/Documents/CG/CG/Fase1/src/sphericalpoint.hpp
+ /home/gustavo/Documents/CG/CG/Fase1/src/transformation.hpp
+ /home/gustavo/Documents/CG/CG/Fase1/src/vector.hpp
 CMakeFiles/engine.dir/models.cpp.o
+ /home/gustavo/Documents/CG/CG/Fase1/src/lights.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/models.cpp
  /home/gustavo/Documents/CG/CG/Fase1/src/models.hpp
  /home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
