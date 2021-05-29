@@ -12,9 +12,14 @@ class Model {
         GLuint buffers[3];
         int verticesCount;
         int texture;
+        Color amb;
+        Color diff;
+        Color spec;
+        Color emiss;
+
 
     public:
-        Model(const char *,std::string);
+        Model(const char *,std::string,Color,Color,Color,Color);
         void drawModel();
         int loadTexture(std::string);
 };

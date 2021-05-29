@@ -14,6 +14,7 @@ CMakeFiles/generator.dir/cone.cpp.o: ../cone.hpp
 CMakeFiles/generator.dir/cone.cpp.o: ../normalTexPoint.hpp
 CMakeFiles/generator.dir/cone.cpp.o: ../point.hpp
 CMakeFiles/generator.dir/cone.cpp.o: ../sphericalpoint.hpp
+CMakeFiles/generator.dir/cone.cpp.o: ../uga.hpp
 CMakeFiles/generator.dir/cone.cpp.o: ../vector.hpp
 
 CMakeFiles/generator.dir/generator.cpp.o: ../box.hpp

@@ -50,7 +50,7 @@ int main(int argc, char** argv){
     else if(primitive == "sphere")
         writeFileNew2(Sphere(argc-3, argv+2), argv[argc-1]);
     else if(primitive == "cone")
-        writeFileNew(Cone(argc-3, argv+2), argv[argc-1]);
+        writeFileNew2(Cone(argc-3, argv+2), argv[argc-1]);
     else if(primitive == "torus")
         writeFileNew2(Torus(argc-3, argv+2), argv[argc-1]);
     else if(primitive == "patches")

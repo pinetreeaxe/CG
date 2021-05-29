@@ -54,12 +54,14 @@ void PointLight::turnOn(){
     GLfloat diffuse[4] = {diff.getRed(), diff.getGreen(), diff.getBlue(),1.0f};
     GLfloat specular[4] = {spec.getRed(), spec.getGreen(), spec.getBlue(),1.0f};
     GLenum light = getLight(number);
+    GLfloat exp = 128;
     
     glEnable(light);
     glLightfv(light, GL_AMBIENT, ambient);
     glLightfv(light, GL_DIFFUSE, diffuse);
     glLightfv(light, GL_SPECULAR, specular);
     glLightfv(light, GL_POSITION, position);
+    glLightfv(light, GL_SPOT_EXPONENT, &exp);
 
 }
 

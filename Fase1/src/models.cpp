@@ -50,6 +50,14 @@ int Model::loadTexture(std::string s) {
 }
 
 void Model::drawModel(){
+    GLfloat ambient[4] = {amb.getRed(),amb.getGreen(),amb.getBlue(),1.0f};
+    GLfloat diffuse[4] = {diff.getRed(),diff.getGreen(),diff.getBlue(),1.0f};
+    GLfloat specular[4] = {spec.getRed(),spec.getGreen(),spec.getBlue(),1.0f};
+    GLfloat emission[4] = {emiss.getRed(),emiss.getGreen(),emiss.getBlue(),1.0f};
+    glMaterialfv(GL_FRONT, GL_AMBIENT, ambient);
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, diffuse);
+    glMaterialfv(GL_FRONT, GL_SPECULAR, specular);
+    glMaterialfv(GL_FRONT, GL_EMISSION, emission);
     glBindTexture(GL_TEXTURE_2D, texture);
     glBindBuffer(GL_ARRAY_BUFFER,buffers[0]);
 	glVertexPointer(3,GL_FLOAT,0,0);
@@ -62,7 +70,7 @@ void Model::drawModel(){
 }
 
 
-Model::Model(const char* fileName, std::string texName){
+Model::Model(const char* fileName, std::string texName, Color ambc, Color diffc, Color specc, Color emissc){
     if(!strcmp(texName.c_str(), "")){
         texture = 0;
     }else
@@ -70,6 +78,10 @@ Model::Model(const char* fileName, std::string texName){
     std::vector<float> points = std::vector<float>();
     std::vector<float> normals = std::vector<float>();
     std::vector<float> texCoords = std::vector<float>();
+    amb = ambc;
+    diff = diffc;
+    spec = specc;
+    emiss = emissc;
     float x,y,z,nx,ny,nz,tx,ty;
     std::ifstream file(fileName);
     int vertex = 0;
@@ -132,13 +144,8 @@ void Models::lightsParser(tinyxml2::XMLNode* points, std::vector<PointLight> *pl
 
                 if(type->ToElement()->Attribute("ambR")){
                     amb = Color(std::stof(type->ToElement()->Attribute("ambR")),
-                                std::stof(type->ToElement()->Attribute("posG")),
-                                std::stof(type->ToElement()->Attribute("posB")));
-                }
-                if(type->ToElement()->Attribute("diffR")){
-                    diff = Color(std::stof(type->ToElement()->Attribute("diffR")),
-                                std::stof(type->ToElement()->Attribute("diffG")),
-                                std::stof(type->ToElement()->Attribute("diffB")));
+                                std::stof(type->ToElement()->Attribute("ambG")),
+                                std::stof(type->ToElement()->Attribute("ambB")));
                 }
                 if(type->ToElement()->Attribute("diffR")){
                     diff = Color(std::stof(type->ToElement()->Attribute("diffR")),
@@ -146,7 +153,7 @@ void Models::lightsParser(tinyxml2::XMLNode* points, std::vector<PointLight> *pl
                                 std::stof(type->ToElement()->Attribute("diffB")));
                 }
                 if(type->ToElement()->Attribute("specR")){
-                    diff = Color(std::stof(type->ToElement()->Attribute("specR")),
+                    spec = Color(std::stof(type->ToElement()->Attribute("specR")),
                                 std::stof(type->ToElement()->Attribute("specG")),
                                 std::stof(type->ToElement()->Attribute("specB")));
                 }
@@ -163,13 +170,8 @@ void Models::lightsParser(tinyxml2::XMLNode* points, std::vector<PointLight> *pl
 
                 if(type->ToElement()->Attribute("ambR")){
                     amb = Color(std::stof(type->ToElement()->Attribute("ambR")),
-                                std::stof(type->ToElement()->Attribute("posG")),
-                                std::stof(type->ToElement()->Attribute("posB")));
-                }
-                if(type->ToElement()->Attribute("diffR")){
-                    diff = Color(std::stof(type->ToElement()->Attribute("diffR")),
-                                std::stof(type->ToElement()->Attribute("diffG")),
-                                std::stof(type->ToElement()->Attribute("diffB")));
+                                std::stof(type->ToElement()->Attribute("ambG")),
+                                std::stof(type->ToElement()->Attribute("ambB")));
                 }
                 if(type->ToElement()->Attribute("diffR")){
                     diff = Color(std::stof(type->ToElement()->Attribute("diffR")),
@@ -177,7 +179,7 @@ void Models::lightsParser(tinyxml2::XMLNode* points, std::vector<PointLight> *pl
                                 std::stof(type->ToElement()->Attribute("diffB")));
                 }
                 if(type->ToElement()->Attribute("specR")){
-                    diff = Color(std::stof(type->ToElement()->Attribute("specR")),
+                    spec = Color(std::stof(type->ToElement()->Attribute("specR")),
                                 std::stof(type->ToElement()->Attribute("specG")),
                                 std::stof(type->ToElement()->Attribute("specB")));
                 }
@@ -199,13 +201,8 @@ void Models::lightsParser(tinyxml2::XMLNode* points, std::vector<PointLight> *pl
 
                 if(type->ToElement()->Attribute("ambR")){
                     amb = Color(std::stof(type->ToElement()->Attribute("ambR")),
-                                std::stof(type->ToElement()->Attribute("posG")),
-                                std::stof(type->ToElement()->Attribute("posB")));
-                }
-                if(type->ToElement()->Attribute("diffR")){
-                    diff = Color(std::stof(type->ToElement()->Attribute("diffR")),
-                                std::stof(type->ToElement()->Attribute("diffG")),
-                                std::stof(type->ToElement()->Attribute("diffB")));
+                                std::stof(type->ToElement()->Attribute("ambG")),
+                                std::stof(type->ToElement()->Attribute("ambB")));
                 }
                 if(type->ToElement()->Attribute("diffR")){
                     diff = Color(std::stof(type->ToElement()->Attribute("diffR")),
@@ -213,7 +210,7 @@ void Models::lightsParser(tinyxml2::XMLNode* points, std::vector<PointLight> *pl
                                 std::stof(type->ToElement()->Attribute("diffB")));
                 }
                 if(type->ToElement()->Attribute("specR")){
-                    diff = Color(std::stof(type->ToElement()->Attribute("specR")),
+                    spec = Color(std::stof(type->ToElement()->Attribute("specR")),
                                 std::stof(type->ToElement()->Attribute("specG")),
                                 std::stof(type->ToElement()->Attribute("specB")));
                 }
@@ -221,7 +218,7 @@ void Models::lightsParser(tinyxml2::XMLNode* points, std::vector<PointLight> *pl
                     cut = std::stof(type->ToElement()->Attribute("cutoff"));
                 }
                 if(type->ToElement()->Attribute("exponent")){
-                    cut = std::stof(type->ToElement()->Attribute("exponent"));
+                    exp = std::stof(type->ToElement()->Attribute("exponent"));
                 }
                 (*sls).push_back(SpotLight(pos,amb,diff,spec,dir,exp,cut,number));
                 number++;
@@ -249,11 +246,37 @@ std::vector<Model> Models::modelsParser(tinyxml2::XMLNode* models){
     std::vector<Model> nModels = std::vector<Model>();
     tinyxml2::XMLNode* type = models->FirstChild();
     while(type){
-        std::string tex = "";
 		if(!strcmp(type->Value(), "model")){
+            std::string tex = "";
+            Color amb = Color(0.2,0.2,0.2);
+            Color diff = Color(0.8,0.8,0.8);
+            Color spec = Color(0,0,0);
+            Color emiss = Color(0,0,0);
             if(type->ToElement()->Attribute("texture"))
                 tex = type->ToElement()->Attribute("texture");
-			nModels.push_back(Model(type->ToElement()->Attribute("file"),tex));
+            if(type->ToElement()->Attribute("ambR")){
+                amb = Color(std::stof(type->ToElement()->Attribute("ambR")),
+                            std::stof(type->ToElement()->Attribute("ambG")),
+                            std::stof(type->ToElement()->Attribute("ambB")));
+            }
+            if(type->ToElement()->Attribute("diffR")){
+                diff = Color(std::stof(type->ToElement()->Attribute("diffR")),
+                            std::stof(type->ToElement()->Attribute("diffG")),
+                            std::stof(type->ToElement()->Attribute("diffB")));
+            }
+            if(type->ToElement()->Attribute("specR")){
+                spec = Color(std::stof(type->ToElement()->Attribute("specR")),
+                            std::stof(type->ToElement()->Attribute("specG")),
+                            std::stof(type->ToElement()->Attribute("specB")));
+            }
+            if(type->ToElement()->Attribute("emissR")){
+                emiss = Color(std::stof(type->ToElement()->Attribute("emissR")),
+                            std::stof(type->ToElement()->Attribute("emissG")),
+                            std::stof(type->ToElement()->Attribute("emissB")));
+            }
+            
+            
+			nModels.push_back(Model(type->ToElement()->Attribute("file"),tex,amb,diff,spec,emiss));
         }
         type = type->NextSibling();
     }
@@ -281,9 +304,35 @@ Models Models::groupParser(tinyxml2::XMLNode* group, Color gColor){
         }
         else if(!strcmp(type->Value(), "model")){
             std::string tex = "";
+            Color amb = Color(0.2,0.2,0.2);
+            Color diff = Color(0.8,0.8,0.8);
+            Color spec = Color(0,0,0);
+            Color emiss = Color(0,0,0);
             if(type->ToElement()->Attribute("texture"))
                 tex = type->ToElement()->Attribute("texture");
-			nModels.push_back(Model(type->ToElement()->Attribute("file"),tex));
+            if(type->ToElement()->Attribute("ambR")){
+                amb = Color(std::stof(type->ToElement()->Attribute("ambR")),
+                            std::stof(type->ToElement()->Attribute("ambG")),
+                            std::stof(type->ToElement()->Attribute("ambB")));
+            }
+            if(type->ToElement()->Attribute("diffR")){
+                diff = Color(std::stof(type->ToElement()->Attribute("diffR")),
+                            std::stof(type->ToElement()->Attribute("diffG")),
+                            std::stof(type->ToElement()->Attribute("diffB")));
+            }
+            if(type->ToElement()->Attribute("specR")){
+                spec = Color(std::stof(type->ToElement()->Attribute("specR")),
+                            std::stof(type->ToElement()->Attribute("specG")),
+                            std::stof(type->ToElement()->Attribute("specB")));
+            }
+            if(type->ToElement()->Attribute("emissR")){
+                emiss = Color(std::stof(type->ToElement()->Attribute("emissR")),
+                            std::stof(type->ToElement()->Attribute("emissG")),
+                            std::stof(type->ToElement()->Attribute("emissB")));
+            }
+            
+            
+			nModels.push_back(Model(type->ToElement()->Attribute("file"),tex,amb,diff,spec,emiss));
         }
         else if(!strcmp(type->Value(), "translate")){
             if(type->ToElement()->Attribute("time")){
