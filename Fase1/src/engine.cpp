@@ -6,6 +6,8 @@
 #include <GL/glut.h>
 #endif
 
+#include <IL/il.h>
+
 #include "models.hpp"
 
 #include <math.h>
@@ -14,7 +16,7 @@
 #include <iostream>
 #include <ostream>
 #include <fstream>
-#define _PI_ 3.14159
+
 
 
 Models models;
@@ -217,14 +219,18 @@ void initGL() {
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_CULL_FACE);
 	glEnable(GL_LIGHTING);
-	//glEnable(GL_LIGHT1);
-	/*glLightfv(GL_LIGHT1, GL_AMBIENT, dark);
-	glLightfv(GL_LIGHT1, GL_DIFFUSE, white);
-	glLightfv(GL_LIGHT1, GL_SPECULAR, white);*/
+
 // init
 	spherical2Cartesian();
 	glEnableClientState(GL_VERTEX_ARRAY);
 	glEnableClientState(GL_NORMAL_ARRAY);
+	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+
+	glEnable(GL_TEXTURE_2D);
+	ilInit();
+    ilEnable(IL_ORIGIN_SET);
+    ilOriginFunc(IL_ORIGIN_UPPER_LEFT);
+
 }
 
 int main(int argc, char **argv) {

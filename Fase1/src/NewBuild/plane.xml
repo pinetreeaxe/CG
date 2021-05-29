@@ -1,0 +1,25 @@
+<scene>
+    <lights>
+		<light type="DIRECTIONAL" dirX="0.0" dirY="1.0" dirZ="0.0"  />
+        <light type="DIRECTIONAL" dirX="0.0" dirY="-1.0" dirZ="0.0"  />
+        <light type="DIRECTIONAL" dirX="1.0" dirY="0.0" dirZ="0.0"  />
+        <light type="DIRECTIONAL" dirX="-1.0" dirY="0.0" dirZ="0.0"  />
+        <light type="DIRECTIONAL" dirX="0.0" dirY="0.0" dirZ="1.0"  />
+        <light type="DIRECTIONAL" dirX="0.0" dirY="0.0" dirZ="-1.0"  />
+	</lights>
+        <model file="box.3d" texture="cool.png"/>
+    <group>
+        <translate X="0" Y="10" Z="0" />
+        <models>
+            <model file="plane.3d" texture="index.jpeg"/>
+        </models>
+    </group>
+    <group>
+        <translate X="0" Y="20" Z="0" />
+        <scale X="1" Y="0.15" Z="1"/>
+        <models>
+            <model file="torus.3d" texture="saturn.jpg"/>
+        </models>
+    </group>
+    
+</scene>

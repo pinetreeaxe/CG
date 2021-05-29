@@ -7,6 +7,7 @@
 #include "torus.hpp"
 #include "patches.hpp"
 #include "normalTexPoint.hpp"
+#include "uga.hpp"
 
 #include<string>
 #include<ostream>
@@ -31,18 +32,27 @@ void writeFileNew(T primitive, std::string fileName){
     }
 }
 
+template<typename T>
+void writeFileNew2(T primitive, std::string fileName){
+    std::ofstream file(fileName);
+    for (NormalTexPoint2 p : primitive.draw()){
+        p.to_string();
+        file << p.to_string() << "\n";
+    }
+}
+
 int main(int argc, char** argv){
     std::string primitive(argv[1]);
     if(primitive == "plane")
-        writeFileNew(Plane(argc-3, argv+2), argv[argc-1]);
+        writeFileNew2(Plane(argc-3, argv+2), argv[argc-1]);
     else if(primitive == "box")
-        writeFileNew(Box(argc-3, argv+2), argv[argc-1]);
+        writeFileNew2(Box(argc-3, argv+2), argv[argc-1]);
     else if(primitive == "sphere")
-        writeFileNew(Sphere(argc-3, argv+2), argv[argc-1]);
+        writeFileNew2(Sphere(argc-3, argv+2), argv[argc-1]);
     else if(primitive == "cone")
         writeFileNew(Cone(argc-3, argv+2), argv[argc-1]);
     else if(primitive == "torus")
-        writeFileNew(Torus(argc-3, argv+2), argv[argc-1]);
+        writeFileNew2(Torus(argc-3, argv+2), argv[argc-1]);
     else if(primitive == "patches")
         writeFile(Patches(argc-3, argv+2), argv[argc-1]); 
 }

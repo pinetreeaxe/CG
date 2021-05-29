@@ -1,6 +1,6 @@
 #ifndef PLANE_H
 #define PLANE_H
-#include "normalTexPoint.hpp"
+#include "uga.hpp"
 
 #include <vector>
 
@@ -10,7 +10,7 @@ private:
 
 public:
     Plane(int argc, char** args);
-    std::vector<NormalTexPoint> draw() const;
+    std::vector<NormalTexPoint2> draw() const;
 };
 
 #endif

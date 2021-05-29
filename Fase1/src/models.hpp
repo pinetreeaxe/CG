@@ -9,12 +9,14 @@
 
 class Model {
     private:
-        GLuint buffers[2];
+        GLuint buffers[3];
         int verticesCount;
+        int texture;
 
     public:
-        Model(const char *);
+        Model(const char *,std::string);
         void drawModel();
+        int loadTexture(std::string);
 };
 
 class Models {

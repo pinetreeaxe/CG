@@ -12,12 +12,12 @@ Torus::Torus(int argc, char** argv){
 	stacks = std::stoi(argv[3]);
 }
 
-std::vector<NormalTexPoint> Torus::draw() {
+std::vector<NormalTexPoint2> Torus::draw() {
 
 	float step = 2 * M_PI / slices;
 	float steph = 2 * M_PI / stacks;
 
-	std::vector<NormalTexPoint> points;
+	std::vector<NormalTexPoint2> points;
 
 	for (int i = 0; i < slices; i++) {
         //translate to the ring
@@ -42,13 +42,21 @@ std::vector<NormalTexPoint> Torus::draw() {
 			Vector v4 = Vector(p4.get_x()/ringRadius, p4.get_y()/ringRadius, p4.get_z()/ringRadius);
             p4.add_vector(nextCenter);
 
-			points.push_back(NormalTexPoint(p1,v1));
-			points.push_back(NormalTexPoint(p3,v3));
-			points.push_back(NormalTexPoint(p2,v2));
+			/*points.push_back(NormalTexPoint2(p1,v1,(i*1.0)/slices, (j*1.0)/stacks));
+			points.push_back(NormalTexPoint2(p3,v3,((i+1)*1.0)/slices, (j*1.0)/stacks));
+			points.push_back(NormalTexPoint2(p2,v2,(i*1.0)/slices, ((j+1)*1.0)/stacks));
 
-			points.push_back(NormalTexPoint(p2,v2));
-			points.push_back(NormalTexPoint(p3,v3));
-			points.push_back(NormalTexPoint(p4,v4));
+			points.push_back(NormalTexPoint2(p2,v2,(i*1.0)/slices, ((j+1)*1.0)/stacks));
+			points.push_back(NormalTexPoint2(p3,v3,((i+1)*1.0)/slices, (j*1.0)/stacks));
+			points.push_back(NormalTexPoint2(p4,v4,((i+1)*1.0)/slices, ((j+1)*1.0)/stacks));*/
+			
+			points.push_back(NormalTexPoint2(p1,v1,(i*1.0)/slices, (j*1.0)/stacks));
+			points.push_back(NormalTexPoint2(p3,v3,((i+1)*1.0)/slices, (j*1.0)/stacks));
+			points.push_back(NormalTexPoint2(p2,v2,(i*1.0)/slices, ((j+1)*1.0)/stacks));
+
+			points.push_back(NormalTexPoint2(p2,v2,(i*1.0)/slices, ((j+1)*1.0)/stacks));
+			points.push_back(NormalTexPoint2(p3,v3,((i+1)*1.0)/slices, (j*1.0)/stacks));
+			points.push_back(NormalTexPoint2(p4,v4,((i+1)*1.0)/slices, ((j+1)*1.0)/stacks));
 		}
 	}
 	return points;

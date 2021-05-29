@@ -1,0 +1,97 @@
+[
+{
+  "directory": "/home/gustavo/Documents/CG/CG/Fase1/src/NewBuild",
+  "command": "clang++   -I/usr/include/IL   -Wall -pedantic   -o CMakeFiles/engine.dir/engine.cpp.o -c /home/gustavo/Documents/CG/CG/Fase1/src/engine.cpp",
+  "file": "/home/gustavo/Documents/CG/CG/Fase1/src/engine.cpp"
+},
+{
+  "directory": "/home/gustavo/Documents/CG/CG/Fase1/src/NewBuild",
+  "command": "clang++   -I/usr/include/IL   -Wall -pedantic   -o CMakeFiles/engine.dir/point.cpp.o -c /home/gustavo/Documents/CG/CG/Fase1/src/point.cpp",
+  "file": "/home/gustavo/Documents/CG/CG/Fase1/src/point.cpp"
+},
+{
+  "directory": "/home/gustavo/Documents/CG/CG/Fase1/src/NewBuild",
+  "command": "clang++   -I/usr/include/IL   -Wall -pedantic   -o CMakeFiles/engine.dir/vector.cpp.o -c /home/gustavo/Documents/CG/CG/Fase1/src/vector.cpp",
+  "file": "/home/gustavo/Documents/CG/CG/Fase1/src/vector.cpp"
+},
+{
+  "directory": "/home/gustavo/Documents/CG/CG/Fase1/src/NewBuild",
+  "command": "clang++   -I/usr/include/IL   -Wall -pedantic   -o CMakeFiles/engine.dir/tinyxml2.cpp.o -c /home/gustavo/Documents/CG/CG/Fase1/src/tinyxml2.cpp",
+  "file": "/home/gustavo/Documents/CG/CG/Fase1/src/tinyxml2.cpp"
+},
+{
+  "directory": "/home/gustavo/Documents/CG/CG/Fase1/src/NewBuild",
+  "command": "clang++   -I/usr/include/IL   -Wall -pedantic   -o CMakeFiles/engine.dir/models.cpp.o -c /home/gustavo/Documents/CG/CG/Fase1/src/models.cpp",
+  "file": "/home/gustavo/Documents/CG/CG/Fase1/src/models.cpp"
+},
+{
+  "directory": "/home/gustavo/Documents/CG/CG/Fase1/src/NewBuild",
+  "command": "clang++   -I/usr/include/IL   -Wall -pedantic   -o CMakeFiles/engine.dir/sphericalpoint.cpp.o -c /home/gustavo/Documents/CG/CG/Fase1/src/sphericalpoint.cpp",
+  "file": "/home/gustavo/Documents/CG/CG/Fase1/src/sphericalpoint.cpp"
+},
+{
+  "directory": "/home/gustavo/Documents/CG/CG/Fase1/src/NewBuild",
+  "command": "clang++   -I/usr/include/IL   -Wall -pedantic   -o CMakeFiles/engine.dir/transformation.cpp.o -c /home/gustavo/Documents/CG/CG/Fase1/src/transformation.cpp",
+  "file": "/home/gustavo/Documents/CG/CG/Fase1/src/transformation.cpp"
+},
+{
+  "directory": "/home/gustavo/Documents/CG/CG/Fase1/src/NewBuild",
+  "command": "clang++   -I/usr/include/IL   -Wall -pedantic   -o CMakeFiles/engine.dir/lights.cpp.o -c /home/gustavo/Documents/CG/CG/Fase1/src/lights.cpp",
+  "file": "/home/gustavo/Documents/CG/CG/Fase1/src/lights.cpp"
+},
+{
+  "directory": "/home/gustavo/Documents/CG/CG/Fase1/src/NewBuild",
+  "command": "clang++   -I/usr/include/IL   -Wall -pedantic   -o CMakeFiles/generator.dir/generator.cpp.o -c /home/gustavo/Documents/CG/CG/Fase1/src/generator.cpp",
+  "file": "/home/gustavo/Documents/CG/CG/Fase1/src/generator.cpp"
+},
+{
+  "directory": "/home/gustavo/Documents/CG/CG/Fase1/src/NewBuild",
+  "command": "clang++   -I/usr/include/IL   -Wall -pedantic   -o CMakeFiles/generator.dir/point.cpp.o -c /home/gustavo/Documents/CG/CG/Fase1/src/point.cpp",
+  "file": "/home/gustavo/Documents/CG/CG/Fase1/src/point.cpp"
+},
+{
+  "directory": "/home/gustavo/Documents/CG/CG/Fase1/src/NewBuild",
+  "command": "clang++   -I/usr/include/IL   -Wall -pedantic   -o CMakeFiles/generator.dir/plane.cpp.o -c /home/gustavo/Documents/CG/CG/Fase1/src/plane.cpp",
+  "file": "/home/gustavo/Documents/CG/CG/Fase1/src/plane.cpp"
+},
+{
+  "directory": "/home/gustavo/Documents/CG/CG/Fase1/src/NewBuild",
+  "command": "clang++   -I/usr/include/IL   -Wall -pedantic   -o CMakeFiles/generator.dir/box.cpp.o -c /home/gustavo/Documents/CG/CG/Fase1/src/box.cpp",
+  "file": "/home/gustavo/Documents/CG/CG/Fase1/src/box.cpp"
+},
+{
+  "directory": "/home/gustavo/Documents/CG/CG/Fase1/src/NewBuild",
+  "command": "clang++   -I/usr/include/IL   -Wall -pedantic   -o CMakeFiles/generator.dir/vector.cpp.o -c /home/gustavo/Documents/CG/CG/Fase1/src/vector.cpp",
+  "file": "/home/gustavo/Documents/CG/CG/Fase1/src/vector.cpp"
+},
+{
+  "directory": "/home/gustavo/Documents/CG/CG/Fase1/src/NewBuild",
+  "command": "clang++   -I/usr/include/IL   -Wall -pedantic   -o CMakeFiles/generator.dir/sphere.cpp.o -c /home/gustavo/Documents/CG/CG/Fase1/src/sphere.cpp",
+  "file": "/home/gustavo/Documents/CG/CG/Fase1/src/sphere.cpp"
+},
+{
+  "directory": "/home/gustavo/Documents/CG/CG/Fase1/src/NewBuild",
+  "command": "clang++   -I/usr/include/IL   -Wall -pedantic   -o CMakeFiles/generator.dir/sphericalpoint.cpp.o -c /home/gustavo/Documents/CG/CG/Fase1/src/sphericalpoint.cpp",
+  "file": "/home/gustavo/Documents/CG/CG/Fase1/src/sphericalpoint.cpp"
+},
+{
+  "directory": "/home/gustavo/Documents/CG/CG/Fase1/src/NewBuild",
+  "command": "clang++   -I/usr/include/IL   -Wall -pedantic   -o CMakeFiles/generator.dir/cone.cpp.o -c /home/gustavo/Documents/CG/CG/Fase1/src/cone.cpp",
+  "file": "/home/gustavo/Documents/CG/CG/Fase1/src/cone.cpp"
+},
+{
+  "directory": "/home/gustavo/Documents/CG/CG/Fase1/src/NewBuild",
+  "command": "clang++   -I/usr/include/IL   -Wall -pedantic   -o CMakeFiles/generator.dir/torus.cpp.o -c /home/gustavo/Documents/CG/CG/Fase1/src/torus.cpp",
+  "file": "/home/gustavo/Documents/CG/CG/Fase1/src/torus.cpp"
+},
+{
+  "directory": "/home/gustavo/Documents/CG/CG/Fase1/src/NewBuild",
+  "command": "clang++   -I/usr/include/IL   -Wall -pedantic   -o CMakeFiles/generator.dir/patches.cpp.o -c /home/gustavo/Documents/CG/CG/Fase1/src/patches.cpp",
+  "file": "/home/gustavo/Documents/CG/CG/Fase1/src/patches.cpp"
+},
+{
+  "directory": "/home/gustavo/Documents/CG/CG/Fase1/src/NewBuild",
+  "command": "clang++   -I/usr/include/IL   -Wall -pedantic   -o CMakeFiles/generator.dir/normalTexPoint.cpp.o -c /home/gustavo/Documents/CG/CG/Fase1/src/normalTexPoint.cpp",
+  "file": "/home/gustavo/Documents/CG/CG/Fase1/src/normalTexPoint.cpp"
+}
+]

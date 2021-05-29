@@ -1,0 +1,4 @@
+/home/gustavo/Documents/CG/CG/Fase1/src/NewBuild/CMakeFiles/edit_cache.dir
+/home/gustavo/Documents/CG/CG/Fase1/src/NewBuild/CMakeFiles/engine.dir
+/home/gustavo/Documents/CG/CG/Fase1/src/NewBuild/CMakeFiles/rebuild_cache.dir
+/home/gustavo/Documents/CG/CG/Fase1/src/NewBuild/CMakeFiles/generator.dir

@@ -12,38 +12,86 @@
 #include <iostream>
 #include <string>
 #include <random> 
+#include <IL/il.h>
 
+int Model::loadTexture(std::string s) {
+
+	unsigned int t,tw,th;
+	unsigned char *texData;
+	unsigned int texID;
+
+	ilInit();
+	ilEnable(IL_ORIGIN_SET);
+	ilOriginFunc(IL_ORIGIN_LOWER_LEFT);
+	ilGenImages(1,&t);
+	ilBindImage(t);	
+	ilLoadImage((ILstring)s.c_str());
+	tw = ilGetInteger(IL_IMAGE_WIDTH);
+	th = ilGetInteger(IL_IMAGE_HEIGHT);
+	ilConvertImage(IL_RGBA, IL_UNSIGNED_BYTE);
+	texData = ilGetData();
+
+	glGenTextures(1,&texID);
+	
+	glBindTexture(GL_TEXTURE_2D,texID);
+	glTexParameteri(GL_TEXTURE_2D,	GL_TEXTURE_WRAP_S,		GL_REPEAT);
+	glTexParameteri(GL_TEXTURE_2D,	GL_TEXTURE_WRAP_T,		GL_REPEAT);
+
+	glTexParameteri(GL_TEXTURE_2D,	GL_TEXTURE_MAG_FILTER,   	GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D,	GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+		
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, tw, th, 0, GL_RGBA, GL_UNSIGNED_BYTE, texData);
+	glGenerateMipmap(GL_TEXTURE_2D);
+
+	glBindTexture(GL_TEXTURE_2D, 0);
+
+	return texID;
+
+}
 
 void Model::drawModel(){
+    glBindTexture(GL_TEXTURE_2D, texture);
     glBindBuffer(GL_ARRAY_BUFFER,buffers[0]);
 	glVertexPointer(3,GL_FLOAT,0,0);
 	glBindBuffer(GL_ARRAY_BUFFER, buffers[1]);
 	glNormalPointer(GL_FLOAT, 0, 0);
+    glBindBuffer(GL_ARRAY_BUFFER, buffers[2]);
+    glTexCoordPointer(2, GL_FLOAT, 0, 0);
 	glDrawArrays(GL_TRIANGLES, 0, verticesCount);
+    glBindTexture(GL_TEXTURE_2D, 0);
 }
 
 
-Model::Model(const char* fileName){
+Model::Model(const char* fileName, std::string texName){
+    if(!strcmp(texName.c_str(), "")){
+        texture = 0;
+    }else
+        texture = loadTexture(texName);
     std::vector<float> points = std::vector<float>();
     std::vector<float> normals = std::vector<float>();
-    float x,y,z,nx,ny,nz;
+    std::vector<float> texCoords = std::vector<float>();
+    float x,y,z,nx,ny,nz,tx,ty;
     std::ifstream file(fileName);
     int vertex = 0;
-    while(file >> x >> y >> z >> nx >> ny >> nz){
+    while(file >> x >> y >> z >> nx >> ny >> nz >> tx >> ty){
         points.push_back(x);
         points.push_back(y);
         points.push_back(z);
         normals.push_back(nx);
         normals.push_back(ny);
         normals.push_back(nz);
+        texCoords.push_back(tx);
+        texCoords.push_back(ty);
         vertex++;
     } 
     verticesCount = vertex;
-    glGenBuffers(2, buffers);
+    glGenBuffers(3, buffers);
 	glBindBuffer(GL_ARRAY_BUFFER,buffers[0]);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(float) * verticesCount * 3, points.data(), GL_STATIC_DRAW);
 	glBindBuffer(GL_ARRAY_BUFFER, buffers[1]);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(float)* verticesCount * 3, normals.data(), GL_STATIC_DRAW);
+    glBindBuffer(GL_ARRAY_BUFFER, buffers[2]);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(float)* verticesCount * 2, texCoords.data(), GL_STATIC_DRAW);
 }
 
 Models::Models(){
@@ -201,8 +249,12 @@ std::vector<Model> Models::modelsParser(tinyxml2::XMLNode* models){
     std::vector<Model> nModels = std::vector<Model>();
     tinyxml2::XMLNode* type = models->FirstChild();
     while(type){
-		if(!strcmp(type->Value(), "model"))
-			nModels.push_back(Model(type->ToElement()->Attribute("file")));
+        std::string tex = "";
+		if(!strcmp(type->Value(), "model")){
+            if(type->ToElement()->Attribute("texture"))
+                tex = type->ToElement()->Attribute("texture");
+			nModels.push_back(Model(type->ToElement()->Attribute("file"),tex));
+        }
         type = type->NextSibling();
     }
     return nModels;
@@ -227,8 +279,12 @@ Models Models::groupParser(tinyxml2::XMLNode* group, Color gColor){
             for(Model m : auxModels)
                 nModels.push_back(m);
         }
-        else if(!strcmp(type->Value(), "model"))
-			nModels.push_back(Model(type->ToElement()->Attribute("file")));
+        else if(!strcmp(type->Value(), "model")){
+            std::string tex = "";
+            if(type->ToElement()->Attribute("texture"))
+                tex = type->ToElement()->Attribute("texture");
+			nModels.push_back(Model(type->ToElement()->Attribute("file"),tex));
+        }
         else if(!strcmp(type->Value(), "translate")){
             if(type->ToElement()->Attribute("time")){
                 std::vector<Point> nPoints = std::vector<Point>();

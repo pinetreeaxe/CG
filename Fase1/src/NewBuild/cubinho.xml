@@ -1,0 +1,16 @@
+<scene>
+    <lights>
+		<light type="POINT" posX="0.0" posY="0.0" posZ="0.0" />
+        <light type="DIRECTIONAL" dirX="10.0" dirY="-10.0" dirZ="0.0" />
+	</lights>
+    <group>
+        <translate X="5" Y="0" Z="0" />
+        <models>
+            <model file="box2.3d" />
+        </models>
+    </group>
+    <group>
+        <translate X="-3" Y="0" Z="0"/>
+        <model file="torus2.3d"/>
+    </group>
+</scene>
