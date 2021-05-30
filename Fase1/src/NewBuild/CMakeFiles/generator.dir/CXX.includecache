@@ -172,22 +172,6 @@ point.hpp
 normalTexPoint.hpp
 /home/gustavo/Documents/CG/CG/Fase1/src/normalTexPoint.hpp
 
-/home/gustavo/Documents/CG/CG/Fase1/src/uga.cpp
-uga.hpp
-/home/gustavo/Documents/CG/CG/Fase1/src/uga.hpp
-
-/home/gustavo/Documents/CG/CG/Fase1/src/uga.hpp
-string
--
-iostream
--
-sstream
--
-vector.hpp
-/home/gustavo/Documents/CG/CG/Fase1/src/vector.hpp
-point.hpp
-/home/gustavo/Documents/CG/CG/Fase1/src/point.hpp
-
 /home/gustavo/Documents/CG/CG/Fase1/src/vector.cpp
 vector.hpp
 /home/gustavo/Documents/CG/CG/Fase1/src/vector.hpp

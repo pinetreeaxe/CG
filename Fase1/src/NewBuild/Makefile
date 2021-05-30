@@ -547,33 +547,6 @@ transformation.cpp.s:
 	$(MAKE) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/transformation.cpp.s
 .PHONY : transformation.cpp.s
 
-uga.o: uga.cpp.o
-
-.PHONY : uga.o
-
-# target to build an object file
-uga.cpp.o:
-	$(MAKE) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/uga.cpp.o
-.PHONY : uga.cpp.o
-
-uga.i: uga.cpp.i
-
-.PHONY : uga.i
-
-# target to preprocess a source file
-uga.cpp.i:
-	$(MAKE) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/uga.cpp.i
-.PHONY : uga.cpp.i
-
-uga.s: uga.cpp.s
-
-.PHONY : uga.s
-
-# target to generate assembly for a file
-uga.cpp.s:
-	$(MAKE) -f CMakeFiles/generator.dir/build.make CMakeFiles/generator.dir/uga.cpp.s
-.PHONY : uga.cpp.s
-
 vector.o: vector.cpp.o
 
 .PHONY : vector.o
@@ -659,9 +632,6 @@ help:
 	@echo "... transformation.o"
 	@echo "... transformation.i"
 	@echo "... transformation.s"
-	@echo "... uga.o"
-	@echo "... uga.i"
-	@echo "... uga.s"
 	@echo "... vector.o"
 	@echo "... vector.i"
 	@echo "... vector.s"

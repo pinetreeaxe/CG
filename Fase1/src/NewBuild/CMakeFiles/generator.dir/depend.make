@@ -69,12 +69,6 @@ CMakeFiles/generator.dir/torus.cpp.o: ../torus.cpp
 CMakeFiles/generator.dir/torus.cpp.o: ../torus.hpp
 CMakeFiles/generator.dir/torus.cpp.o: ../vector.hpp
 
-CMakeFiles/generator.dir/uga.cpp.o: ../point.hpp
-CMakeFiles/generator.dir/uga.cpp.o: ../sphericalpoint.hpp
-CMakeFiles/generator.dir/uga.cpp.o: ../uga.cpp
-CMakeFiles/generator.dir/uga.cpp.o: ../uga.hpp
-CMakeFiles/generator.dir/uga.cpp.o: ../vector.hpp
-
 CMakeFiles/generator.dir/vector.cpp.o: ../vector.cpp
 CMakeFiles/generator.dir/vector.cpp.o: ../vector.hpp
 
