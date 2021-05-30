@@ -41,6 +41,7 @@ CMakeFiles/generator.dir/patches.cpp.o: ../patches.cpp
 CMakeFiles/generator.dir/patches.cpp.o: ../patches.hpp
 CMakeFiles/generator.dir/patches.cpp.o: ../point.hpp
 CMakeFiles/generator.dir/patches.cpp.o: ../sphericalpoint.hpp
+CMakeFiles/generator.dir/patches.cpp.o: ../uga.hpp
 CMakeFiles/generator.dir/patches.cpp.o: ../vector.hpp
 
 CMakeFiles/generator.dir/plane.cpp.o: ../plane.cpp

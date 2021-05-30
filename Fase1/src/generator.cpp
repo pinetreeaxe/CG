@@ -23,14 +23,6 @@ void writeFile(T primitive, std::string fileName){
     }
 }
 
-template<typename T>
-void writeFileNew(T primitive, std::string fileName){
-    std::ofstream file(fileName);
-    for (NormalTexPoint p : primitive.draw()){
-        p.to_string();
-        file << p.to_string() << "\n";
-    }
-}
 
 template<typename T>
 void writeFileNew2(T primitive, std::string fileName){
@@ -54,5 +46,5 @@ int main(int argc, char** argv){
     else if(primitive == "torus")
         writeFileNew2(Torus(argc-3, argv+2), argv[argc-1]);
     else if(primitive == "patches")
-        writeFile(Patches(argc-3, argv+2), argv[argc-1]); 
+        writeFileNew2(Patches(argc-3, argv+2), argv[argc-1]); 
 }

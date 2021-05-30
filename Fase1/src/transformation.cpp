@@ -221,8 +221,4 @@ float Color::getBlue(){
 
 void Color::transform(){
     glColor3f(r,g,b);
-    /*GLfloat color[4] = {r,g,b,1.0f};
-    glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, color);
-	glMaterialfv(GL_FRONT, GL_SPECULAR, color);
-	glMaterialf(GL_FRONT, GL_SHININESS, 128);*/
 }
