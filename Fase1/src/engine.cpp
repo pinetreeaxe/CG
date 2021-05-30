@@ -29,6 +29,7 @@ float camAlfa = 0.75f, camBeta = 0.5f, camRadius = 200.0f;
 float camX, camY, camZ;
 float centerX = 0.0f, centerY = 0.0f, centerZ = 0.0f;
 float timestamp = 0.0f;
+int timebase = 0, frame = 0;
 float savedMod,timeMod = 0.0001f;
 bool isPaused = false;	
 GLfloat dark[4] = { 0.2,0.2,0.2,1.0 };
@@ -89,7 +90,7 @@ void drawAxis(){
 }
 
 void renderScene(void) {
-
+	char s[64];
 	// clear buffers
 	glClearColor(0.0f,0.0f,0.0f,0.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -107,6 +108,15 @@ void renderScene(void) {
 	glRotatef(angleZ,0.0,0.0,1.0);
 
 	models.drawModels(timestamp);
+	frame++;
+	int timet=glutGet(GLUT_ELAPSED_TIME); 
+	if (timet - timebase > 1000) { 
+		float fps = frame*1000.0/(timet-timebase); 
+		timebase = timet; 
+		frame = 0; 
+		sprintf(s, "FPS: %f6.2", fps);
+		glutSetWindowTitle(s);
+	} 
 	timestamp += timeMod;
 	
 	// End of frame
