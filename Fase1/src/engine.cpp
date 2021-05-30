@@ -106,18 +106,6 @@ void renderScene(void) {
 	glRotatef(angleY,0.0,1.0,0.0);
 	glRotatef(angleZ,0.0,0.0,1.0);
 
-	float pos[4] = { 1.0,1.0,1.0,0.0 };
-	//glLightfv(GL_LIGHT1, GL_POSITION, pos);
-
-	float dark[] = { 0.2,0.2,0.2,1.0 };
-	float white[] = { 0.8,0.8,0.8,1.0 };
-	float red[] = { 0.8,0.2,0.2,1.0 };
-	/*glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, white);
-	glMaterialfv(GL_FRONT, GL_SPECULAR, white);
-	glMaterialf(GL_FRONT, GL_SHININESS, 128);*/
-
-	//drawCilinder();
-
 	models.drawModels(timestamp);
 	timestamp += timeMod;
 	

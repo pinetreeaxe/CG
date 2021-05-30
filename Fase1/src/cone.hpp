@@ -5,7 +5,6 @@
 #include "sphericalpoint.hpp"
 #include "point.hpp"
 #include "normalTexPoint.hpp"
-#include "uga.hpp"
 
 class Cone {
 private:
@@ -14,6 +13,6 @@ private:
 
 public:
     Cone(int, char**);
-    std::vector<NormalTexPoint2> draw();
+    std::vector<NormalTexPoint> draw();
 };
 #endif

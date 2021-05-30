@@ -4,7 +4,6 @@
 #include <vector>
 #include "point.hpp"
 #include "normalTexPoint.hpp"
-#include "uga.hpp"
 
 class Patches {
 private:
@@ -17,7 +16,7 @@ public:
     void multMatrixVector(float[4][4], float *, float *);
     void getBezierPoint(float, Point, Point, Point, Point, float *);
     Vector getNormal(std::vector<Point>, float, float);
-    NormalTexPoint2 getGlobalBezierPoint(int, float, float); 
-    std::vector<NormalTexPoint2> draw();
+    NormalTexPoint getGlobalBezierPoint(int, float, float); 
+    std::vector<NormalTexPoint> draw();
 };
 #endif

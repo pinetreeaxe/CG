@@ -63,7 +63,7 @@ f.write('''\t<group>
 translatePlanet(f,20,10,1)
 rotatePlanet(f,0,0.1,0,1,0)
 f.write('''\t\t<models>
-\t\t\t<model file="sphere.3d" texture="mercury.jpg"/>
+\t\t\t<model file="sphere.3d" texture="mercury.jpg" emissR="0.2" emissG="0.2" emissB="0.2"/>
 \t\t</models>
 \t</group>''')
 
@@ -74,7 +74,7 @@ translatePlanet(f,30,10,2)
 rotatePlanet(f,0,0.1,0,1,0)
 f.write('''\t\t<scale X="1.8" Y="1.8" Z="1.8"/>
 \t\t<models>
-\t\t\t<model file="sphere.3d" texture="venus.jpg"/>
+\t\t\t<model file="sphere.3d" texture="venus.jpg" emissR="0.2" emissG="0.2" emissB="0.2"/>
 \t\t</models>
 \t</group>''')
 
@@ -86,7 +86,7 @@ rotatePlanet(f,0,0.1,0,1,0)
 generateMoons(f,3,5,2)
 f.write('''\t\t<scale X="2" Y="2" Z="2"/>
 \t\t<models>
-\t\t\t<model file="sphere.3d" texture="earth.jpg"/>
+\t\t\t<model file="sphere.3d" texture="earth.jpg" emissR="0.2" emissG="0.2" emissB="0.2"/>
 \t\t</models>''')
 f.write("\t</group>")
 
@@ -98,7 +98,7 @@ rotatePlanet(f,0,0.1,0,1,0)
 #generateMoons(f,2,4,1)
 f.write('''\t\t<scale X="1" Y="1" Z="1"/>
 \t\t<models>
-\t\t\t<model file="sphere.3d" texture="mars.jpg"/>
+\t\t\t<model file="sphere.3d" texture="mars.jpg" emissR="0.2" emissG="0.2" emissB="0.2"/>
 \t\t</models>''')
 f.write("\t</group>")
 
@@ -110,7 +110,7 @@ rotatePlanet(f,0,0.1,0,1,0)
 #generateMoons(f,10,15,9)
 f.write('''\t\t<scale X="9" Y="9" Z="9"/>
 \t\t<models>
-\t\t\t<model file="sphere.3d" texture="jupiter.jpg"/>
+\t\t\t<model file="sphere.3d" texture="jupiter.jpg" emissR="0.2" emissG="0.2" emissB="0.2"/>
 \t\t</models>''')
 f.write("\t</group>")
 
@@ -122,7 +122,7 @@ rotatePlanet(f,0,0.1,0,1,0)
 #generateMoons(f,17,25,7)
 f.write('''\t\t<scale X="7" Y="7" Z="7"/>
 \t\t<models>
-\t\t\t<model file="sphere.3d" texture="saturn.jpg"/>
+\t\t\t<model file="sphere.3d" texture="saturn.jpg" emissR="0.2" emissG="0.2" emissB="0.2"/>
 \t\t</models>''')
 
 #ring
@@ -130,7 +130,7 @@ f.write('''\t\t<group>
 \t\t\t<color R="0.8" G="0.6" B="0.3"/>
 \t\t\t<scale X="1" Y="0.01" Z="1"/>
 \t\t\t<models>
-\t\t\t\t<model file="torus.3d" texture="ring.jpg"/>
+\t\t\t\t<model file="torus.3d" texture="ring.jpg" emissR="0.2" emissG="0.2" emissB="0.2"/>
 \t\t\t</models>
 \t\t</group>''')
 f.write("\t</group>")
@@ -143,7 +143,7 @@ rotatePlanet(f,0,0.1,0,1,0)
 #generateMoons(f,6,9,4.5)
 f.write('''\t\t<scale X="4.5" Y="4.5" Z="4.5"/>
 \t\t<models>
-\t\t\t<model file="sphere.3d" texture="uranus.jpg"/>
+\t\t\t<model file="sphere.3d" texture="uranus.jpg" emissR="0.2" emissG="0.2" emissB="0.2"/>
 \t\t</models>\n''')
 f.write("\t</group>\n")
 
@@ -186,7 +186,7 @@ f.write('''\t<group>
 \t\t</translate>
 \t\t<scale X="0.7" Y="0.7" Z="0.7"/>
 \t\t<models>
-\t\t\t<model file="sphere.3d"/>
+\t\t\t<model file="teapot.3d" texture="moon.jpg" emissR="0.2" emissG="0.2" emissB="0.2"/>
 \t\t</models>''')
 f.write("\t</group>")
 
@@ -198,7 +198,7 @@ rotatePlanet(f,0,0.1,0,1,0)
 #generateMoons(f,6,9,4)
 f.write('''\t\t<scale X="4" Y="4" Z="4"/>
 \t\t<models>
-\t\t\t<model file="sphere.3d" texture="neptune.jpg"/>
+\t\t\t<model file="sphere.3d" texture="neptune.jpg" emissR="0.2" emissG="0.2" emissB="0.2"/>
 \t\t</models>''')
 f.write("\t</group>")
 

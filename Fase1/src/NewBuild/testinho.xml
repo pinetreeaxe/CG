@@ -5,7 +5,7 @@
 	</lights>
 	<group>
 		<models>
-			<model file="teapot.3d"  texture ="index.jpeg"/>
+			<model file="bige.3d"  texture ="index.jpeg"/>
 		</models>
 	</group>
 </scene>

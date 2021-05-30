@@ -157,7 +157,7 @@ void Patches::getBezierPoint(float t, Point p0, Point p1, Point p2, Point p3, fl
 	}
 }
 
-NormalTexPoint2 Patches::getGlobalBezierPoint(int patchNum, float u, float v) {
+NormalTexPoint Patches::getGlobalBezierPoint(int patchNum, float u, float v) {
 
     std::vector<Point> patch = std::vector<Point>();
     std::vector<int> patchPoints = indices[patchNum];
@@ -177,11 +177,11 @@ NormalTexPoint2 Patches::getGlobalBezierPoint(int patchNum, float u, float v) {
 	getBezierPoint(v, bezierPoints[0], bezierPoints[1], bezierPoints[2], bezierPoints[3], pos);
     Vector normal = getNormal(patch,u,v);
 
-    return NormalTexPoint2(Point(pos[0],pos[1],pos[2]),normal,u,v);
+    return NormalTexPoint(Point(pos[0],pos[1],pos[2]),normal,u,v);
 }
 
-std::vector<NormalTexPoint2> Patches::draw(){
-    std::vector<NormalTexPoint2> points;
+std::vector<NormalTexPoint> Patches::draw(){
+    std::vector<NormalTexPoint> points;
     float step = 1.0f / tesselationLevel;
     for (int i = 0; i < numPatches; i++) {
         
@@ -196,10 +196,10 @@ std::vector<NormalTexPoint2> Patches::draw(){
                 float nextV = (k + 1) * step;
 
                 
-                NormalTexPoint2 p0 = getGlobalBezierPoint(i, u, v);
-                NormalTexPoint2 p1 = getGlobalBezierPoint(i, u, nextV);
-                NormalTexPoint2 p2 = getGlobalBezierPoint(i, nextU, v);
-                NormalTexPoint2 p3 = getGlobalBezierPoint(i, nextU, nextV);
+                NormalTexPoint p0 = getGlobalBezierPoint(i, u, v);
+                NormalTexPoint p1 = getGlobalBezierPoint(i, u, nextV);
+                NormalTexPoint p2 = getGlobalBezierPoint(i, nextU, v);
+                NormalTexPoint p3 = getGlobalBezierPoint(i, nextU, nextV);
                 
                 points.push_back(p3);
                 points.push_back(p2);

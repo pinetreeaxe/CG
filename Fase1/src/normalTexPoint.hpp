@@ -7,14 +7,15 @@
 #include "vector.hpp"
 #include "point.hpp"
 
-class NormalTexPoint {
+class NormalTexPoint{
 private:
     Point p;
     Vector n;
-    //texture missing
+    float texX;
+    float texY;
 
 public:
-    NormalTexPoint(Point, Vector);
+    NormalTexPoint(Point, Vector, float, float);
     std::string to_string();
 };
 #endif

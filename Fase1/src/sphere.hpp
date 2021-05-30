@@ -4,7 +4,7 @@
 #include <vector>
 #include "sphericalpoint.hpp"
 #include "point.hpp"
-#include "uga.hpp"
+#include "normalTexPoint.hpp"
 
 class Sphere {
 private:
@@ -13,6 +13,6 @@ private:
 
 public:
     Sphere(int, char**);
-    std::vector<NormalTexPoint2> draw();
+    std::vector<NormalTexPoint> draw();
 };
 #endif
