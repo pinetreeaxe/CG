@@ -76,54 +76,51 @@ Vector Patches::getNormal(std::vector<Point> patch, float u, float v){
                     {+3.0f, -6.0f, +3.0f, +0.0f},
                     {-3.0f, +3.0f, +0.0f, +0.0f},
                     {+1.0f, +0.0f, +0.0f, +0.0f}};
-
+    float px[4][4];
+    float py[4][4];
+    float pz[4][4];
+    for (int i = 0; i < 4; i++){
+        for (int j = 0; j < 4; j++){
+            Point p = patch[i*4+j];
+            px[i][j] = p.get_x();
+            py[i][j] = p.get_y();
+            pz[i][j] = p.get_z();
+        }
+    }
     float tu[4] = {u*u*u, u*u, u, 1.0f}; 
     float dtu[4] = {3.0f*u*u, 2.0f*u, 1.0f, 0.0f};
     float tv[4] = {v*v*v, v*v, v, 1.0f};
     float dtv[4] = {3.0f*v*v, 2.0f*v, 1.0f, 0.0f};
-    float duvm[4] = {};
-    multMatrixVector(m,dtu,duvm);
-    Point duvmvp[4] = {};
-    for (int i = 0; i < 4; i++){
-        duvmvp[i] = Point(0,0,0);
-    }
-    for (int i = 0; i < 4; i++){
-        for (int j = 0; j < 4; j++){
-            Point p = patch[(j*4)+i];
-            duvmvp[i] = Point(duvmvp[i].get_x()+(p.get_x()*duvm[j]),duvmvp[i].get_y()+(p.get_y()*duvm[j]), duvmvp[i].get_z()+(p.get_z()*duvm[j]));
-        }
-    }
+    float ax[4];
+    float ay[4];
+    float az[4];
+    float fu[3];
+    float fv[3];
+    
     float mvv[4];
     multMatrixVector(m,tv,mvv);
-    float fu[3] = {0};
-    for (int i = 0; i < 4; i++){
-        fu[0] = fu[0] + (duvmvp[i].get_x()*mvv[i]);
-        fu[1] = fu[1] + (duvmvp[i].get_y()*mvv[i]);
-        fu[2] = fu[2] + (duvmvp[i].get_z()*mvv[i]); 
-    }
-    float uvm[4] = {};
-    multMatrixVector(m,tu,uvm);
-    Point uvmvp[4] = {};
-    for (int i = 0; i < 4; i++){
-        uvmvp[i] = Point(0,0,0);
-    }
-    for (int i = 0; i < 4; i++){
-        for (int j = 0; j < 4; j++){
-            Point p = patch[(j*4)+i];
-            uvmvp[i] = Point(uvmvp[i].get_x()+p.get_x()*uvm[j],uvmvp[i].get_y()+p.get_y()*uvm[j], uvmvp[i].get_z()+p.get_z()*uvm[j]);
-        }
-    }
-    float mvdv[4] = {};
+    multMatrixVector(px,mvv,ax);
+    multMatrixVector(py,mvv,ay);
+    multMatrixVector(pz,mvv,az);
+    fu[0] = (ax[0]*dtu[0])+(ax[1]*dtu[1])+(ax[2]*dtu[2])+(ax[3]*dtu[3]);
+    fu[1] = (ay[0]*dtu[0])+(ay[1]*dtu[1])+(ay[2]*dtu[2])+(ay[3]*dtu[3]);
+    fu[2] = (az[0]*dtu[0])+(az[1]*dtu[1])+(az[2]*dtu[2])+(az[3]*dtu[3]);
+
+    float mvdv[4];
     multMatrixVector(m,dtv,mvdv);
-    float fv[3] = {0};
-    for (int i = 0; i < 4; i++){
-        fv[0] = fv[0] + uvmvp[i].get_x()*mvdv[i];
-        fv[1] = fv[1] + uvmvp[i].get_y()*mvdv[i];
-        fv[2] = fv[2] + uvmvp[i].get_z()*mvdv[i]; 
-    } 
+    multMatrixVector(px,mvdv,ax);
+    multMatrixVector(py,mvdv,ay);
+    multMatrixVector(pz,mvdv,az);
+    fv[0] = (ax[0]*tu[0])+(ax[1]*tu[1])+(ax[2]*tu[2])+(ax[3]*tu[3]);
+    fv[1] = (ay[0]*tu[0])+(ay[1]*tu[1])+(ay[2]*tu[2])+(ay[3]*tu[3]);
+    fv[2] = (az[0]*tu[0])+(az[1]*tu[1])+(az[2]*tu[2])+(az[3]*tu[3]);  
 
     float normal[3] = {};
-    cross(fv,fu,normal); 
+    normalize(fu);
+    normalize(fv);
+    cross(fv,fu,normal);
+    normalize(normal);
+
     return Vector(normal[0], normal[1], normal[2]);
 }
 

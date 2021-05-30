@@ -56,11 +56,6 @@ std::vector<NormalTexPoint> Cone::draw() {
 			p2.set_y(p4.get_y());
 			p2.set_z(p4.get_z());
 		}
-
-		/*points.push_back(NormalTexPoint(p2,normal2));
-		points.push_back(NormalTexPoint(top,normal2));
-		points.push_back(NormalTexPoint(p1,normal1));*/
-
 	}
 	return points;
 }
