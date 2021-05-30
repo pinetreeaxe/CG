@@ -10,7 +10,7 @@
 	<group>
 		<scale X="2" Y="2" Z="2"/>
 		<models>
-			<model file="cone.3d"  texture ="cone.jpg"/>
+			<model file="teapot.3d"  texture ="flowers.jpg"/>
 		</models>
 	</group>
 </scene>
