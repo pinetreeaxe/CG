@@ -2,10 +2,15 @@
 	<lights>
 		<light type="DIRECTIONAL" dirX="0.0" dirY="1.0" dirZ="0.0" />
 		<light type="DIRECTIONAL" dirX="0.0" dirY="-1.0" dirZ="0.0" />
+		<light type="DIRECTIONAL" dirX="1.0" dirY="0.0" dirZ="0.0" />
+		<light type="DIRECTIONAL" dirX="-1.0" dirY="0.0" dirZ="0.0" />
+		<light type="DIRECTIONAL" dirX="0.0" dirY="0.0" dirZ="1.0" />
+		<light type="DIRECTIONAL" dirX="0.0" dirY="0.0" dirZ="-1.0" />
 	</lights>
 	<group>
+		<scale X="2" Y="2" Z="2"/>
 		<models>
-			<model file="bige.3d"  texture ="index.jpeg"/>
+			<model file="cone.3d"  texture ="cone.jpg"/>
 		</models>
 	</group>
 </scene>
