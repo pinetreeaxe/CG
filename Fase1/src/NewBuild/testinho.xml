@@ -2,10 +2,6 @@
 	<lights>
 		<light type="DIRECTIONAL" dirX="0.0" dirY="1.0" dirZ="0.0" />
 		<light type="DIRECTIONAL" dirX="0.0" dirY="-1.0" dirZ="0.0" />
-		<light type="DIRECTIONAL" dirX="0.0" dirY="0.0" dirZ="1.0" />
-		<light type="DIRECTIONAL" dirX="0.0" dirY="0.0" dirZ="-1.0" />
-		<light type="DIRECTIONAL" dirX="1.0" dirY="0.0" dirZ="0.0" />
-		<light type="DIRECTIONAL" dirX="-1.0" dirY="0.0" dirZ="0.0" />
 	</lights>
 	<group>
 		<models>
