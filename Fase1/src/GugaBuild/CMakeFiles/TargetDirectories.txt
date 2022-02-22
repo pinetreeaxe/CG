@@ -1,4 +1,0 @@
-/home/gustavo/Documents/CG/CG/Fase1/src/GugaBuild/CMakeFiles/edit_cache.dir
-/home/gustavo/Documents/CG/CG/Fase1/src/GugaBuild/CMakeFiles/engine.dir
-/home/gustavo/Documents/CG/CG/Fase1/src/GugaBuild/CMakeFiles/rebuild_cache.dir
-/home/gustavo/Documents/CG/CG/Fase1/src/GugaBuild/CMakeFiles/generator.dir
