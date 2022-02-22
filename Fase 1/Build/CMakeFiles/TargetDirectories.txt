@@ -1,4 +1,0 @@
-/home/pinetreeaxe/Desktop/CG/CG/Fase 1/src/Build/CMakeFiles/engine.dir
-/home/pinetreeaxe/Desktop/CG/CG/Fase 1/src/Build/CMakeFiles/generator.dir
-/home/pinetreeaxe/Desktop/CG/CG/Fase 1/src/Build/CMakeFiles/edit_cache.dir
-/home/pinetreeaxe/Desktop/CG/CG/Fase 1/src/Build/CMakeFiles/rebuild_cache.dir
