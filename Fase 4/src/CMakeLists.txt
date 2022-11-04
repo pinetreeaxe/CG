@@ -3,6 +3,8 @@ cmake_minimum_required(VERSION 3.9)
 
 PROJECT(engine)
 
+set(OpenGL_GL_PREFERENCE LEGACY)
+
 add_executable(${PROJECT_NAME} engine.cpp point.cpp vector.cpp tinyxml2.cpp models.cpp sphericalpoint.cpp transformation.cpp lights.cpp)
 add_executable(generator generator.cpp point.cpp plane.cpp box.cpp vector.cpp sphere.cpp sphericalpoint.cpp cone.cpp torus.cpp patches.cpp normalTexPoint.cpp)
 
